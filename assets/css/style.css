@@ -1,0 +1,155 @@
+/* Dashboard Starts */
+
+.toast-enter {
+  transform: translateY(0);
+  opacity: 1;
+}
+.toast-exit {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.modal-enter {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-exit {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@keyframes chartPopIn {
+  0% {
+    transform: scale(0) rotate(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+.animate-chart {
+  animation: chartPopIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+/* Dashboard Ends */
+
+/* Chats Starts */
+#sidebar {
+  transition: transform 0.3s ease-in-out;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Chats Ends */
+
+/* Inquiry Starts */
+table {
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+thead th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+thead th:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.toast-enter {
+  transform: translateY(0);
+  opacity: 1;
+}
+.toast-exit {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.dropdown-menu {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+.dropdown-hidden {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
+  pointer-events: none;
+  visibility: hidden;
+}
+.dropdown-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  visibility: visible;
+}
+/* Inquiry Ends */
+
+/* Manage Properties Starts */
+table {
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+thead th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+thead th:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.toast-enter {
+  transform: translateY(0);
+  opacity: 1;
+}
+.toast-exit {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.modal-enter {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-exit {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-body::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+/* Manage Properties Ends */
