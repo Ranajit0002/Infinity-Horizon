@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinity Horizon - Customers</title>
+  <link rel="shortcut icon" href="assests/images/about-images/logo.png" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style type="text/tailwindcss">
+    @theme {
+    --color-ink: #06092c;
+    --color-sidebar: #171f5c;
+    --color-panel: #eef4fb;
+  }
+</style>
+</head>
+
+<body class="min-h-screen bg-panel text-ink lg:overflow-hidden">
+
+  <!-- Mobile Menu Backdrop -->
+  <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden transition-opacity duration-300">
+  </div>
+
+  <aside id="appSidebar"
+    class="fixed top-0 bottom-0 left-0 lg:top-6 lg:left-[34px] w-[240px] lg:w-[203px] h-screen lg:h-[calc(100vh-40px)] lg:rounded-xl bg-[#171f5c] flex flex-col py-8 px-4 lg:px-3 z-50 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+    <!-- Close Button for Mobile -->
+    <button id="closeSidebar" class="lg:hidden absolute top-4 right-4 text-white text-xl p-1">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Logo -->
+    <div class="flex flex-col items-center mb-8">
+      <img src="image/infinity horizon logo finale 1.png" alt="Infinity Horizon Logo"
+        class="w-[90px] h-[72px] object-contain" />
+    </div>
+
+    <!-- Nav -->
+    <nav class="flex flex-col gap-1 overflow-y-auto scrollbar-hide flex-1">
+      <a href="admin.html"
+        class="flex items-center gap-2.5 rounded-xl  px-3.5 py-2.5 text-[13px] font-bold text-white  transition">
+        <img src="image/icon/desktop-white.png" alt="Chat icon" class=" h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Dashboard</span>
+      </a>
+      <a href="chat.html"
+        class=" flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white transition hover:bg-white/10">
+        <img src="image/icon/chat_icon.png" alt="Chat icon" class=" h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Chat</span>
+      </a>
+      <a href="calendar.html"
+        class=" flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white  transition">
+        <img src="image/icon/calender_icon.png" alt="Dashboard icon"
+          class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Calendar</span>
+      </a>
+      <a href="castomer.html"
+        class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold  transition bg-white text-[#171f5c]  hover:bg-white/10">
+        <img src="image/icon/user-black.png" alt="Customer icon" class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Customer</span>
+      </a>
+      <a href="revenue.html"
+        class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white transition hover:bg-white/10">
+        <img src="image/icon/revenu_icon.png" alt="Revenue icon" class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Revenue</span>
+      </a>
+    </nav>
+
+    <!-- User Section -->
+    <div class="mt-auto pt-4 border-t border-white/10">
+      <div class="mb-4 flex items-center gap-3 rounded-xl bg-white px-3 py-3">
+        <img src="image/logo_us.png" alt="Sneha Paul" class="h-10 w-10 rounded-xl object-cover" />
+        <div class="min-w-0">
+          <p class="truncate text-xs font-bold text-[#26306a]">Sneha Paul</p>
+          <p class="truncate text-[11px] font-bold text-[#26306a]">dcdh@gmail.com</p>
+        </div>
+      </div>
+      <button
+        class="flex h-7 w-full items-center justify-center gap-2 rounded-full bg-white/30 text-xs font-bold text-white transition hover:bg-white/40">
+        <i class="fa-solid fa-right-from-bracket text-[13px]" aria-hidden="true"></i>
+        Logout
+      </button>
+    </div>
+  </aside>
+
+  <main class="app-main lg:ml-[237px] h-screen overflow-y-auto pb-8 pt-0 hide-scrollbar">
+
+    <div class="sticky top-0 bg-[#eef4fb]/95 backdrop-blur-md z-40 px-4 md:px-[17px] pt-4 pb-2">
+      <div class="w-full max-w-[1580px] mx-auto flex items-center justify-between">
+
+        <div class="flex items-center gap-3">
+          <button id="toggleSidebar"
+            class="lg:hidden p-2 text-[#070b2d] bg-white rounded-full shadow-sm text-lg focus:outline-none cursor-pointer">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h1 class="text-xl md:text-[29px] leading-none font-bold text-[#070b2d]">Customers</h1>
+        </div>
+
+        <div class="flex items-center gap-2 md:gap-3">
+          <button
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-slate-50 transition cursor-pointer">
+            <i class="fa-solid fa-magnifying-glass text-sm md:text-[17px] text-[#64748b]" aria-hidden="true"></i>
+          </button>
+          <button
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-slate-50 transition cursor-pointer">
+            <i class="fa-solid fa-comment-dots text-sm md:text-[17px] text-[#64748b]" aria-hidden="true"></i>
+          </button>
+          <button
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center shadow-sm relative hover:bg-slate-50 transition cursor-pointer">
+            <i class="fa-solid fa-bell text-sm md:text-[17px] text-[#64748b]" aria-hidden="true"></i>
+            <span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-red-500"></span>
+          </button>
+          <img src="image/Ellipse 3 (1).png" alt="Profile"
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover cursor-pointer border border-white shadow-sm" />
+        </div>
+
+      </div>
+    </div>
+
+    <section class="mx-auto max-w-[1580px] px-4 md:px-[17px] mt-4">
+
+      <h2 class="mb-2 text-xl font-bold text-ink">List view</h2>
+
+      <section class="rounded-t-xl rounded-b-lg bg-white px-[17px] pb-4 pt-4">
+        <div class="mb-3 flex items-center justify-between">
+          <h3 class="text-[15px] font-medium text-ink">Customer List</h3>
+          <button
+            class="h-7 rounded-xl border border-[#08092d] px-3 text-[12px] font-medium text-ink transition hover:bg-[#08092d] hover:text-white cursor-pointer">View
+            all</button>
+        </div>
+
+        <div class="overflow-x-auto hide-scrollbar">
+          <table class="w-full min-w-[1010px] border-collapse text-left text-[12px]">
+            <thead>
+              <tr class="h-[33px] bg-[#010126] text-white">
+                <th class="rounded-l-xl px-7 font-medium">ID</th>
+                <th class="px-4 font-medium">Customer Name</th>
+                <th class="px-4 font-medium">Property Type</th>
+                <th class="px-4 font-medium">Email</th>
+                <th class="px-4 font-medium">Phone</th>
+                <th class="px-4 font-medium">Status</th>
+                <th class="px-4 font-medium">Budget</th>
+                <th class="px-4 font-medium">Registration date</th>
+                <th class="rounded-r-xl px-4 font-medium">Action</th>
+              </tr>
+            </thead>
+            <tbody class="text-[#252525]">
+              <tr class="h-[50px] border-b border-gray-100">
+                <td class="px-7">CUS 2001</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 82.png" alt="Robert Johnson"
+                      class="h-[22px] w-[22px] rounded object-cover" />Robert Johnson</div>
+                </td>
+                <td class="px-4">House</td>
+                <td class="px-4">sabuj00@gmail.com</td>
+                <td class="px-4">5645345670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#ff7457] px-3 py-1.5 text-[11px] font-medium text-black">Lost</span>
+                </td>
+                <td class="px-4">Rs.39,7860</td>
+                <td class="px-4">Aug 8,2024</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+              <tr class="h-[50px] border-b border-gray-100">
+                <td class="px-7">CUS 2002</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 82 (5).png" alt="Sarah Williams"
+                      class="h-[22px] w-[22px] rounded object-cover" />Sarah Williams</div>
+                </td>
+                <td class="px-4">Office Space</td>
+                <td class="px-4">abs123@gmail.com</td>
+                <td class="px-4">9745345670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#e7cde9] px-3 py-1.5 text-[11px] font-medium text-black">Negotiation</span>
+                </td>
+                <td class="px-4">Rs 78,7668</td>
+                <td class="px-4">Aug 9,2026</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+              <tr class="h-[50px] border-b border-gray-100">
+                <td class="px-7">CUS 2003</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 80 (1).png" alt="Michael Brown"
+                      class="h-[22px] w-[22px] rounded object-cover" />Michael Brown</div>
+                </td>
+                <td class="px-4">Villa</td>
+                <td class="px-4">suraj34@gmail.com</td>
+                <td class="px-4">9445345670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#f2c564] px-3 py-1.5 text-[11px] font-medium text-black">Site
+                    visit</span></td>
+                <td class="px-4">Rs.54,7860</td>
+                <td class="px-4">Sep 7,2020</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+              <tr class="h-[50px] border-b border-gray-100">
+                <td class="px-7">CUS 2004</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 82 (1).png" alt="Emily Davis"
+                      class="h-[22px] w-[22px] rounded object-cover" />Emily Davis</div>
+                </td>
+                <td class="px-4">Commercial</td>
+                <td class="px-4">anupaul56@gmail.com</td>
+                <td class="px-4">9745775670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#aab6ff] px-3 py-1.5 text-[11px] font-medium text-black">Inquiry</span>
+                </td>
+                <td class="px-4">Rs.44,7860</td>
+                <td class="px-4">Jan 9,2018</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+              <tr class="h-[50px] border-b border-gray-100">
+                <td class="px-7">CUS 2005</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 82.png" alt="James Wilson"
+                      class="h-[22px] w-[22px] rounded object-cover" />James Wilson</div>
+                </td>
+                <td class="px-4">Commercial</td>
+                <td class="px-4">anupaul56@gmail.com</td>
+                <td class="px-4">9745775670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#aab6ff] px-3 py-1.5 text-[11px] font-medium text-black">Inquiry</span>
+                </td>
+                <td class="px-4">Rs.44,7860</td>
+                <td class="px-4">Jan 9,2018</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+              <tr class="h-[50px] border-b border-gray-100">
+                <td class="px-7">CUS 2006</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 82 (3).png" alt="Jennifer Martinez"
+                      class="h-[22px] w-[22px] rounded object-cover" />Jennifer Martinez</div>
+                </td>
+                <td class="px-4">Commercial</td>
+                <td class="px-4">anupaul56@gmail.com</td>
+                <td class="px-4">9745775670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#aab6ff] px-3 py-1.5 text-[11px] font-medium text-black">Inquiry</span>
+                </td>
+                <td class="px-4">Rs.44,7860</td>
+                <td class="px-4">Jan 9,2018</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+              <tr class="h-[50px] border-b border-gray-100">
+                <td class="px-7">CUS 2007</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 79 (2).png" alt="David Anderson"
+                      class="h-[22px] w-[22px] rounded object-cover" />David Anderson</div>
+                </td>
+                <td class="px-4">Commercial</td>
+                <td class="px-4">anupaul56@gmail.com</td>
+                <td class="px-4">9745775670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#aab6ff] px-3 py-1.5 text-[11px] font-medium text-black">Inquiry</span>
+                </td>
+                <td class="px-4">Rs.44,7860</td>
+                <td class="px-4">Jan 9,2018</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+              <tr class="h-[50px] border-b border-gray-100">
+                <td class="px-7">CUS 2008</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 82 (1).png" alt="Lisa Taylor"
+                      class="h-[22px] w-[22px] rounded object-cover" />Lisa Taylor</div>
+                </td>
+                <td class="px-4">Commercial</td>
+                <td class="px-4">anupaul56@gmail.com</td>
+                <td class="px-4">9745775670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#aab6ff] px-3 py-1.5 text-[11px] font-medium text-black">Inquiry</span>
+                </td>
+                <td class="px-4">Rs.44,7860</td>
+                <td class="px-4">Jan 9,2018</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+              <tr class="h-[50px] border-b border-gray-100">
+                <td class="px-7">CUS 2009</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 82.png" alt="Christopher Gomez"
+                      class="h-[22px] w-[22px] rounded object-cover" />Christopher Gomez</div>
+                </td>
+                <td class="px-4">Commercial</td>
+                <td class="px-4">anupaul56@gmail.com</td>
+                <td class="px-4">9745775670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#aab6ff] px-3 py-1.5 text-[11px] font-medium text-black">Inquiry</span>
+                </td>
+                <td class="px-4">Rs.44,7860</td>
+                <td class="px-4">Jan 9,2018</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+              <tr class="h-[50px] border-b border-gray-100">
+                <td class="px-7">CUS 2010</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 82 (1).png" alt="Patricia Garcia"
+                      class="h-[22px] w-[22px] rounded object-cover" />Patricia Garcia</div>
+                </td>
+                <td class="px-4">Commercial</td>
+                <td class="px-4">anupaul56@gmail.com</td>
+                <td class="px-4">9745775670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#aab6ff] px-3 py-1.5 text-[11px] font-medium text-black">Inquiry</span>
+                </td>
+                <td class="px-4">Rs.44,7860</td>
+                <td class="px-4">Jan 9,2018</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+              <tr class="h-[50px]">
+                <td class="px-7">CUS 2011</td>
+                <td class="px-4">
+                  <div class="flex items-center gap-4"><img src="image/Rectangle 81 (2).png" alt="Anu Paul"
+                      class="h-[22px] w-[22px] rounded object-cover" />Anu Paul</div>
+                </td>
+                <td class="px-4">Commercial</td>
+                <td class="px-4">anupaul56@gmail.com</td>
+                <td class="px-4">9745775670</td>
+                <td class="px-4"><span
+                    class="inline-flex min-w-[85px] justify-center rounded-lg bg-[#aab6ff] px-3 py-1.5 text-[11px] font-medium text-black">Inquiry</span>
+                </td>
+                <td class="px-4">Rs.44,7860</td>
+                <td class="px-4">Jan 9,2018</td>
+                <td class="px-4">
+                  <div class="flex gap-3"><button class="text-[#70c74f] cursor-pointer" aria-label="Edit"><i
+                        class="fa-solid fa-pen-to-square text-[15px]" aria-hidden="true"></i></button><button
+                      class="text-[#ff5a4e] cursor-pointer" aria-label="Delete"><i class="fa-solid fa-trash text-[15px]"
+                        aria-hidden="true"></i></button></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px] text-[#232323]">
+          <p class="rounded border border-[#d0d0d0] px-2 py-1.5 text-[12px]">Showing 1-4 out of 16 result</p>
+          <div class="flex items-center gap-2">
+            <button
+              class="rounded border border-dashed border-[#777] px-2.5 py-1.5 text-[11px] font-medium cursor-pointer">Prev.</button>
+            <button
+              class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#17205d] text-white text-[12px] cursor-pointer">1</button>
+            <button
+              class="flex h-7 w-7 items-center justify-center rounded-lg border border-[#8c8c8c] text-[#17205d] text-[12px] cursor-pointer">2</button>
+            <button
+              class="rounded border border-dashed border-[#777] px-2.5 py-1.5 text-[11px] font-medium cursor-pointer">Next</button>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

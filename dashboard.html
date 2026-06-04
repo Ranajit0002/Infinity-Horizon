@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body
+    class="bg-gray-50 font-sans antialiased h-screen flex flex-col lg:flex-row overflow-hidden relative"
+  >
+    <header
+      class="bg-[#161a2b] p-4 flex items-center justify-between lg:hidden shadow-md z-40 shrink-0"
+    >
+      <button
+        id="menu-toggle"
+        class="text-2xl focus:outline-none text-white hover:text-[#DAA520] transition-colors"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html">
+        <img
+          src="assets/images/logo.png"
+          alt="Logo"
+          class="h-8 object-contain"
+        />
+      </a>
+    </header>
+
+    <aside
+      id="sidebar"
+      class="bg-[#161a2b] text-gray-300 w-64 h-full fixed inset-y-0 left-0 lg:relative lg:translate-x-0 -translate-x-full z-50 flex flex-col p-6 shadow-xl shrink-0"
+    >
+      <div class="flex items-center justify-between mb-10">
+        <div class="flex items-center w-full justify-center">
+          <a href="index.html" class="w-[74px] h-[92px]">
+            <img
+              src="assets/images/logo.png"
+              alt="Infinity Horizon Logo"
+              class="object-cover"
+          /></a>
+        </div>
+        <button
+          id="menu-close"
+          class="text-2xl lg:hidden focus:outline-none text-gray-400 hover:text-white absolute right-4 top-6"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <nav class="flex-1 space-y-2 overflow-y-auto hide-scrollbar">
+        <a
+          href="dashboard.html"
+          class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl bg-white text-[#161a2b] shadow-sm transition-colors font-bold"
+        >
+          <i class="fas fa-th-large text-lg w-5 text-center"></i>
+          <span class="text-sm">Dashboard</span>
+        </a>
+        <a
+          href="inquiry.html"
+          class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl hover:bg-white/10 hover:text-white transition-colors"
+        >
+          <i class="fas fa-headset text-lg w-5 text-center"></i>
+          <span class="font-medium text-sm">Customer Inquiry</span>
+        </a>
+        <a
+          href="manage-properties.html"
+          class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl hover:bg-white/10 hover:text-white transition-colors"
+        >
+          <i class="fas fa-building text-lg w-5 text-center"></i>
+          <span class="font-medium text-sm">Manage Properties</span>
+        </a>
+        <a
+          href="chats.html"
+          class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl hover:bg-white/10 hover:text-white transition-colors"
+        >
+          <i class="fas fa-comments text-lg w-5 text-center"></i>
+          <span class="font-medium text-sm">Chats</span>
+        </a>
+      </nav>
+
+      <div class="mt-6 space-y-4">
+        <div class="bg-white p-4 rounded-xl flex items-center gap-3 shadow-md">
+          <img
+            src="assets/images/agent-1.jpg"
+            alt="Sneha Paul"
+            class="w-12 h-12 rounded-xl object-cover"
+          />
+          <div class="overflow-hidden">
+            <p class="font-bold text-[#161a2b] text-sm truncate">Sneha Paul</p>
+            <p class="text-xs text-[#161a2b] font-medium opacity-80 truncate">
+              Agent
+            </p>
+          </div>
+        </div>
+        <button
+          class="w-full flex items-center justify-center gap-2 bg-white/10 text-gray-300 py-3 rounded-xl hover:bg-white/20 hover:text-white transition-colors font-medium text-sm"
+        >
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </button>
+      </div>
+    </aside>
+
+    <main
+      class="flex-1 h-full overflow-y-auto bg-[#f4f7f6] relative w-full custom-scrollbar"
+    >
+      <div
+        class="mx-auto max-w-[1320px] flex flex-col p-4 md:p-6 lg:p-8 min-h-full"
+      >
+        <header
+          class="sticky top-0 z-30 bg-[#f4f7f6] py-2 mb-6 flex items-center justify-between gap-4"
+        >
+          <div class="flex items-center gap-3 min-w-0 flex-1">
+            <h1
+              class="text-xl md:text-2xl lg:text-3xl font-extrabold text-[#161a2b] truncate"
+            >
+              Dashboard
+            </h1>
+          </div>
+
+          <div
+            class="flex items-center gap-2 md:gap-4 bg-white/50 backdrop-blur-sm p-1.5 rounded-full shadow-sm shrink-0"
+          >
+            <button
+              class="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300 transition"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+
+            <button
+              class="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300 transition relative"
+            >
+              <i class="fas fa-bell"></i>
+            </button>
+            <img
+              src="assets/images/agent-1.jpg"
+              alt="User Profile"
+              class="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover border border-gray-200 cursor-pointer ml-1"
+            />
+          </div>
+        </header>
+
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4"
+        >
+          <h2 class="text-xl font-bold text-[#161a2b] shrink-0">Overview</h2>
+
+          <button
+            onclick="openScheduleModal()"
+            class="bg-[#161a2b] text-white px-5 py-2.5 rounded-lg text-sm font-semibold shadow-sm flex items-center gap-2 hover:bg-[#2c3454] hover:shadow transition-colors duration-300"
+          >
+            <i class="far fa-calendar-check text-base"></i> Book Schedules
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div
+            class="bg-[#2b487c] text-white rounded-2xl p-6 shadow-lg flex justify-between items-center transition-transform hover:-translate-y-1 duration-300"
+          >
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-wider mb-2 text-white/90 font-sans"
+              >
+                TOTAL INQUIRIES
+              </p>
+              <h3 class="text-4xl font-bold mb-4 font-sans">28</h3>
+              <a
+                href="inquiry.html"
+                class="text-sm font-medium underline underline-offset-4 hover:text-gray-300 transition"
+                >View Inquiries</a
+              >
+            </div>
+            <div>
+              <i class="far fa-calendar-alt text-[56px] text-white"></i>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#e29100] text-white rounded-2xl p-6 shadow-lg flex justify-between items-center transition-transform hover:-translate-y-1 duration-300"
+          >
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-wider mb-2 text-white/90 font-sans"
+              >
+                TOTAL PROPERTY SOLD
+              </p>
+              <h3 class="text-4xl font-bold mb-4 font-sans">15</h3>
+              <p class="text-sm font-medium text-white/95">
+                65% Conversion Rate
+              </p>
+            </div>
+            <div><i class="fas fa-history text-[56px] text-white"></i></div>
+          </div>
+
+          <div
+            class="bg-[#394a6b] text-white rounded-2xl p-6 shadow-lg flex justify-between items-center transition-transform hover:-translate-y-1 duration-300"
+          >
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-wider mb-2 text-white/90 font-sans"
+              >
+                TOTAL PROPERTY AVAILABLE
+              </p>
+              <h3 class="text-4xl font-bold mb-4 font-sans">8</h3>
+              <a
+                href="#"
+                class="text-sm font-medium underline underline-offset-4 hover:text-gray-300 transition"
+                >Manage Listings</a
+              >
+            </div>
+            <div><i class="far fa-heart text-[56px] text-white"></i></div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col lg:flex-row gap-6 h-[1000px] lg:h-[500px] mb-6"
+        >
+          <div
+            class="flex-1 bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden"
+          >
+            <div
+              class="p-6 pb-2 shrink-0 border-b border-dashed border-gray-200 mb-2"
+            >
+              <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold font-serif text-gray-900">
+                  My Properties
+                </h2>
+                <span
+                  class="bg-[#fef3c7] text-[#92400e] text-xs font-bold px-3 py-1.5 rounded-full"
+                  >4 Active Listings</span
+                >
+              </div>
+            </div>
+
+            <div class="flex-1 overflow-y-auto p-6 pt-2 custom-scrollbar">
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                <!-- Property Card 1 -->
+                <div
+                  class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div class="relative h-44">
+                    <img
+                      src="assets/images/property-box-img-1.png"
+                      alt="Duplex House"
+                      class="w-full h-full object-cover"
+                    />
+                    <span
+                      class="absolute top-3 left-3 bg-[#10b981] text-white text-[10px] tracking-wide font-bold px-3 py-1.5 rounded"
+                      >AVAILABLE</span
+                    >
+                  </div>
+                  <div class="p-4">
+                    <div class="flex justify-between items-start mb-1">
+                      <h4 class="font-bold text-gray-900 text-[17px]">
+                        Duplex House
+                      </h4>
+                      <span class="text-[11px] font-bold text-gray-500 mt-1"
+                        >2BHK</span
+                      >
+                    </div>
+                    <p class="text-xs text-gray-500 mb-4">
+                      <i class="fas fa-map-marker-alt text-gray-400 mr-1.5"></i>
+                      Barasat, Chapadali More
+                    </p>
+
+                    <div class="flex justify-between items-end mb-4">
+                      <div>
+                        <p
+                          class="text-[10px] text-gray-400 uppercase font-semibold mb-0.5"
+                        >
+                          Status
+                        </p>
+                        <p class="text-[13px] font-medium text-gray-800">
+                          Ready To Move
+                        </p>
+                      </div>
+                      <div class="text-right">
+                        <p
+                          class="text-[10px] text-gray-400 uppercase font-semibold mb-0.5"
+                        >
+                          Value
+                        </p>
+                        <p class="text-[19px] font-extrabold text-[#161a2b]">
+                          45L
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex justify-between items-center pt-4 border-t border-gray-100"
+                    >
+                      <span class="text-[13px] font-semibold text-gray-600"
+                        >Sq.FT - 800</span
+                      >
+                      <button
+                        class="bg-[#161a2b] hover:bg-gray-800 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors"
+                      >
+                        Get Quote
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div
+                  class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div class="relative h-44">
+                    <img
+                      src="assets/images/property-box-img-2.png"
+                      alt="Luxury Apartments"
+                      class="w-full h-full object-cover"
+                    />
+                    <span
+                      class="absolute top-3 left-3 bg-[#10b981] text-white text-[10px] tracking-wide font-bold px-3 py-1.5 rounded"
+                      >AVAILABLE</span
+                    >
+                  </div>
+                  <div class="p-4">
+                    <div class="flex justify-between items-start mb-1">
+                      <h4 class="font-bold text-gray-900 text-[17px]">
+                        Luxury Apartments
+                      </h4>
+                      <span class="text-[11px] font-bold text-gray-500 mt-1"
+                        >3BHK</span
+                      >
+                    </div>
+                    <p class="text-xs text-gray-500 mb-4">
+                      <i class="fas fa-map-marker-alt text-gray-400 mr-1.5"></i>
+                      Barasat, Colony More
+                    </p>
+
+                    <div class="flex justify-between items-end mb-4">
+                      <div>
+                        <p
+                          class="text-[10px] text-gray-400 uppercase font-semibold mb-0.5"
+                        >
+                          Status
+                        </p>
+                        <p class="text-[13px] font-medium text-gray-800">
+                          Under Construction
+                        </p>
+                      </div>
+                      <div class="text-right">
+                        <p
+                          class="text-[10px] text-gray-400 uppercase font-semibold mb-0.5"
+                        >
+                          Value
+                        </p>
+                        <p class="text-[19px] font-extrabold text-[#161a2b]">
+                          50L
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex justify-between items-center pt-4 border-t border-gray-100"
+                    >
+                      <span class="text-[13px] font-semibold text-gray-600"
+                        >Sq.FT - 1200</span
+                      >
+                      <button
+                        class="bg-[#161a2b] hover:bg-gray-800 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors"
+                      >
+                        Get Quote
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div
+                  class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div class="relative h-44">
+                    <img
+                      src="assets/images/property-box-img-3.png"
+                      alt="Modern Villa"
+                      class="w-full h-full object-cover"
+                    />
+                    <span
+                      class="absolute top-3 left-3 bg-[#4f46e5] text-white text-[10px] tracking-wide font-bold px-3 py-1.5 rounded"
+                      >SOLD</span
+                    >
+                  </div>
+                  <div class="p-4">
+                    <div class="flex justify-between items-start mb-1">
+                      <h4 class="font-bold text-gray-900 text-[17px]">
+                        Modern Villa
+                      </h4>
+                      <span class="text-[11px] font-bold text-gray-500 mt-1"
+                        >4BHK</span
+                      >
+                    </div>
+                    <p class="text-xs text-gray-500 mb-4">
+                      <i class="fas fa-map-marker-alt text-gray-400 mr-1.5"></i>
+                      Newtown, Action Area 1
+                    </p>
+
+                    <div class="flex justify-between items-end mb-4">
+                      <div>
+                        <p
+                          class="text-[10px] text-gray-400 uppercase font-semibold mb-0.5"
+                        >
+                          Status
+                        </p>
+                        <p class="text-[13px] font-medium text-gray-800">
+                          Sold (May 2026)
+                        </p>
+                      </div>
+                      <div class="text-right">
+                        <p
+                          class="text-[10px] text-gray-400 uppercase font-semibold mb-0.5"
+                        >
+                          Sale Price
+                        </p>
+                        <p class="text-[19px] font-extrabold text-[#4f46e5]">
+                          1.2 Cr
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex justify-between items-center pt-4 border-t border-gray-100"
+                    >
+                      <span class="text-[13px] font-semibold text-gray-600"
+                        >Sq.FT - 2200</span
+                      >
+                      <button
+                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-bold px-4 py-2 rounded-lg transition-colors"
+                      >
+                        Get Quote
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Property Card 4 -->
+                <div
+                  class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div class="relative h-44">
+                    <img
+                      src="assets/images/property-box-img-4.png"
+                      alt="Cozy Penthouse"
+                      class="w-full h-full object-cover"
+                    />
+                    <span
+                      class="absolute top-3 left-3 bg-[#4f46e5] text-white text-[10px] tracking-wide font-bold px-3 py-1.5 rounded"
+                      >SOLD</span
+                    >
+                  </div>
+                  <div class="p-4">
+                    <div class="flex justify-between items-start mb-1">
+                      <h4 class="font-bold text-gray-900 text-[17px]">
+                        Cozy Penthouse
+                      </h4>
+                      <span class="text-[11px] font-bold text-gray-500 mt-1"
+                        >3BHK</span
+                      >
+                    </div>
+                    <p class="text-xs text-gray-500 mb-4">
+                      <i class="fas fa-map-marker-alt text-gray-400 mr-1.5"></i>
+                      Salt Lake, Sector 5
+                    </p>
+
+                    <div class="flex justify-between items-end mb-4">
+                      <div>
+                        <p
+                          class="text-[10px] text-gray-400 uppercase font-semibold mb-0.5"
+                        >
+                          Status
+                        </p>
+                        <p class="text-[13px] font-medium text-gray-800">
+                          Sold (April 2026)
+                        </p>
+                      </div>
+                      <div class="text-right">
+                        <p
+                          class="text-[10px] text-gray-400 uppercase font-semibold mb-0.5"
+                        >
+                          Sale Price
+                        </p>
+                        <p class="text-[19px] font-extrabold text-[#4f46e5]">
+                          85L
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex justify-between items-center pt-4 border-t border-gray-100"
+                    >
+                      <span class="text-[13px] font-semibold text-gray-600"
+                        >Sq.FT - 1600</span
+                      >
+                      <button
+                        class="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-bold px-4 py-2 rounded-lg transition-colors"
+                      >
+                        Get Quote
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="w-full lg:w-[350px] xl:w-[400px] bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col shrink-0"
+          >
+            <div class="p-6 pb-4 border-b border-dashed border-gray-200">
+              <h2 class="text-2xl font-bold font-serif text-gray-900">
+                Portfolio Chart
+              </h2>
+              <p class="text-sm font-medium text-gray-500 mt-1">
+                Property Status Breakdown
+              </p>
+            </div>
+
+            <div
+              class="flex-1 flex flex-col items-center justify-center p-6 relative"
+            >
+              <div class="mb-10 mt-4 relative w-56 h-56 animate-chart">
+                <div
+                  class="absolute inset-0 m-auto w-[150px] h-[150px] bg-white rounded-full shadow-[inset_0_4px_6px_-1px_rgba(0,0,0,0.1)] pointer-events-none z-0"
+                ></div>
+
+                <svg
+                  viewBox="0 0 36 36"
+                  class="w-full h-full transform -rotate-90 z-10 relative overflow-visible drop-shadow-md"
+                >
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="15.91549431"
+                    fill="transparent"
+                    stroke="#f1f5f9"
+                    stroke-width="4"
+                  ></circle>
+
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="15.91549431"
+                    fill="transparent"
+                    stroke="#4f46e5"
+                    stroke-width="4"
+                    stroke-dasharray="63 37"
+                    stroke-dashoffset="0"
+                    class="transition-all duration-300 cursor-pointer hover:stroke-[5] hover:drop-shadow-lg"
+                    onmouseover="showChartTooltip(event, 'Sold', 15, '#4f46e5')"
+                    onmousemove="moveChartTooltip(event)"
+                    onmouseout="hideChartTooltip()"
+                  ></circle>
+
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="15.91549431"
+                    fill="transparent"
+                    stroke="#10b981"
+                    stroke-width="4"
+                    stroke-dasharray="33 67"
+                    stroke-dashoffset="-65"
+                    class="transition-all duration-300 cursor-pointer hover:stroke-[5] hover:drop-shadow-lg"
+                    onmouseover="
+                      showChartTooltip(event, 'Available', 8, '#10b981')
+                    "
+                    onmousemove="moveChartTooltip(event)"
+                    onmouseout="hideChartTooltip()"
+                  ></circle>
+                </svg>
+              </div>
+
+              <div
+                id="chart-tooltip"
+                class="fixed hidden bg-[#161a2b]/95 backdrop-blur-sm text-white text-xs px-4 py-2.5 rounded-lg shadow-xl pointer-events-none z-[100] whitespace-nowrap border border-gray-700 transition-opacity duration-200"
+              >
+                <span id="tooltip-text" class="text-gray-200"></span>
+                <div
+                  class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[#161a2b]/95 border-b border-r border-gray-700 rotate-45"
+                ></div>
+              </div>
+
+              <div class="w-full space-y-4 px-2">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="block w-4 h-4 rounded-full bg-[#10b981] shadow-sm"
+                    ></span>
+                    <span class="text-sm font-bold text-gray-700"
+                      >Total Property Available</span
+                    >
+                  </div>
+                  <span class="text-sm font-bold text-gray-900"
+                    >8 Listings</span
+                  >
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="block w-4 h-4 rounded-full bg-[#4f46e5] shadow-sm"
+                    ></span>
+                    <span class="text-sm font-bold text-gray-700"
+                      >Total Property Sold</span
+                    >
+                  </div>
+                  <span class="text-sm font-bold text-gray-900"
+                    >15 Listings</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full lg:w-[60%] bg-blue-50/50 border border-blue-100 rounded-xl p-3 flex items-center gap-3 shadow-sm mb-4"
+        >
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="relative flex h-3 w-3">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"
+              ></span>
+            </span>
+            <span class="font-bold text-[#161a2b] text-sm"
+              >Recent Activity :</span
+            >
+          </div>
+          <div class="flex-1 overflow-hidden">
+            <p
+              id="activity-ticker"
+              class="text-sm font-medium text-gray-600 fade-in truncate"
+            >
+              Rahul Sharma booked a schedule for Sunset View Villa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="mobile-overlay"
+      class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"
+    ></div>
+
+    <div id="schedule-modal" class="fixed inset-0 z-[60] hidden">
+      <div
+        class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+        onclick="closeScheduleModal()"
+      ></div>
+      <div
+        class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0"
+      >
+        <div
+          id="schedule-modal-panel"
+          class="relative bg-white rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:max-w-lg w-full modal-exit duration-300"
+        >
+          <div
+            class="bg-gray-50 px-6 py-4 border-b border-gray-100 flex justify-between items-center"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-[#161a2b]/10 flex items-center justify-center text-[#161a2b]"
+              >
+                <i class="far fa-calendar-plus text-lg"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">Book New Schedule</h3>
+            </div>
+            <button
+              onclick="closeScheduleModal()"
+              class="text-gray-400 hover:text-red-500 transition-colors focus:outline-none p-1"
+            >
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+
+          <form id="schedule-form" onsubmit="submitScheduleForm(event)">
+            <div class="px-6 py-6 space-y-5">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5"
+                  >Client Name <span class="text-red-500">*</span></label
+                >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                  >
+                    <i class="far fa-user text-gray-400"></i>
+                  </div>
+                  <input
+                    type="text"
+                    required
+                    class="w-full bg-gray-50 border border-gray-200 rounded-xl py-2.5 pl-10 pr-4 text-sm focus:bg-white focus:ring-2 focus:ring-[#161a2b] focus:border-transparent outline-none transition-all"
+                    placeholder="e.g. Rahul Sharma"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5"
+                  >Interested Property
+                  <span class="text-red-500">*</span></label
+                >
+                <select
+                  required
+                  class="w-full bg-gray-50 border border-gray-200 rounded-xl py-2.5 px-3 text-sm focus:bg-white focus:ring-2 focus:ring-[#161a2b] focus:border-transparent outline-none transition-all cursor-pointer"
+                >
+                  <option value="" disabled selected>Select a Property</option>
+                  <option>Sunset View Villa</option>
+                  <option>Imperial Estate</option>
+                  <option>Downtown Office Space</option>
+                  <option>Green Valley Apartment</option>
+                </select>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 mb-1.5"
+                    >Visit Date <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="date"
+                    required
+                    class="w-full bg-gray-50 border border-gray-200 rounded-xl py-2.5 px-4 text-sm focus:bg-white focus:ring-2 focus:ring-[#161a2b] focus:border-transparent outline-none transition-all text-gray-700"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 mb-1.5"
+                    >Time Slot <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="time"
+                    required
+                    class="w-full bg-gray-50 border border-gray-200 rounded-xl py-2.5 px-4 text-sm focus:bg-white focus:ring-2 focus:ring-[#161a2b] focus:border-transparent outline-none transition-all text-gray-700"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-gray-50 px-6 py-4 border-t border-gray-100 flex justify-end gap-3 rounded-b-2xl"
+            >
+              <button
+                type="button"
+                onclick="closeScheduleModal()"
+                class="px-5 py-2.5 bg-white border border-gray-300 rounded-xl text-sm font-bold text-gray-700 hover:bg-gray-100 transition-colors shadow-sm"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="px-6 py-2.5 bg-[#161a2b] rounded-xl text-sm font-bold text-white hover:bg-[#252c47] transition-all shadow-md hover:shadow-lg flex items-center gap-2"
+              >
+                <i class="fas fa-check"></i> Confirm Booking
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="toast"
+      class="fixed bottom-8 left-1/2 -translate-x-1/2 lg:left-auto lg:right-8 lg:translate-x-0 z-[70] flex items-center p-4 space-x-3 w-max max-w-xs text-gray-500 bg-white rounded-lg shadow-2xl border-l-4 toast-exit transition-all duration-300 ease-in-out pointer-events-none"
+      role="alert"
+    >
+      <div
+        id="toast-icon"
+        class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg"
+      >
+        <i class="fas fa-check"></i>
+      </div>
+      <div id="toast-message" class="ml-3 text-sm font-semibold text-gray-800">
+        Action Successful
+      </div>
+    </div>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const menuToggle = document.getElementById("menu-toggle");
+      const menuClose = document.getElementById("menu-close");
+      const overlay = document.getElementById("mobile-overlay");
+
+      function toggleSidebar() {
+        sidebar.classList.toggle("-translate-x-full");
+        overlay.classList.toggle("hidden");
+      }
+
+      menuToggle.addEventListener("click", toggleSidebar);
+      menuClose.addEventListener("click", toggleSidebar);
+      overlay.addEventListener("click", toggleSidebar);
+
+      const activities = [
+        "Rahul Sharma booked a schedule for Sunset View Villa.",
+        "Payment received for Imperial Estate (Token Amount).",
+        "Snehas Roy canceled the site visit for Downtown Office.",
+        "New inquiry received from Ananya Paul for 3BHK Apartment.",
+        "Property 'Green Valley' status updated to Sold.",
+      ];
+
+      let currentActivityIndex = 0;
+      const tickerElement = document.getElementById("activity-ticker");
+
+      setInterval(() => {
+        tickerElement.classList.remove("fade-in");
+        tickerElement.classList.add("fade-out");
+
+        setTimeout(() => {
+          currentActivityIndex = (currentActivityIndex + 1) % activities.length;
+          tickerElement.innerText = activities[currentActivityIndex];
+
+          tickerElement.classList.remove("fade-out");
+          tickerElement.classList.add("fade-in");
+        }, 500);
+      }, 2500);
+
+      const tooltip = document.getElementById("chart-tooltip");
+      const tooltipText = document.getElementById("tooltip-text");
+
+      window.showChartTooltip = function (e, label, count, color) {
+        tooltipText.innerHTML = `<span style="color: ${color}; font-weight: 700;">${label}:</span> <span class="font-bold">${count}</span> Properties`;
+        tooltip.style.left = e.clientX + "px";
+        tooltip.style.top = e.clientY - 45 + "px";
+        tooltip.classList.remove("hidden");
+      };
+
+      window.moveChartTooltip = function (e) {
+        tooltip.style.left = e.clientX + "px";
+        tooltip.style.top = e.clientY - 45 + "px";
+      };
+
+      window.hideChartTooltip = function () {
+        tooltip.classList.add("hidden");
+      };
+
+      const scheduleModal = document.getElementById("schedule-modal");
+      const scheduleModalPanel = document.getElementById(
+        "schedule-modal-panel",
+      );
+
+      window.openScheduleModal = function () {
+        scheduleModal.classList.remove("hidden");
+        setTimeout(() => {
+          scheduleModalPanel.classList.remove("modal-exit");
+          scheduleModalPanel.classList.add("modal-enter");
+        }, 10);
+      };
+
+      window.closeScheduleModal = function () {
+        scheduleModalPanel.classList.remove("modal-enter");
+        scheduleModalPanel.classList.add("modal-exit");
+        setTimeout(() => {
+          scheduleModal.classList.add("hidden");
+          document.getElementById("schedule-form").reset();
+        }, 300);
+      };
+
+      window.submitScheduleForm = function (event) {
+        event.preventDefault();
+        closeScheduleModal();
+        setTimeout(() => {
+          showToast("Schedule booked successfully!", "Success");
+        }, 300);
+      };
+
+      let toastTimeout;
+      window.showToast = function (message, type) {
+        const toast = document.getElementById("toast");
+        const toastMsg = document.getElementById("toast-message");
+        const toastIcon = document.getElementById("toast-icon");
+
+        toast.className =
+          "fixed bottom-8 left-1/2 -translate-x-1/2 lg:left-auto lg:right-8 lg:translate-x-0 z-[70] flex items-center p-4 space-x-3 w-max max-w-xs bg-white rounded-xl shadow-2xl border-l-4 transition-all duration-300 ease-in-out";
+        toastIcon.className =
+          "inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg text-white shadow-sm";
+        toastMsg.innerText = message;
+
+        if (type === "Success") {
+          toast.classList.add("border-[#161a2b]");
+          toastIcon.classList.add("bg-[#161a2b]");
+          toastIcon.innerHTML = '<i class="fas fa-check"></i>';
+        }
+
+        toast.classList.remove("toast-exit", "pointer-events-none");
+        toast.classList.add("toast-enter");
+
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove("toast-enter");
+          toast.classList.add("toast-exit", "pointer-events-none");
+        }, 3000);
+      };
+    </script>
+  </body>
+</html>

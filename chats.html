@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chats</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-gray-50 font-sans antialiased h-screen flex flex-col lg:flex-row overflow-hidden">
+  <header class="bg-[#161a2b] p-4 flex items-center justify-between lg:hidden shadow-md z-40 shrink-0">
+    <button id="menu-toggle" class="text-2xl focus:outline-none text-white hover:text-[#DAA520] transition-colors mr-4">
+      <i class="fas fa-bars"></i>
+    </button>
+    <a href="index.html">
+      <img src="assets/images/logo.png" alt="Logo" class="h-8 object-contain" /></a>
+  </header>
+
+  <aside id="sidebar"
+    class="bg-[#161a2b] text-gray-300 w-64 h-full fixed inset-y-0 left-0 lg:relative lg:translate-x-0 -translate-x-full z-50 flex flex-col p-6 shadow-xl shrink-0">
+    <div class="flex items-center justify-between mb-10">
+      <div class="flex items-center w-full justify-center">
+        <a href="index.html" class="w-[74px] h-[92px]">
+          <img src="assets/images/logo.png" alt="Infinity Horizon Logo" class="object-cover" /></a>
+      </div>
+      <button id="menu-close"
+        class="text-2xl lg:hidden focus:outline-none text-gray-400 hover:text-white absolute right-4 top-6">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <nav class="flex-1 space-y-2 overflow-y-auto hide-scrollbar">
+      <a href="dashboard.html"
+        class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl hover:bg-white/10 hover:text-white transition-colors">
+        <i class="fas fa-th-large text-lg w-5 text-center"></i>
+        <span class="font-medium text-sm">Dashboard</span>
+      </a>
+
+      <a href="inquiry.html"
+        class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl hover:bg-white/10 hover:text-white transition-colors">
+        <i class="fas fa-headset text-lg w-5 text-center"></i>
+        <span class="font-medium text-sm">Customer Inquiry</span>
+      </a>
+
+      <a href="manage-properties.html"
+        class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl hover:bg-white/10 hover:text-white transition-colors">
+        <i class="fas fa-building text-lg w-5 text-center"></i>
+        <span class="font-medium text-sm">Manage Properties</span>
+      </a>
+
+      <a href="chats.html"
+        class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl bg-white text-[#161a2b] shadow-sm transition-colors font-bold">
+        <i class="fas fa-comments text-lg w-5 text-center"></i>
+        <span class="text-sm">Chats</span>
+      </a>
+    </nav>
+
+    <div class="mt-6 space-y-4">
+      <div class="bg-white p-4 rounded-xl flex items-center gap-3 shadow-md">
+        <img src="assets/images/agent-1.jpg" alt="Sneha Paul" class="w-12 h-12 rounded-xl object-cover" />
+        <div class="overflow-hidden">
+          <p class="font-bold text-[#161a2b] text-sm truncate">Sneha Paul</p>
+          <p class="text-xs text-[#161a2b] font-medium opacity-80 truncate">
+            Agent
+          </p>
+        </div>
+      </div>
+
+      <button
+        class="w-full flex items-center justify-center gap-2 bg-white/10 text-gray-300 py-3 rounded-xl hover:bg-white/20 hover:text-white transition-colors font-medium text-sm">
+        <i class="fas fa-sign-out-alt"></i>
+        Logout
+      </button>
+    </div>
+  </aside>
+
+  <main class="flex-1 h-full overflow-y-auto bg-[#f4f7f6] relative w-full">
+    <div class="mx-auto max-w-[1320px] flex flex-col p-4 md:p-6 lg:p-8 min-h-full">
+      <header class="sticky top-0 z-20 bg-[#f4f7f6] py-2 mb-4 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <h1 class="text-2xl md:text-3xl font-extrabold text-[#161a2b]">
+            Chats
+          </h1>
+        </div>
+
+        <div class="flex items-center gap-3 md:gap-4 bg-white/50 backdrop-blur-sm p-1.5 rounded-full shadow-sm">
+          <button
+            class="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300 transition">
+            <i class="fas fa-search"></i>
+          </button>
+
+          <button
+            class="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300 transition relative">
+            <i class="fas fa-bell"></i>
+          </button>
+          <img src="assets/images/agent-1.jpg" alt="User Profile"
+            class="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover border border-gray-200 cursor-pointer ml-1" />
+        </div>
+      </header>
+
+      <h2 class="text-xl font-bold text-[#161a2b] mb-4 shrink-0">Default</h2>
+
+      <div class="flex-1 flex flex-col-reverse lg:flex-row gap-6 pb-6 overflow-visible lg:overflow-hidden">
+        <div
+          class="w-full lg:w-[350px] h-[350px] lg:h-full bg-white rounded-2xl shadow-sm border border-gray-100 p-4 lg:p-5 flex flex-col shrink-0">
+          <div class="relative mb-4 shrink-0">
+            <input type="text" placeholder="Search for..."
+              class="w-full bg-white border border-gray-300 rounded-lg py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-[#161a2b] focus:border-[#161a2b] outline-none transition" />
+            <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          </div>
+          <div class="flex-1 space-y-2 overflow-y-auto pr-1">
+            <div class="flex items-center gap-3 p-3 rounded-lg cursor-pointer relative">
+              <div class="relative shrink-0">
+                <img src="assets/images/chat-person-1.jpg" alt="Sabuj Bera" class="w-10 h-10 rounded-md object-cover" />
+                <span
+                  class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-500 ring-2 ring-white"></span>
+              </div>
+              <div class="flex-1 overflow-hidden">
+                <p class="font-semibold text-gray-800 text-sm">Sabuj Bera</p>
+                <p class="text-xs text-gray-500 truncate">
+                  Hello, how are you?
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer relative">
+              <div class="relative shrink-0">
+                <img src="assets/images/chat-person-2.jpg" alt="Snehas Roy" class="w-10 h-10 rounded-md object-cover" />
+                <span
+                  class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-500 ring-2 ring-white"></span>
+              </div>
+              <div class="flex-1 overflow-hidden">
+                <p class="font-semibold text-gray-800 text-sm">Snehas Roy</p>
+                <p class="text-xs text-gray-400 truncate">
+                  No further questions.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+              <div class="relative shrink-0">
+                <img src="assets/images/chat-person-3.jpg" alt="Suraj Sing" class="w-10 h-10 rounded-md object-cover" />
+              </div>
+              <div class="flex-1 overflow-hidden">
+                <p class="font-semibold text-gray-800 text-sm">Suraj Sing</p>
+                <p class="text-xs text-gray-400 truncate">
+                  I will share the meeting minutes...
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+              <div class="relative shrink-0">
+                <img src="assets/images/chat-person-4.jpg" alt="Anu Paul" class="w-10 h-10 rounded-md object-cover" />
+              </div>
+              <div class="flex-1 overflow-hidden">
+                <p class="font-semibold text-gray-800 text-sm">Anu Paul</p>
+                <p class="text-xs text-gray-400 truncate">
+                  Sure I can help with ...
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 rounded-lg cursor-pointer relative">
+              <div class="relative shrink-0">
+                <img src="assets/images/chat-person-1.jpg" alt="Sabuj Bera" class="w-10 h-10 rounded-md object-cover" />
+                <span
+                  class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-500 ring-2 ring-white"></span>
+              </div>
+              <div class="flex-1 overflow-hidden">
+                <p class="font-semibold text-gray-800 text-sm">Sabuj Bera</p>
+                <p class="text-xs text-gray-500 truncate">
+                  Hello, how are you?
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer relative">
+              <div class="relative shrink-0">
+                <img src="assets/images/chat-person-2.jpg" alt="Snehas Roy" class="w-10 h-10 rounded-md object-cover" />
+                <span
+                  class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-500 ring-2 ring-white"></span>
+              </div>
+              <div class="flex-1 overflow-hidden">
+                <p class="font-semibold text-gray-800 text-sm">Snehas Roy</p>
+                <p class="text-xs text-gray-400 truncate">
+                  No further questions.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+              <div class="relative shrink-0">
+                <img src="assets/images/chat-person-3.jpg" alt="Suraj Sing" class="w-10 h-10 rounded-md object-cover" />
+              </div>
+              <div class="flex-1 overflow-hidden">
+                <p class="font-semibold text-gray-800 text-sm">Suraj Sing</p>
+                <p class="text-xs text-gray-400 truncate">
+                  I will share the meeting minutes...
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+              <div class="relative shrink-0">
+                <img src="assets/images/chat-person-4.jpg" alt="Anu Paul" class="w-10 h-10 rounded-md object-cover" />
+              </div>
+              <div class="flex-1 overflow-hidden">
+                <p class="font-semibold text-gray-800 text-sm">Anu Paul</p>
+                <p class="text-xs text-gray-400 truncate">
+                  Sure I can help with ...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full lg:flex-1 h-[570px] bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden relative">
+          <div class="flex items-center justify-between p-4 border-b border-gray-100 bg-white z-10 shrink-0">
+            <div class="flex items-center gap-3">
+              <div class="relative shrink-0">
+                <img src="assets/images/chat-person-1.jpg" alt="Sabuj Bera" class="w-10 h-10 rounded-md object-cover" />
+                <span
+                  class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-500 ring-2 ring-white"></span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">Sabuj Bera</p>
+                <p class="text-xs text-gray-500">Last seen 2hr</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-gray-600">
+              <button class="hover:text-[#161a2b] transition text-lg">
+                <i class="fas fa-phone-alt"></i>
+              </button>
+              <button class="hover:text-[#161a2b] transition text-lg">
+                <i class="fas fa-video"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-1 p-4 overflow-y-auto bg-white space-y-6">
+            <div class="flex flex-col items-end gap-1">
+              <div
+                class="w-full max-w-[90%] md:max-w-xl bg-[#dcdfe3] text-gray-800 p-4 rounded-xl rounded-tr-sm text-sm">
+                We need a new website that allows users to create accounts,
+                browse products, and make purchases. Can you provide a rough
+                timeline and cost estimate?
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <img src="assets/images/chat-person-1.jpg" alt="Sabuj Bera"
+                class="w-6 h-6 rounded-md object-cover shrink-0" />
+              <span class="text-xs text-gray-500">Today, 9:59 AM</span>
+            </div>
+
+            <div class="flex flex-col items-start gap-1">
+              <div
+                class="w-full max-w-[90%] md:max-w-xl bg-[#dcdfe3] text-gray-800 p-4 rounded-xl rounded-tl-sm text-sm">
+                Sure, we can help with that. To provide an accurate estimate,
+                we'll need more details on the features you want. Let's
+                schedule a call this week to discuss the specifics, such as
+                the types of products, payment methods, and any design
+                preferences
+              </div>
+              <div class="w-full max-w-[90%] md:max-w-xl flex justify-end items-center gap-2 mt-1">
+                <span class="text-xs text-gray-500">Today, 9:59 AM</span>
+                <div class="relative shrink-0">
+                  <img src="assets/images/chat-person-5.png" alt="Sabuj Bera" class="w-5 h-5 rounded-md object-cover" />
+                  <span
+                    class="absolute bottom-0 right-0 block h-2 w-2 rounded-full bg-green-500 ring-2 ring-white"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 bg-white border-t border-gray-100 shrink-0">
+            <div class="border border-gray-300 rounded-xl p-1.5 md:p-2 flex items-center gap-2 bg-white">
+              <button class="p-2 text-gray-400 hover:text-indigo-600 transition">
+                <i class="fas fa-chart-bar"></i>
+              </button>
+              <input type="text" placeholder="Type something"
+                class="flex-1 bg-transparent text-sm text-gray-800 outline-none px-2 min-w-0" />
+              <div class="flex items-center gap-1 md:gap-2">
+                <button class="p-2 text-green-500 hover:text-green-600 transition">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+                <button class="p-2 text-gray-500 hover:text-gray-700 transition hidden sm:block">
+                  <i class="far fa-image"></i>
+                </button>
+                <button class="p-2 text-gray-500 hover:text-gray-700 transition hidden sm:block">
+                  <i class="far fa-smile"></i>
+                </button>
+                <button class="p-2 text-gray-500 hover:text-gray-700 transition">
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Properties</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body
+    class="bg-gray-50 font-sans antialiased h-screen flex flex-col lg:flex-row overflow-hidden relative"
+  >
+    <header
+      class="bg-[#161a2b] p-4 flex items-center justify-between lg:hidden shadow-md z-40 shrink-0"
+    >
+      <button
+        id="menu-toggle"
+        class="text-2xl focus:outline-none text-white hover:text-[#DAA520] transition-colors"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html">
+        <img
+          src="assets/images/logo.png"
+          alt="Infinity Horizon Logo"
+          class="h-8 object-contain"
+        />
+      </a>
+    </header>
+
+    <aside
+      id="sidebar"
+      class="bg-[#161a2b] text-gray-300 w-64 h-full fixed inset-y-0 left-0 lg:relative lg:translate-x-0 -translate-x-full z-50 flex flex-col p-6 shadow-xl shrink-0"
+    >
+      <div class="flex items-center justify-between mb-10">
+        <div class="flex items-center w-full justify-center">
+          <a href="index.html" class="w-[74px] h-[92px]">
+            <img
+              src="assets/images/logo.png"
+              alt="Infinity Horizon Logo"
+              class="object-cover"
+          /></a>
+        </div>
+        <button
+          id="menu-close"
+          class="text-2xl lg:hidden focus:outline-none text-gray-400 hover:text-white absolute right-4 top-6"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <nav class="flex-1 space-y-2 overflow-y-auto hide-scrollbar">
+        <a
+          href="dashboard.html"
+          class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl hover:bg-white/10 hover:text-white transition-colors"
+        >
+          <i class="fas fa-th-large text-lg w-5 text-center"></i>
+          <span class="font-medium text-sm">Dashboard</span>
+        </a>
+
+        <a
+          href="inquiry.html"
+          class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl hover:bg-white/10 hover:text-white transition-colors"
+        >
+          <i class="fas fa-headset text-lg w-5 text-center"></i>
+          <span class="font-medium text-sm">Customer Inquiry</span>
+        </a>
+
+        <a
+          href="manage-properties.html"
+          class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl bg-white text-[#161a2b] shadow-sm transition-colors font-bold"
+        >
+          <i class="fas fa-building text-lg w-5 text-center"></i>
+          <span class="text-sm">Manage Properties</span>
+        </a>
+
+        <a
+          href="chats.html"
+          class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl hover:bg-white/10 hover:text-white transition-colors"
+        >
+          <i class="fas fa-comments text-lg w-5 text-center"></i>
+          <span class="font-medium text-sm">Chats</span>
+        </a>
+      </nav>
+
+      <div class="mt-6 space-y-4">
+        <div class="bg-white p-4 rounded-xl flex items-center gap-3 shadow-md">
+          <img
+            src="assets/images/agent-1.jpg"
+            alt="Sneha Paul"
+            class="w-12 h-12 rounded-xl object-cover"
+          />
+          <div class="overflow-hidden">
+            <p class="font-bold text-[#161a2b] text-sm truncate">Sneha Paul</p>
+            <p class="text-xs text-[#161a2b] font-medium opacity-80 truncate">
+              Agent
+            </p>
+          </div>
+        </div>
+        <button
+          class="w-full flex items-center justify-center gap-2 bg-white/10 text-gray-300 py-3 rounded-xl hover:bg-white/20 hover:text-white transition-colors font-medium text-sm"
+        >
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </button>
+      </div>
+    </aside>
+
+    <main class="flex-1 h-full overflow-y-auto bg-[#f4f7f6] relative w-full">
+      <div
+        class="mx-auto max-w-[1320px] flex flex-col p-4 md:p-6 lg:p-8 min-h-full"
+      >
+        <header
+          class="sticky top-0 z-30 bg-[#f4f7f6] py-2 mb-6 flex items-center justify-between gap-4"
+        >
+          <div class="flex items-center gap-3 min-w-0 flex-1">
+            <h1
+              class="text-xl md:text-2xl lg:text-3xl font-extrabold text-[#161a2b] truncate"
+            >
+              Manage Properties
+            </h1>
+          </div>
+
+          <div
+            class="flex items-center gap-2 md:gap-4 bg-white/50 backdrop-blur-sm p-1.5 rounded-full shadow-sm shrink-0"
+          >
+            <button
+              class="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300 transition"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+
+            <button
+              class="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300 transition relative"
+            >
+              <i class="fas fa-bell"></i>
+            </button>
+            <img
+              src="assets/images/agent-1.jpg"
+              alt="User Profile"
+              class="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover border border-gray-200 cursor-pointer ml-1"
+            />
+          </div>
+        </header>
+
+        <div
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 md:p-6 flex flex-col relative z-10 mb-6"
+        >
+          <div
+            class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-4"
+          >
+            <h3 class="font-bold text-gray-800 text-lg">Property List</h3>
+            <button
+              onclick="openModal('add')"
+              class="bg-[#161a2b] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors shadow-md flex items-center gap-2 shrink-0"
+            >
+              <i class="fas fa-plus"></i> Add Property
+            </button>
+          </div>
+
+          <div
+            class="overflow-x-auto w-full relative hide-scrollbar border rounded-xl"
+          >
+            <table
+              class="w-full text-sm text-left whitespace-nowrap min-w-[900px]"
+            >
+              <thead class="text-white bg-[#161a2b]">
+                <tr>
+                  <th class="px-5 py-4 font-medium rounded-tl-xl">
+                    Property Name
+                  </th>
+                  <th class="px-5 py-4 font-medium">Type</th>
+                  <th class="px-5 py-4 font-medium">Location</th>
+                  <th class="px-5 py-4 font-medium">Price</th>
+                  <th class="px-5 py-4 font-medium">Status</th>
+                  <th class="px-5 py-4 font-medium text-center rounded-tr-xl">
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="property-table-body" class="text-gray-600"></tbody>
+            </table>
+          </div>
+
+          <div
+            class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600 border-t border-gray-100 pt-5"
+          >
+            <span
+              class="font-semibold text-gray-800 text-center w-full sm:w-auto"
+            >
+              Page
+              <span id="current-page-display" class="text-[#161a2b]">1</span> of
+              <span id="total-pages-display">2</span>
+            </span>
+            <div
+              class="flex items-center gap-4 w-full sm:w-auto justify-center sm:justify-end"
+            >
+              <button
+                id="btn-prev"
+                onclick="changePage(currentPage - 1)"
+                class="px-4 py-2 font-semibold bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-[#161a2b] transition disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <i class="fas fa-chevron-left mr-1 text-xs"></i> Prev
+              </button>
+              <button
+                id="btn-next"
+                onclick="changePage(currentPage + 1)"
+                class="px-4 py-2 font-semibold bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-[#161a2b] transition disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Next <i class="fas fa-chevron-right ml-1 text-xs"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="mobile-overlay"
+      class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"
+    ></div>
+
+    <div id="property-modal" class="fixed inset-0 z-[60] hidden">
+      <div
+        class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+        onclick="closeModal()"
+      ></div>
+
+      <div
+        class="flex items-center justify-center min-h-screen p-4 text-center sm:p-0"
+      >
+        <div
+          id="modal-panel"
+          class="relative bg-white rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:max-w-2xl w-full modal-exit duration-300 flex flex-col"
+        >
+          <div
+            class="bg-gray-50 px-6 py-4 border-b border-gray-100 flex justify-between items-center"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-[#161a2b]/10 flex items-center justify-center text-[#161a2b]"
+              >
+                <i id="modal-icon" class="fas fa-building text-lg"></i>
+              </div>
+              <h3 id="modal-title" class="text-xl font-bold text-gray-900">
+                Add New Property
+              </h3>
+            </div>
+            <button
+              onclick="closeModal()"
+              class="text-gray-400 hover:text-red-500 transition-colors focus:outline-none p-1"
+            >
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+
+          <form
+            id="property-form"
+            onsubmit="submitForm(event)"
+            class="flex flex-col flex-1"
+          >
+            <input type="hidden" id="form-id" />
+
+            <div class="modal-body p-4 sm:p-6 space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 mb-1.5"
+                    >Title <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="form-name"
+                    placeholder="2BHK Apartment"
+                    required
+                    class="w-full bg-white border border-gray-300 rounded-xl py-2.5 px-4 text-sm focus:ring-2 focus:ring-[#161a2b] outline-none transition-all"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 mb-1.5"
+                    >Price (₹) <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="number"
+                    id="form-price"
+                    placeholder="7800000"
+                    required
+                    class="w-full bg-white border border-gray-300 rounded-xl py-2.5 px-4 text-sm focus:ring-2 focus:ring-[#161a2b] outline-none transition-all"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5"
+                  >Description</label
+                >
+                <textarea
+                  id="form-desc"
+                  rows="3"
+                  placeholder="Near metro station, ready to move."
+                  class="w-full bg-white border border-gray-300 rounded-xl py-2.5 px-4 text-sm focus:ring-2 focus:ring-[#161a2b] outline-none transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 mb-1.5"
+                    >Address</label
+                  >
+                  <input
+                    type="text"
+                    id="form-location"
+                    placeholder="Kolkata, India"
+                    class="w-full bg-white border border-gray-300 rounded-xl py-2.5 px-4 text-sm focus:ring-2 focus:ring-[#161a2b] outline-none transition-all"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 mb-1.5"
+                    >BHK Type</label
+                  >
+                  <select
+                    id="form-bhk"
+                    class="w-full bg-white border border-gray-300 rounded-xl py-2.5 px-4 text-sm focus:ring-2 focus:ring-[#161a2b] outline-none transition-all cursor-pointer"
+                  >
+                    <option value="" disabled selected>Select BHK</option>
+                    <option value="1BHK">1BHK</option>
+                    <option value="2BHK">2BHK</option>
+                    <option value="3BHK">3BHK</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 mb-1.5"
+                    >Sq.FT</label
+                  >
+                  <input
+                    type="number"
+                    id="form-sqft"
+                    placeholder="1200"
+                    class="w-full bg-white border border-gray-300 rounded-xl py-2.5 px-4 text-sm focus:ring-2 focus:ring-[#161a2b] outline-none transition-all"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 mb-1.5"
+                    >Apartment Type</label
+                  >
+                  <select
+                    id="form-apt-type"
+                    class="w-full bg-white border border-gray-300 rounded-xl py-2.5 px-4 text-sm focus:ring-2 focus:ring-[#161a2b] outline-none transition-all cursor-pointer"
+                  >
+                    <option value="" disabled selected>Select Type</option>
+                    <option value="Rent House">Rent House</option>
+                    <option value="Apartment">Apartment</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 mb-1.5"
+                    >Property Type <span class="text-red-500">*</span></label
+                  >
+                  <select
+                    id="form-type"
+                    required
+                    class="w-full bg-white border border-gray-300 rounded-xl py-2.5 px-4 text-sm focus:ring-2 focus:ring-[#161a2b] outline-none transition-all cursor-pointer"
+                  >
+                    <option value="" disabled selected>Select Property</option>
+                    <option value="Home">Home</option>
+                    <option value="Office">Office</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Rental">Rental</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-semibold text-gray-700 mb-1.5"
+                    >Project Status <span class="text-red-500">*</span></label
+                  >
+                  <select
+                    id="form-status"
+                    required
+                    class="w-full bg-white border border-gray-300 rounded-xl py-2.5 px-4 text-sm focus:ring-2 focus:ring-[#161a2b] outline-none transition-all cursor-pointer"
+                  >
+                    <option value="" disabled selected>Select Status</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Ongoing">Ongoing</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1.5"
+                  >Image (optional)</label
+                >
+                <label
+                  for="file-upload"
+                  class="flex flex-col items-center justify-center w-full h-28 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer hover:border-[#161a2b] hover:bg-gray-50 transition-all"
+                >
+                  <i
+                    class="fas fa-cloud-upload-alt text-2xl text-gray-400 mb-2"
+                  ></i>
+                  <span
+                    id="file-text"
+                    class="text-sm text-gray-500 font-medium text-center px-2"
+                    >Click to upload or drag and drop</span
+                  >
+                  <span class="text-xs text-gray-400 mt-1"
+                    >PNG, JPG up to 5MB</span
+                  >
+                  <input
+                    id="file-upload"
+                    type="file"
+                    class="hidden"
+                    onchange="
+                      document.getElementById('file-text').innerText =
+                        'Selected: ' + this.files[0].name
+                    "
+                  />
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="bg-gray-50 px-4 sm:px-6 py-4 border-t border-gray-100 flex flex-col sm:flex-row justify-end gap-3 sm:gap-4 mt-auto shrink-0"
+            >
+              <button
+                type="button"
+                onclick="closeModal()"
+                class="w-full sm:w-auto px-5 py-2.5 bg-white border border-gray-300 rounded-xl text-sm font-bold text-gray-700 hover:bg-gray-100 transition-colors shadow-sm"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full sm:w-auto px-6 py-2.5 bg-[#161a2b] rounded-xl text-sm font-bold text-white hover:bg-[#252c47] transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+              >
+                <i id="btn-icon" class="fas fa-save"></i>
+                <span id="btn-text">Save Property</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="toast"
+      class="fixed bottom-8 left-1/2 -translate-x-1/2 lg:left-auto lg:right-8 lg:translate-x-0 z-[70] flex items-center p-4 space-x-3 w-max max-w-xs text-gray-500 bg-white rounded-lg shadow-2xl border-l-4 toast-exit transition-all duration-300 ease-in-out pointer-events-none"
+      role="alert"
+    >
+      <div
+        id="toast-icon"
+        class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg"
+      >
+        <i class="fas fa-check"></i>
+      </div>
+      <div id="toast-message" class="ml-3 text-sm font-semibold text-gray-800">
+        Action Successful
+      </div>
+    </div>
+
+    <!-- JS Starts -->
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const menuToggle = document.getElementById("menu-toggle");
+      const menuClose = document.getElementById("menu-close");
+      const overlay = document.getElementById("mobile-overlay");
+
+      function toggleSidebar() {
+        sidebar.classList.toggle("-translate-x-full");
+        overlay.classList.toggle("hidden");
+      }
+      menuToggle.addEventListener("click", toggleSidebar);
+      menuClose.addEventListener("click", toggleSidebar);
+      overlay.addEventListener("click", toggleSidebar);
+
+      const propertyTypes = [
+        "Villa",
+        "Apartment",
+        "Home",
+        "Office",
+        "Rent House",
+        "Rental",
+      ];
+      const locations = [
+        "Kolkata",
+        "Salt Lake",
+        "New Town",
+        "Rajarhat",
+        "Ballygunge",
+        "Howrah",
+      ];
+      const statuses = ["Ongoing", "Completed", "Ongoing", "Completed"];
+      const propertyNames = [
+        "Sunset View",
+        "Green Valley",
+        "Ocean Breeze",
+        "Skyline Tower",
+        "Imperial Estate",
+      ];
+
+      let propertiesData = Array.from({ length: 20 }, (_, i) => ({
+        id: `PRP-${1000 + i}`,
+        name: `${propertyNames[i % 5]} ${i + 1}`,
+        type: propertyTypes[i % 5],
+        location: locations[i % 6],
+        price: `₹${Math.floor(Math.random() * 80 + 20)},00,000`,
+        status: statuses[i % 4],
+      }));
+
+      let currentPage = 1;
+      const itemsPerPage = 10;
+      let totalPages = Math.ceil(propertiesData.length / itemsPerPage);
+
+      function getStatusBadge(status) {
+        if (status === "Ongoing")
+          return '<span class="px-3 py-1 rounded-md bg-red-50 border border-red-200 text-red-700 text-xs font-bold">Ongoing</span>';
+        if (status === "Completed")
+          return '<span class="px-3 py-1 rounded-md bg-green-50 border border-green-200 text-green-700 text-xs font-bold">Completed</span>';
+        return `<span class="px-3 py-1 rounded-md bg-gray-50 border border-gray-200 text-gray-700 text-xs font-bold">${status}</span>`;
+      }
+
+      function renderTable() {
+        const tableBody = document.getElementById("property-table-body");
+        tableBody.innerHTML = "";
+
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const currentItems = propertiesData.slice(startIndex, endIndex);
+
+        currentItems.forEach((item) => {
+          const tr = document.createElement("tr");
+          tr.className =
+            "hover:bg-gray-50/80 transition border-b border-gray-50 last:border-0";
+
+          tr.innerHTML = `
+                    <td class="px-5 py-4 font-bold text-[#161a2b]">${item.name}</td>
+                    <td class="px-5 py-4 text-gray-600 font-medium">${item.type}</td>
+                    <td class="px-5 py-4 text-gray-600 font-medium"><i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>${item.location}</td>
+                    <td class="px-5 py-4 font-bold text-gray-800">${item.price}</td>
+                    <td class="px-5 py-4">${getStatusBadge(item.status)}</td>
+                    <td class="px-5 py-4 text-center">
+                        <div class="flex items-center justify-center gap-3">
+                            <button onclick="openModal('edit', '${item.id}')" class="w-8 h-8 rounded bg-blue-50 text-blue-600 hover:bg-blue-100 transition flex items-center justify-center" title="Edit Property">
+                                <i class="fas fa-edit text-sm"></i>
+                            </button>
+                            <button onclick="deleteProperty('${item.id}')" class="w-8 h-8 rounded bg-red-50 text-red-600 hover:bg-red-100 transition flex items-center justify-center" title="Delete Property">
+                                <i class="fas fa-trash text-sm"></i>
+                            </button>
+                        </div>
+                    </td>
+                `;
+          tableBody.appendChild(tr);
+        });
+
+        updatePagination();
+      }
+
+      function updatePagination() {
+        totalPages = Math.ceil(propertiesData.length / itemsPerPage);
+        if (totalPages === 0) totalPages = 1;
+
+        document.getElementById("current-page-display").innerText = currentPage;
+        document.getElementById("total-pages-display").innerText = totalPages;
+
+        document.getElementById("btn-prev").disabled = currentPage <= 1;
+        document.getElementById("btn-next").disabled =
+          currentPage >= totalPages;
+      }
+
+      window.changePage = function (page) {
+        if (page >= 1 && page <= totalPages) {
+          currentPage = page;
+          renderTable();
+        }
+      };
+
+      window.deleteProperty = function (id) {
+        if (confirm("Are you sure you want to delete this property?")) {
+          const index = propertiesData.findIndex((p) => p.id === id);
+          if (index > -1) {
+            const propName = propertiesData[index].name;
+            propertiesData.splice(index, 1);
+
+            totalPages = Math.ceil(propertiesData.length / itemsPerPage);
+            if (currentPage > totalPages && totalPages > 0)
+              currentPage = totalPages;
+
+            renderTable();
+            showToast(`Deleted "${propName}" successfully!`, "Deleted");
+          }
+        }
+      };
+
+      let currentMode = "add";
+
+      window.openModal = function (mode, id = null) {
+        currentMode = mode;
+        const form = document.getElementById("property-form");
+        form.reset();
+        document.getElementById("file-text").innerText =
+          "Click to upload or drag and drop";
+
+        const title = document.getElementById("modal-title");
+        const icon = document.getElementById("modal-icon");
+        const btnText = document.getElementById("btn-text");
+        const btnIcon = document.getElementById("btn-icon");
+
+        if (mode === "add") {
+          title.innerText = "Add New Property";
+          icon.className = "fas fa-building text-lg";
+          btnText.innerText = "Save Property";
+          btnIcon.className = "fas fa-save";
+          document.getElementById("form-id").value = "";
+        } else if (mode === "edit") {
+          title.innerText = "Edit Property";
+          icon.className = "fas fa-edit text-lg";
+          btnText.innerText = "Update Property";
+          btnIcon.className = "fas fa-sync-alt";
+
+          const prop = propertiesData.find((p) => p.id === id);
+          if (prop) {
+            document.getElementById("form-id").value = prop.id;
+            document.getElementById("form-name").value = prop.name;
+            document.getElementById("form-type").value = prop.type;
+
+            const statusSelect = document.getElementById("form-status");
+            if (
+              [...statusSelect.options].some((opt) => opt.value === prop.status)
+            ) {
+              statusSelect.value = prop.status;
+            }
+            document.getElementById("form-location").value =
+              prop.location || "";
+            const rawPrice = prop.price.replace(/[^0-9]/g, "");
+            document.getElementById("form-price").value = rawPrice;
+          }
+        }
+
+        const modal = document.getElementById("property-modal");
+        const modalPanel = document.getElementById("modal-panel");
+        modal.classList.remove("hidden");
+        setTimeout(() => {
+          modalPanel.classList.remove("modal-exit");
+          modalPanel.classList.add("modal-enter");
+        }, 10);
+      };
+
+      window.closeModal = function () {
+        const modal = document.getElementById("property-modal");
+        const modalPanel = document.getElementById("modal-panel");
+        modalPanel.classList.remove("modal-enter");
+        modalPanel.classList.add("modal-exit");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+        }, 300);
+      };
+
+      window.submitForm = function (event) {
+        event.preventDefault();
+
+        const id = document.getElementById("form-id").value;
+        const name = document.getElementById("form-name").value;
+        const type = document.getElementById("form-type").value;
+        const status = document.getElementById("form-status").value;
+        const location =
+          document.getElementById("form-location").value || "N/A";
+        const price = document.getElementById("form-price").value;
+
+        const formattedPrice = "₹" + Number(price).toLocaleString("en-IN");
+
+        if (currentMode === "add") {
+          const newId = `PRP-${Math.floor(Math.random() * 9000) + 1000}`;
+          propertiesData.unshift({
+            id: newId,
+            name: name,
+            type: type,
+            location: location,
+            price: formattedPrice,
+            status: status,
+          });
+          currentPage = 1;
+          showToast("New Property added successfully!", "Success");
+        } else if (currentMode === "edit") {
+          const index = propertiesData.findIndex((p) => p.id === id);
+          if (index > -1) {
+            propertiesData[index].name = name;
+            propertiesData[index].type = type;
+            propertiesData[index].status = status;
+            propertiesData[index].location = location;
+            propertiesData[index].price = formattedPrice;
+          }
+          showToast("Property updated successfully!", "Edit");
+        }
+
+        renderTable();
+        closeModal();
+      };
+
+      let toastTimeout;
+      window.showToast = function (message, type) {
+        const toast = document.getElementById("toast");
+        const toastMsg = document.getElementById("toast-message");
+        const toastIcon = document.getElementById("toast-icon");
+
+        toast.className =
+          "fixed bottom-8 left-1/2 -translate-x-1/2 lg:left-auto lg:right-8 lg:translate-x-0 z-[70] flex items-center p-4 space-x-3 w-max max-w-xs bg-white rounded-xl shadow-2xl border-l-4 transition-all duration-300 ease-in-out";
+        toastIcon.className =
+          "inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg text-white shadow-sm";
+        toastMsg.innerText = message;
+
+        if (type === "Success" || type === "Edit") {
+          toast.classList.add("border-[#161a2b]");
+          toastIcon.classList.add("bg-[#161a2b]");
+          toastIcon.innerHTML =
+            type === "Edit"
+              ? '<i class="fas fa-sync-alt"></i>'
+              : '<i class="fas fa-check"></i>';
+        } else if (type === "Deleted") {
+          toast.classList.add("border-red-500");
+          toastIcon.classList.add("bg-red-500");
+          toastIcon.innerHTML = '<i class="fas fa-trash"></i>';
+        }
+
+        toast.classList.remove("toast-exit", "pointer-events-none");
+        toast.classList.add("toast-enter");
+
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove("toast-enter");
+          toast.classList.add("toast-exit", "pointer-events-none");
+        }, 3000);
+      };
+
+      renderTable();
+    </script>
+  </body>
+</html>

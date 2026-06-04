@@ -1,0 +1,1260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assests/images/Properties-images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assests/css/cmn-style.css" />
+    <link rel="stylesheet" href="assests/css/contacts/style.css" />
+  </head>
+  <body class="text-white antialiased">
+    <!-- Header With Nav Starts -->
+    <div
+      class="relative w-full h-[50vh] min-h-[400px] bg-cover bg-center bg-no-repeat flex flex-col"
+      style="background-image: url(assests/images/contacts-images/banner.png)"
+    >
+      <!-- <div class="absolute inset-0 bg-black/30"></div> -->
+
+      <header class="relative z-40 w-full pt-4 md:pt-6 pb-2">
+        <div class="max-w-[1320px] mx-auto px-4 md:px-6">
+          <nav class="flex items-center justify-between w-full h-16">
+            <div class="flex-1 flex justify-start">
+              <a href="index.html" class="inline-block">
+                <img
+                  src="assests/images/index/logo.png"
+                  alt="Logo"
+                  class="w-[74px] h-[92px] object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <div
+              class="hidden lg:flex flex-none items-center gap-6 backdrop-blur-xl border-2 border-white/50 rounded-full px-6 py-1"
+            >
+              <a
+                href="index.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Home</a
+              >
+              <a
+                href="about.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >About US</a
+              >
+
+              <div class="relative group cursor-pointer">
+                <a
+                  href="properties.html"
+                  id="desktop-properties-btn"
+                  class="flex items-center py-2.5 text-sm text-white transition"
+                >
+                  <span
+                    class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                    >Properties</span
+                  >
+                  <span
+                    class="ml-1.5 text-[10px] text-white group-hover:text-[#facc15] inline-block transition-transform duration-300 group-hover:-rotate-180"
+                    ><i class="fa-solid fa-angle-down"></i
+                  ></span>
+                </a>
+
+                <div
+                  id="desktop-properties-dropdown"
+                  class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-50 backdrop-blur-md rounded-t-sm rounded-b-2xl border border-[#facc15] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden"
+                >
+                  <ul class="py-2">
+                    <li>
+                      <a
+                        href="properties.html"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >All Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Buy Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Rent Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Sell Properties</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <a
+                href="services.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Services</a
+              >
+              <a
+                href="blogs.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Blogs</a
+              >
+            </div>
+
+            <div class="hidden lg:flex flex-1 items-center justify-end gap-3">
+              <a
+                href="#"
+                aria-label="Favorite"
+                class="group inline-flex items-center justify-center w-11 h-11 rounded-full bg-slate-900 border-2 border-transparent transition-all duration-300 ease-in-out hover:border-red-500 hover:bg-white"
+              >
+                <i
+                  class="fa-regular fa-heart text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-red-500"
+                ></i>
+              </a>
+              <a
+                href="login.html"
+                aria-label="Favorite"
+                class="group inline-flex items-center justify-center w-11 h-11 rounded-full bg-slate-900 border-2 border-transparent transition-all duration-300 ease-in-out hover:border-[#0F172A] hover:bg-white"
+              >
+                <i
+                  class="fa-regular fa-user text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-[#0F172A]"
+                ></i>
+              </a>
+
+              <a
+                href="contacts.html"
+                class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]"
+              >
+                <span class="text-sm font-medium whitespace-nowrap"
+                  >Contact Us</span
+                >
+
+                <div
+                  class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]"
+                >
+                  <i
+                    class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"
+                  ></i>
+                </div>
+              </a>
+            </div>
+
+            <button
+              id="menu-btn"
+              class="lg:hidden text-white p-2 focus:outline-none z-50 relative ml-auto flex items-center justify-center"
+            >
+              <span id="icon-menu" class="text-3xl leading-none drop-shadow-md"
+                >&#9776;</span
+              >
+              <span
+                id="icon-close"
+                class="hidden text-3xl leading-none drop-shadow-md"
+                >&#10005;</span
+              >
+            </button>
+          </nav>
+        </div>
+        <div
+          id="menu-overlay"
+          class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 invisible"
+        ></div>
+
+        <div
+          id="mobile-menu"
+          class="fixed top-0 right-0 h-full w-[85%] max-w-[320px] backdrop-blur-md border-l border-white/40 z-50 translate-x-full overflow-y-auto"
+        >
+          <div
+            class="flex items-center justify-between p-6 border-b border-white/40"
+          >
+            <span class="text-white font-bold tracking-wider">
+              <a href="index.html" class="inline-block">
+                <img
+                  src="assests/images/index/logo.png"
+                  alt="Logo"
+                  class="w-[74px] h-[92px] object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </span>
+            <button
+              id="close-menu-btn"
+              class="text-gray-400 hover:text-white transition p-1 text-2xl leading-none"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <nav class="flex flex-col px-6 py-6 space-y-4">
+            <div>
+              <a
+                href="index.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Home</a
+              >
+            </div>
+            <div>
+              <a
+                href="about.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >About Us</a
+              >
+            </div>
+
+            <div class="flex flex-col group space-y-0">
+              <a
+                href="properties.html"
+                id="mobile-properties-btn"
+                class="text-white hover:text-[#facc15] text-lg font-semibold flex justify-between items-center w-full focus:outline-none transition"
+              >
+                <span class="nav-link">Properties</span>
+                <span
+                  id="mobile-properties-icon"
+                  class="inline-block transition-transform duration-300 text-sm"
+                  ><i class="fa-solid fa-angle-down"></i
+                ></span>
+              </a>
+              <div
+                id="mobile-properties-menu"
+                class="flex flex-col pl-4 mt-3 space-y-4"
+              >
+                <a
+                  href="properties.html"
+                  class="text-gray-300 hover:text-[#facc15] transition block pt-4"
+                  >All Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Buy Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Rent Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Sell Properties</a
+                >
+              </div>
+            </div>
+
+            <div>
+              <a
+                href="services.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Services</a
+              >
+            </div>
+            <div>
+              <a
+                href="blogs.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Blogs</a
+              >
+            </div>
+
+            <hr class="border-white/40 my-4" />
+
+            <div class="flex flex-col gap-4 mt-4">
+              <div class="flex gap-4 justify-center">
+                <a
+                  href="#"
+                  aria-label="Favorite"
+                  class="group inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 ease-in-out hover:border-red-500 hover:bg-white"
+                >
+                  <i
+                    class="fa-regular fa-heart text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-red-500"
+                  ></i>
+                </a>
+                <a
+                  href="login.html"
+                  aria-label="Favorite"
+                  class="group inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 ease-in-out hover:border-[#0F172A] hover:bg-white"
+                >
+                  <i
+                    class="fa-regular fa-user text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-[#0F172A]"
+                  ></i>
+                </a>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="contacts.html"
+                  class="group flex items-center justify-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border-2 border-white hover:border-[#0F172A]"
+                >
+                  <span class="text-sm font-medium whitespace-nowrap"
+                    >Contact Us</span
+                  >
+
+                  <div
+                    class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]"
+                  >
+                    <i
+                      class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"
+                    ></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div
+        class="relative z-10 flex-grow flex flex-col items-center justify-center text-center px-4"
+      >
+        <h1
+          class="text-white text-4xl sm:text-5xl md:text-7xl font-semibold mb-4 leading-tight"
+        >
+          Contacts Us
+        </h1>
+        <div
+          class="flex items-center gap-2 text-white/90 text-xs sm:text-sm md:text-base font-medium mt-2"
+        >
+          <a href="index.html" class="hover:text-yellow-400 transition">Home</a>
+          <span class="text-[10px] sm:text-xs"
+            ><i class="fa-solid fa-angle-right"></i
+          ></span>
+          <span class="text-white">Contacts Us</span>
+        </div>
+      </div>
+    </div>
+    <!-- Header With Nav Ends -->
+
+    <!-- Contact Info Section Starts -->
+    <section id="contact-info" class="bg-[#edf1f7] py-16 lg:py-[58px]">
+      <div class="max-w-[1320px] lg:max-w-[984px] mx-auto px-4 md:px-6">
+        <div class="text-center">
+          <h2
+            class="font-playfair text-[36px] sm:text-[44px] md:text-[52px] lg:text-[48px] leading-[0.95] lg:leading-none text-[#1e2330]"
+          >
+            Contact & Join Together
+          </h2>
+          <p
+            class="mt-4 text-[16px] lg:text-[11px] lg:leading-[1.25] text-gray-600 lg:text-[#1e2330] lg:max-w-[500px] lg:mx-auto"
+          >
+            Vivamus magna justo, lacinia eget consectetur sed, convallis at
+            tellus. Quisque velit nisi,pretium utlacinia,inementum id enim.
+          </p>
+        </div>
+
+        <div
+          class="mt-12 lg:mt-[70px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12"
+        >
+          <div
+            class="contact-card group bg-white border border-[#1a2848]/60 rounded-2xl lg:rounded-[14px] px-6 lg:px-4 py-7 lg:py-[18px] text-center min-h-[176px] lg:min-h-[154px] flex flex-col justify-center transition-all duration-[350ms] hover:-translate-y-[3px] hover:border-[#14244a] hover:bg-[#14244a] hover:shadow-[0_10px_20px_rgba(20,36,74,0.28)]"
+          >
+            <div
+              class="card-icon-wrap w-12 h-12 mx-auto rounded-full bg-[#14244a] flex items-center justify-center transition-all duration-[350ms] group-hover:bg-white"
+            >
+              <div class="image-wrap">
+                <img
+                  src="assests/images/contacts-images/office.png"
+                  alt="Office icon"
+                  class="w-8 h-8 transition-all duration-[350ms] group-hover:[filter:brightness(0)_saturate(100%)_invert(70%)_sepia(87%)_saturate(2211%)_hue-rotate(353deg)_brightness(101%)_contrast(98%)]"
+                />
+              </div>
+            </div>
+            <p
+              class="card-title mt-4 text-[20px] md:text-[24px] font-semibold text-[#1a2640] transition-all duration-[350ms] group-hover:text-white"
+            >
+              Visit in office
+            </p>
+            <p
+              class="card-copy mt-2 text-[16px] text-gray-600 transition-all duration-[350ms] group-hover:text-white"
+            >
+              West Bengal,Kolkata, India
+            </p>
+          </div>
+          <div
+            class="contact-card group bg-white border border-[#1a2848]/60 rounded-2xl lg:rounded-[14px] px-6 lg:px-4 py-7 lg:py-[18px] text-center min-h-[176px] lg:min-h-[154px] flex flex-col justify-center transition-all duration-[350ms] hover:-translate-y-[3px] hover:border-[#14244a] hover:bg-[#14244a] hover:shadow-[0_10px_20px_rgba(20,36,74,0.28)]"
+          >
+            <div
+              class="card-icon-wrap w-12 h-12 mx-auto rounded-full bg-[#14244a] flex items-center justify-center transition-all duration-[350ms] group-hover:bg-white"
+            >
+              <div class="image-wrap">
+                <img
+                  src="assests/images/contacts-images/clock.png"
+                  alt="Clock icon"
+                  class="w-8 h-8 transition-all duration-[350ms] group-hover:[filter:brightness(0)_saturate(100%)_invert(70%)_sepia(87%)_saturate(2211%)_hue-rotate(353deg)_brightness(101%)_contrast(98%)]"
+                />
+              </div>
+            </div>
+            <p
+              class="card-title mt-4 text-[20px] md:text-[24px] font-semibold text-[#1a2640] transition-all duration-[350ms] group-hover:text-white"
+            >
+              Office Hours
+            </p>
+            <p
+              class="card-copy mt-2 text-[16px] text-gray-600 transition-all duration-[350ms] group-hover:text-white"
+            >
+              Mon to Fri: 9am - 6pm
+            </p>
+          </div>
+          <div
+            class="contact-card group bg-white border border-[#1a2848]/60 rounded-2xl lg:rounded-[14px] px-6 lg:px-4 py-7 lg:py-[18px] text-center min-h-[176px] lg:min-h-[154px] flex flex-col justify-center transition-all duration-[350ms] hover:-translate-y-[3px] hover:border-[#14244a] hover:bg-[#14244a] hover:shadow-[0_10px_20px_rgba(20,36,74,0.28)]"
+          >
+            <div
+              class="card-icon-wrap w-12 h-12 mx-auto rounded-full bg-[#14244a] flex items-center justify-center transition-all duration-[350ms] group-hover:bg-white"
+            >
+              <div class="image-wrap">
+                <img
+                  src="assests/images/contacts-images/misscall.png"
+                  alt="Phone icon"
+                  class="w-8 h-8 transition-all duration-[350ms] group-hover:[filter:brightness(0)_saturate(100%)_invert(70%)_sepia(87%)_saturate(2211%)_hue-rotate(353deg)_brightness(101%)_contrast(98%)]"
+                />
+              </div>
+            </div>
+            <p
+              class="card-title mt-4 text-[20px] md:text-[24px] font-semibold text-[#1a2640] transition-all duration-[350ms] group-hover:text-white"
+            >
+              Call Us Now
+            </p>
+            <p
+              class="card-copy mt-2 text-[16px] text-gray-600 transition-all duration-[350ms] group-hover:text-white"
+            >
+              Get expert help in minutes
+            </p>
+          </div>
+          <div
+            class="contact-card group bg-white border border-[#1a2848]/60 rounded-2xl lg:rounded-[14px] px-6 lg:px-4 py-7 lg:py-[18px] text-center min-h-[176px] lg:min-h-[154px] flex flex-col justify-center transition-all duration-[350ms] hover:-translate-y-[3px] hover:border-[#14244a] hover:bg-[#14244a] hover:shadow-[0_10px_20px_rgba(20,36,74,0.28)]"
+          >
+            <div
+              class="card-icon-wrap w-12 h-12 mx-auto rounded-full bg-[#14244a] flex items-center justify-center transition-all duration-[350ms] group-hover:bg-white"
+            >
+              <div class="image-wrap">
+                <img
+                  src="assests/images/contacts-images/message.png"
+                  alt="Message icon"
+                  class="w-8 h-8 transition-all duration-[350ms] group-hover:[filter:brightness(0)_saturate(100%)_invert(70%)_sepia(87%)_saturate(2211%)_hue-rotate(353deg)_brightness(101%)_contrast(98%)]"
+                />
+              </div>
+            </div>
+            <p
+              class="card-title mt-4 text-[20px] md:text-[24px] font-semibold text-[#1a2640] transition-all duration-[350ms] group-hover:text-white"
+            >
+              Send Message
+            </p>
+            <p
+              class="card-copy mt-2 text-[16px] text-gray-600 transition-all duration-[350ms] group-hover:text-white"
+            >
+              Drop a line......
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Info Section Ends -->
+
+    <!-- Chat with us Section Starts -->
+    <section
+      id="contact-form"
+      class="bg-[#f6f7fa] lg:bg-white overflow-hidden pt-8 sm:pt-12 md:pt-26 lg:pt-20"
+    >
+      <div class="container max-w-[1320px] mx-auto px-4 sm:px-6">
+        <div
+          class="content grid lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 items-end"
+        >
+          <div
+            class="relative w-full flex flex-col items-center justify-end pt-4 lg:pt-32 xl:pt-40"
+          >
+            <div
+              class="relative z-[1] w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[460px] xl:max-w-[500px] flex flex-col items-center lg:block mx-auto lg:ml-auto lg:mr-4"
+            >
+              <div
+                class="relative lg:absolute z-20 lg:-top-[300px] lg:-left-[0] xl:-top-[350px] xl:-left-[0] w-full max-w-[250px] bg-white border border-[#1a2848] rounded-[22px] p-6 sm:p-8 text-center shadow-sm mb-8 lg:mb-0"
+              >
+                <div
+                  class="text-[#1a2848] inline-flex items-center justify-center mb-4"
+                >
+                  <img
+                    src="assests/images/contacts-images/headset.png"
+                    alt="Headset icon"
+                    class="w-10 h-10 object-contain"
+                  />
+                </div>
+                <p
+                  class="text-[20px] sm:text-[22px] leading-tight text-[#1b253d] font-serif font-semibold mb-3"
+                >
+                  Chat With Live!
+                </p>
+                <p
+                  class="text-[12px] sm:text-[13px] leading-relaxed text-gray-600 mb-6"
+                >
+                  One event with top speakers & trending topics. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block text-[13px] font-medium border border-[#9ca6ba] rounded-lg px-8 py-2.5 text-[#1b253d] hover:bg-[#1a2848] hover:text-white transition-colors duration-300"
+                >
+                  Lets Chat
+                </a>
+              </div>
+
+              <img
+                src="assests/images/contacts-images/women-pointing.png"
+                alt="Business advisor"
+                class="w-full object-contain relative z-[1]"
+              />
+            </div>
+          </div>
+
+          <div class="w-full max-w-[600px] mx-auto lg:mx-0 pb-0 lg:pb-8">
+            <span
+              class="text-sm tracking-widest text-[#1a2640] font-bold uppercase mb-3 block"
+              >CONTACT US</span
+            >
+            <h2
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-[#11212C] mb-8 sm:mb-10"
+            >
+              Reach & Get In Touch With Us
+            </h2>
+
+            <form class="space-y-4 sm:space-y-5">
+              <input
+                type="text"
+                placeholder="Your Name*"
+                class="w-full h-12 sm:h-14 rounded-xl border border-[#7f8faa] bg-transparent px-4 sm:px-5 text-sm sm:text-base text-[#4d5a73] outline-none transition-all duration-300 focus:border-[#14244a] focus:shadow-[0_0_0_3px_rgba(20,36,74,0.12)]"
+              />
+              <input
+                type="email"
+                placeholder="Your Email*"
+                class="w-full h-12 sm:h-14 rounded-xl border border-[#7f8faa] bg-transparent px-4 sm:px-5 text-sm sm:text-base text-[#4d5a73] outline-none transition-all duration-300 focus:border-[#14244a] focus:shadow-[0_0_0_3px_rgba(20,36,74,0.12)]"
+              />
+              <input
+                type="tel"
+                placeholder="Your ph No*"
+                class="w-full h-12 sm:h-14 rounded-xl border border-[#7f8faa] bg-transparent px-4 sm:px-5 text-sm sm:text-base text-[#4d5a73] outline-none transition-all duration-300 focus:border-[#14244a] focus:shadow-[0_0_0_3px_rgba(20,36,74,0.12)]"
+              />
+              <input
+                type="text"
+                placeholder="Your Subject*"
+                class="w-full h-12 sm:h-14 rounded-xl border border-[#7f8faa] bg-transparent px-4 sm:px-5 text-sm sm:text-base text-[#4d5a73] outline-none transition-all duration-300 focus:border-[#14244a] focus:shadow-[0_0_0_3px_rgba(20,36,74,0.12)]"
+              />
+              <textarea
+                placeholder="Enter Message"
+                class="w-full h-32 sm:h-40 rounded-xl border border-[#7f8faa] bg-transparent px-4 sm:px-5 py-3 sm:py-4 text-sm sm:text-base text-[#4d5a73] outline-none resize-none transition-all duration-300 focus:border-[#14244a] focus:shadow-[0_0_0_3px_rgba(20,36,74,0.12)]"
+              ></textarea>
+
+              <div class="pt-2 sm:pt-4 pb-8">
+                <a
+                  href="#"
+                  onclick="
+                    this.closest('form').submit();
+                    return false;
+                  "
+                  class="group inline-flex items-center justify-between min-w-[160px] sm:min-w-[180px] px-4 sm:px-5 py-2.5 sm:py-3 rounded-full bg-[#1a2848] text-white hover:bg-white hover:text-[#1a2848] border border-transparent hover:border-[#1a2848] transition-all duration-300 shadow-md"
+                >
+                  <span class="text-sm sm:text-base font-medium"
+                    >Send Message</span
+                  >
+                  <div
+                    class="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 ml-4 rounded-full bg-white group-hover:bg-[#1a2848] transition-colors duration-300"
+                  >
+                    <i
+                      class="fa-solid fa-arrow-right text-sm sm:text-base text-[#1a2848] -rotate-45 group-hover:text-white group-hover:rotate-0 transition-transform duration-300"
+                    ></i>
+                  </div>
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Chat with us Section Ends -->
+
+    <!-- Video ASection Starts -->
+    <section id="promo-video-section" class="w-full bg-[#f6f7fa]">
+      <div class="w-full mx-auto">
+        <div
+          id="promo-vid-wrapper"
+          class="relative w-full h-[70vh] overflow-hidden bg-black group cursor-pointer"
+        >
+          <video
+            id="promo-vid-element"
+            class="absolute inset-0 w-full h-full object-cover"
+            muted
+            playsinline
+            loop
+          >
+            <source src="assests/videos/video-test-3.mp4" type="video/mp4" />
+          </video>
+
+          <!-- Dark Overlay -->
+          <div
+            class="promo-overlay absolute inset-0 transition-colors duration-500 pointer-events-none group-hover:bg-black/40"
+          ></div>
+
+          <a
+            href="#"
+            id="promo-vid-trigger"
+            aria-label="Toggle promotional video"
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-white text-[#17294b] shadow-[0_8px_30px_rgb(0,0,0,0.15)] flex items-center justify-center transition-all duration-500 hover:scale-110 z-10"
+          >
+            <i
+              class="icon-play fa-solid fa-play text-xl md:text-2xl lg:text-3xl ml-1 lg:ml-2 absolute transition-all duration-500"
+            ></i>
+
+            <i
+              class="icon-pause fa-solid fa-pause text-xl md:text-2xl lg:text-3xl absolute transition-all duration-500"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Video Section Ends -->
+
+    <!-- FaqS Section Starts -->
+    <section
+      id="faq"
+      class="bg-[#edf1f7] py-16 md:py-24 max-md:pt-12 max-md:pb-[52px] lg:py-[66px]"
+    >
+      <div class="max-w-[1320px] lg:max-w-[984px] mx-auto px-4 md:px-6">
+        <div
+          class="grid lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1fr)] gap-12 max-md:gap-[34px] lg:gap-[72px] items-start"
+        >
+          <div class="faq-intro max-md:text-center">
+            <p
+              class="text-[20px] max-md:text-xs lg:text-[10px] font-semibold uppercase tracking-wide lg:tracking-normal text-[#1b2846] max-md:leading-[1.2] lg:leading-none"
+            >
+              Frequently Asked Questions
+            </p>
+
+            <p
+              class="font-playfair text-[#17294b] text-[30px] sm:text-[38px] md:text-[48px] lg:text-[36px] leading-[1.1] uppercase mt-4 lg:mt-[22px] lg:max-w-[420px]"
+            >
+              Frequently Asked Questions
+            </p>
+
+            <div
+              class="image-wrap w-full max-w-[360px] max-md:max-w-[238px] lg:max-w-[250px] mt-10 max-md:mt-7 lg:mt-9 mx-auto"
+            >
+              <img
+                src="assests/images/contacts-images/Frame 575.png"
+                alt="FAQ illustration"
+                class="w-full object-contain"
+              />
+            </div>
+
+            <div class="text-center">
+              <p
+                class="font-playfair text-[#1e2a44] text-[26px] max-md:text-2xl md:text-[34px] lg:text-lg mt-6 max-md:mt-[22px] lg:mt-5 lg:leading-none"
+              >
+                Any questions?
+              </p>
+              <p
+                class="text-[#2f3a51] text-[16px] max-md:text-sm md:text-[24px] lg:text-[10px] mt-2 leading-normal max-md:leading-[1.35] lg:leading-[1.3]"
+              >
+                You can ask anything you want to know about us.
+              </p>
+            </div>
+
+            <div
+              class="mt-12 max-md:mt-7 lg:mt-[38px] max-w-[520px] lg:max-w-[360px] mx-auto lg:mx-0"
+            >
+              <label
+                class="font-playfair text-[16px] max-md:text-sm md:text-[24px] lg:text-[10px] text-[#25314a] block mb-3 lg:mb-2.5 max-md:text-left"
+              >
+                Let me know
+              </label>
+              <div class="relative">
+                <input
+                  type="text"
+                  id="faq-search-input"
+                  placeholder="Enter here"
+                  class="w-full h-[54px] max-md:h-12 md:h-[66px] lg:h-[34px] rounded-[10px] lg:rounded-md border border-[#1a2848] bg-transparent pl-5 lg:pl-[14px] pr-14 lg:pr-11 text-[18px] max-md:text-sm md:text-[32px] lg:text-[10px] text-[#40506d] font-[inherit] outline-none transition-colors duration-300 focus:bg-white"
+                />
+                <a
+                  href="#"
+                  id="clear-faq-search"
+                  aria-label="Clear input"
+                  class="absolute right-4 lg:right-2.5 top-1/2 -translate-y-1/2 w-9 h-9 max-md:w-7 max-md:h-7 lg:w-[18px] lg:h-[18px] rounded-full border border-[#1a2848] text-[#1a2848] flex items-center justify-center text-[14px] lg:text-[8px] hover:bg-[#1a2848] hover:text-white transition-colors duration-300"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="space-y-6 max-md:space-y-3 lg:space-y-[16px] lg:pt-[86px]"
+          >
+            <div
+              class="faq-item border border-[#c4cad5] rounded-[14px] max-md:rounded-xl lg:rounded-[10px] bg-[#eef1f6] px-5 py-4 max-md:px-[14px] max-md:py-[13px] lg:px-[14px] lg:py-2"
+            >
+              <a href="#" class="faq-toggle block w-full">
+                <div
+                  class="flex items-center justify-between text-left gap-6 max-md:gap-3 lg:gap-[14px]"
+                >
+                  <span
+                    class="faq-question transition-colors duration-300 font-playfair text-[20px] max-md:text-base md:text-[22px] lg:text-xs leading-tight max-md:leading-[1.25] lg:leading-[1.2] text-[#1e2a44]"
+                  >
+                    When is the right time to sell my house?
+                  </span>
+                  <span
+                    class="faq-icon flex-none text-[24px] max-md:text-[22px] lg:text-base leading-none text-[#1f2a42]"
+                    >+</span
+                  >
+                </div>
+              </a>
+              <div class="faq-content-wrapper">
+                <div>
+                  <p
+                    class="faq-answer pt-3 text-[14px] md:text-[18px] lg:text-[11px] leading-[1.4] text-[#3f4a60]"
+                  >
+                    The right time to sell your house is when market conditions
+                    favor sellers-typically when demand is high and inventory is
+                    low. It also depends on your personal readiness, such as
+                    financial goals and relocation plans.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item border border-[#c4cad5] rounded-[14px] max-md:rounded-xl lg:rounded-[10px] bg-[#eef1f6] px-5 py-4 max-md:px-[14px] max-md:py-[13px] lg:px-[14px] lg:py-2"
+            >
+              <a href="#" class="faq-toggle block w-full">
+                <div
+                  class="flex items-center justify-between text-left gap-6 max-md:gap-3 lg:gap-[14px]"
+                >
+                  <span
+                    class="faq-question transition-colors duration-300 font-playfair text-[20px] max-md:text-base md:text-[22px] lg:text-xs leading-tight max-md:leading-[1.25] lg:leading-[1.2] text-[#1e2a44]"
+                  >
+                    What is the process of buying a home?
+                  </span>
+                  <span
+                    class="faq-icon flex-none text-[24px] max-md:text-[22px] lg:text-base leading-none text-[#1f2a42]"
+                    >+</span
+                  >
+                </div>
+              </a>
+              <div class="faq-content-wrapper">
+                <div>
+                  <p
+                    class="faq-answer pt-3 text-[14px] md:text-[18px] lg:text-[11px] leading-[1.4] text-[#3f4a60]"
+                  >
+                    The process usually starts with determining your budget and
+                    getting pre-approved for a mortgage. After that, you search
+                    for homes, make an offer, complete an inspection, and
+                    finally close the deal.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item border border-[#c4cad5] rounded-[14px] max-md:rounded-xl lg:rounded-[10px] bg-[#eef1f6] px-5 py-4 max-md:px-[14px] max-md:py-[13px] lg:px-[14px] lg:py-2"
+            >
+              <a href="#" class="faq-toggle block w-full">
+                <div
+                  class="flex items-center justify-between text-left gap-6 max-md:gap-3 lg:gap-[14px]"
+                >
+                  <span
+                    class="faq-question transition-colors duration-300 font-playfair text-[20px] max-md:text-base md:text-[22px] lg:text-xs leading-tight max-md:leading-[1.25] lg:leading-[1.2] text-[#1e2a44]"
+                  >
+                    How much do I need for a down payment?
+                  </span>
+                  <span
+                    class="faq-icon flex-none text-[24px] max-md:text-[22px] lg:text-base leading-none text-[#1f2a42]"
+                    >+</span
+                  >
+                </div>
+              </a>
+              <div class="faq-content-wrapper">
+                <div>
+                  <p
+                    class="faq-answer pt-3 text-[14px] md:text-[18px] lg:text-[11px] leading-[1.4] text-[#3f4a60]"
+                  >
+                    Down payments usually range from 3% to 20% based on your
+                    loan type and eligibility.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item border border-[#c4cad5] rounded-[14px] max-md:rounded-xl lg:rounded-[10px] bg-[#eef1f6] px-5 py-4 max-md:px-[14px] max-md:py-[13px] lg:px-[14px] lg:py-2"
+            >
+              <a href="#" class="faq-toggle block w-full">
+                <div
+                  class="flex items-center justify-between text-left gap-6 max-md:gap-3 lg:gap-[14px]"
+                >
+                  <span
+                    class="faq-question transition-colors duration-300 font-playfair text-[20px] max-md:text-base md:text-[22px] lg:text-xs leading-tight max-md:leading-[1.25] lg:leading-[1.2] text-[#1e2a44]"
+                  >
+                    How do I know how much house I can afford?
+                  </span>
+                  <span
+                    class="faq-icon flex-none text-[24px] max-md:text-[22px] lg:text-base leading-none text-[#1f2a42]"
+                    >+</span
+                  >
+                </div>
+              </a>
+              <div class="faq-content-wrapper">
+                <div>
+                  <p
+                    class="faq-answer pt-3 text-[14px] md:text-[18px] lg:text-[11px] leading-[1.4] text-[#3f4a60]"
+                  >
+                    Use your monthly income, liabilities, and lender
+                    pre-approval to set a safe budget range.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item border border-[#c4cad5] rounded-[14px] max-md:rounded-xl lg:rounded-[10px] bg-[#eef1f6] px-5 py-4 max-md:px-[14px] max-md:py-[13px] lg:px-[14px] lg:py-2"
+            >
+              <a href="#" class="faq-toggle block w-full">
+                <div
+                  class="flex items-center justify-between text-left gap-6 max-md:gap-3 lg:gap-[14px]"
+                >
+                  <span
+                    class="faq-question transition-colors duration-300 font-playfair text-[20px] max-md:text-base md:text-[22px] lg:text-xs leading-tight max-md:leading-[1.25] lg:leading-[1.2] text-[#1e2a44]"
+                  >
+                    What is a pre-approval, and why is it important?
+                  </span>
+                  <span
+                    class="faq-icon flex-none text-[24px] max-md:text-[22px] lg:text-base leading-none text-[#1f2a42]"
+                    >+</span
+                  >
+                </div>
+              </a>
+              <div class="faq-content-wrapper">
+                <div>
+                  <p
+                    class="faq-answer pt-3 text-[14px] md:text-[18px] lg:text-[11px] leading-[1.4] text-[#3f4a60]"
+                  >
+                    Pre-approval confirms your loan eligibility and strengthens
+                    your offer while buying.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item border border-[#c4cad5] rounded-[14px] max-md:rounded-xl lg:rounded-[10px] bg-[#eef1f6] px-5 py-4 max-md:px-[14px] max-md:py-[13px] lg:px-[14px] lg:py-2"
+            >
+              <a href="#" class="faq-toggle block w-full">
+                <div
+                  class="flex items-center justify-between text-left gap-6 max-md:gap-3 lg:gap-[14px]"
+                >
+                  <span
+                    class="faq-question transition-colors duration-300 font-playfair text-[20px] max-md:text-base md:text-[22px] lg:text-xs leading-tight max-md:leading-[1.25] lg:leading-[1.2] text-[#1e2a44]"
+                  >
+                    Should I buy or rent a home?
+                  </span>
+                  <span
+                    class="faq-icon flex-none text-[24px] max-md:text-[22px] lg:text-base leading-none text-[#1f2a42]"
+                    >+</span
+                  >
+                </div>
+              </a>
+              <div class="faq-content-wrapper">
+                <div>
+                  <p
+                    class="faq-answer pt-3 text-[14px] md:text-[18px] lg:text-[11px] leading-[1.4] text-[#3f4a60]"
+                  >
+                    Buying helps build long-term equity; renting offers
+                    flexibility depending on your goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FaqS Section Endss -->
+
+    <!-- Map Section Starts -->
+    <section id="map" class="bg-[#edf1f7] w-full">
+      <div
+        class="relative w-full overflow-hidden h-[30vh] sm:h-[50vh] lg:h-[70vh]"
+      >
+        <!-- Embedded Google Map -->
+        <iframe
+          src="https://maps.google.com/maps?q=Kolkata,+West+Bengal&t=&z=12&ie=UTF8&iwloc=&output=embed"
+          class="absolute top-0 left-0 w-full h-full border-0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Interactive map of Kolkata, West Bengal"
+        ></iframe>
+      </div>
+    </section>
+    <!-- Map Section Ends -->
+
+    <!-- Newsletter Section Starts -->
+    <section
+      id="newsletter"
+      class="relative py-14 md:py-20 bg-[url('assests/images/contacts-images/newsltr-bg.png')] bg-cover bg-center bg-no-repeat w-full"
+    >
+      <div class="absolute inset-0 bg-white/40"></div>
+
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
+        <div
+          class="grid lg:grid-cols-[1.15fr_1fr] gap-8 lg:gap-12 items-center"
+        >
+          <div>
+            <h2
+              class="font-serif text-[32px] sm:text-[44px] md:text-[56px] leading-[1.1] md:leading-[0.95] text-[#1b2948] font-light"
+            >
+              Subscribe Our Newsletter
+            </h2>
+            <p class="mt-4 md:mt-5 text-[14px] md:text-[16px] text-[#3d4658]">
+              Sign up our newsletter to get update news article about company.
+            </p>
+          </div>
+
+          <!-- Form Content -->
+          <form
+            class="w-full flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-start lg:justify-end mt-4 lg:mt-0"
+          >
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="w-full sm:flex-1 lg:flex-none lg:w-[310px] h-[48px] rounded-[10px] border border-[#1b2948] bg-white/80 backdrop-blur-sm px-4 text-[16px] text-[#1b2948] font-[inherit] outline-none placeholder:text-[#6a7385] transition-all duration-300 focus:bg-[#f8fafe] focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/30"
+              required
+            />
+
+            <a
+              href="#"
+              onclick="
+                this.closest('form').submit();
+                return false;
+              "
+              class="flex items-center justify-center w-full sm:w-auto h-[48px] px-8 rounded-[10px] bg-[#15274b] text-white text-[16px] font-medium border border-transparent hover:bg-white hover:text-[#15274b] hover:border-[#15274b] transition-all duration-300 font-[inherit] whitespace-nowrap flex-shrink-0"
+            >
+              Subscribe
+            </a>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter Section Starts -->
+
+    <!-- Footer Starts -->
+    <footer
+      class="bg-[#12192b] pt-8 pb-2 relative overflow-hidden group mt-auto border-t border-white/10"
+    >
+      <img
+        src="assests/images/services-images/ftr-1.png"
+        alt="Building Cityscape"
+        class="absolute bottom-0 left-0 w-full h-[250px] object-cover object-bottom opacity-90 transform translate-y-2/3 group-hover:translate-y-0 transition-transform duration-700 ease-out z-0 pointer-events-none"
+        loading="lazy"
+      />
+
+      <div class="max-w-[1320px] mx-auto px-4 md:px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-2">
+          <div class="lg:col-span-4 flex flex-col justify-between">
+            <div>
+              <div class="mb-1">
+                <a href="index.html" class="inline-block">
+                  <img
+                    src="assests/images/ongoing-projects/logo.png"
+                    alt="Logo"
+                    class="w-[74px] h-[92px] object-contain"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <h2 class="text-3xl text-white mb-4">
+                <span class="italic font-medium">Smart Moves</span>
+                <span class="font-bold">Start With Us</span>
+              </h2>
+
+              <p class="text-gray-300 text-sm leading-relaxed mb-6 pr-4">
+                Redefining real estate through institutional-grade advisory and
+                world-class inventory.
+              </p>
+
+              <div class="flex gap-3 mb-6">
+                <a
+                  href="https://www.instagram.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-instagram" style="color: #fca311"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-facebook-f" style="color: #fca311"></i
+                ></a>
+                <a
+                  href="https://x.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-twitter" style="color: #fca311"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="mt-auto">
+              <p class="text-white text-sm mb-3">
+                Receive monthly market reports and exclusive listing updates.
+              </p>
+              <form method="get">
+                <div
+                  class="flex bg-white rounded-lg overflow-hidden w-full max-w-[350px]"
+                >
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    class="w-full px-4 py-3 text-sm text-gray-800 outline-none bg-white"
+                    required
+                  />
+
+                  <input
+                    type="submit"
+                    class="bg-[#fca311] hover:bg-[#e5930f] text-black font-bold text-sm px-6 py-3 transition"
+                    value="Join"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                NAVIGATION
+              </div>
+
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-house" style="color: #fca311"></i>
+                    </span>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-user-group"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="properties.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-house-chimney-window"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    Property List
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-gear" style="color: #fca311"></i>
+                    </span>
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="blogs.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-pen-to-square"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    Blogs
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                CONTACTS
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="mailto:infinityhorizon@gmail.com"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white text-[#fca311] flex items-center justify-center text-[10px] shadow-sm"
+                    >
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    infinity@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="tel:+2835203202-940"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white text-[#fca311] flex items-center justify-center text-[10px] shadow-sm"
+                      ><i class="fa-solid fa-phone"></i
+                    ></span>
+                    +2835203202-940
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                EXPERTISE
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Luxury Residential</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Commercial Assets</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Market Analysis</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                OFFICES
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Kolkata</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Mumbai</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Bangalore</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-white text-xs md:text-sm pt-5 pb-3 relative z-20"
+        >
+          <span class="mb-4 md:mb-0 text-white"
+            >&copy; 2026
+            <a
+              href="index.html"
+              class="hover:text-yellow-400 transition-colors"
+            >
+              INFINITY HORIZON
+            </a>
+            ALL RIGHT RESERVED
+          </span>
+          <div
+            class="flex flex-wrap justify-center gap-6 md:gap-8 font-semibold tracking-wider uppercase text-[10px] sm:text-xs"
+          >
+            <a href="#" class="hover:text-[#fca311] transition">OFFERS</a>
+            <a href="#" class="hover:text-[#fca311] transition"
+              >TERMS OF SERVICE</a
+            >
+            <a href="#" class="hover:text-[#fca311] transition"
+              >PRIVACY POLICY</a
+            >
+            <a href="#" class="hover:text-[#fca311] transition"
+              >COOKIE SETTINGS</a
+            >
+          </div>
+        </div>
+
+        <button
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          class="absolute right-4 md:right-6 bottom-11 w-12 h-12 rounded-full bg-white/95 text-[#fca311] flex items-center justify-center shadow-lg hover:bg-[#fca311] hover:text-white transition duration-300 text-xl z-30 leading-none"
+        >
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <script src="assests/js/contacts/script.js"></script>
+    <script src="assests/js/cmn-script.js"></script>
+  </body>
+</html>

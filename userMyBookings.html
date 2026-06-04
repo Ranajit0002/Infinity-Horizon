@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USER - DASHBOARD</title>
+    <link rel="shortcut icon" href="./assets/userDashboardImages/logo.png" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/userMyBookings.css" />
+</head>
+
+<body>
+    <div class="font-sans text-gray-800 antialiased overflow-x-hidden">
+
+        <!-- sidebar start -->
+        <aside id="separator-sidebar"
+            class="bg-[#14213D] text-white fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
+            <div class="flex flex-col justify-between h-full px-5 py-4 overflow-y-auto">
+
+                <ul class="space-y-5 font-medium">
+                    <li>
+                        <a href="index.html"
+                            class="flex justify-center items-center px-2 py-1.5 text-white rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group">
+                            <img src="./assets/userDashboardImages/logo.png" alt="logo" class="w-24 h-26">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="userDashboard.html"
+                            class="flex items-center p-4 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userDashboard.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userDashboard.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="userSavedProperties.html"
+                            class="flex items-center p-4 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userSavedProperties.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userSavedProperties.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">Saved Properties</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="userMyInquiries.html"
+                            class="flex items-center p-4 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userMyInquiries.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userMyInquiries.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">My Inquiries</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="userMyBookings.html"
+                            class="flex items-center p-4 bg-[#FCA311] text-[#F8FEFF] rounded-xl group active">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userMyBookings.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userMyBookings.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">My Bookings</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="userNotifications.html"
+                            class="flex items-center p-4 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userNotifications.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userNotifications.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">Notifications</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="space-y-5 font-medium border-t border-default pt-4 mt-4">
+                    <li>
+                        <a href="#" id="dropdown-button" data-dropdown-toggle="dropdown"
+                            class="flex justify-evenly items-center p-2 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <img src="./assets/userDashboardImages/userImage.png" alt="userImage">
+                            <span>John Carter</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </li>
+
+                    <div id="dropdown" class="hidden w-[220px] bg-[#EEEEEE] text-[#1E1E1E] rounded-xl">
+                        <ul class="w-full text-sm font-medium" aria-labelledby="dropdown-button">
+                            <li><a href="#"
+                                    class="flex items-center w-full p-2 rounded-xl transition-colors duration-150 hover:bg-[#FCA311] hover:text-[#F8FEFF]">1</a>
+                            </li>
+                            <li><a href="#"
+                                    class="flex items-center w-full p-2 rounded-xl transition-colors duration-150 hover:bg-[#FCA311] hover:text-[#F8FEFF]">2</a>
+                            </li>
+                            <li><a href="#"
+                                    class="flex items-center w-full p-2 rounded-xl transition-colors duration-150 hover:bg-[#FCA311] hover:text-[#F8FEFF]">3</a>
+                            </li>
+                            <li><a href="#"
+                                    class="flex items-center w-full p-2 rounded-xl transition-colors duration-150 hover:bg-[#FCA311] hover:text-[#F8FEFF]">4</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <li>
+                        <a href="logout.html"
+                            class="flex items-center p-4 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userLogout.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userLogout.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- sidebar end -->
+
+        <div class="sm:ms-64 p-4">
+
+            <!-- section 1 start -->
+            <section>
+                <div class="w-full mx-auto font-sans select-none mb-6">
+
+                    <div class="flex items-center justify-between gap-4 mb-8">
+
+                        <div class="flex items-center gap-3 min-w-0">
+                            <button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar"
+                                aria-controls="separator-sidebar" type="button"
+                                class="inline-flex sm:hidden items-center justify-center p-2 text-neutral-700 bg-transparent hover:bg-neutral-100 focus:ring-2 focus:ring-neutral-300 rounded-md focus:outline-none shrink-0">
+                                <i class="fa-solid fa-bars text-xl"></i>
+                            </button>
+
+                            <h2
+                                class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-serif font-semibold text-[#14213D] truncate">
+                                My Bookings
+                            </h2>
+                        </div>
+
+                        <div class="flex items-center gap-2 shrink-0">
+                            <div class="relative w-28 xs:w-36 sm:w-40 md:w-48">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <i class="fa-solid fa-magnifying-glass w-3 h-3 text-neutral-500"></i>
+                                </span>
+                                <input type="text" placeholder="Search"
+                                    class="w-full pl-8 pr-2 py-2 border border-[#14213D] rounded-lg placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-slate-400 transition-all text-xs" />
+                            </div>
+
+                            <!-- <button
+                                class="relative p-1.5 text-slate-700 hover:bg-slate-100 rounded-full transition-colors shrink-0"
+                                aria-label="Notifications">
+                                <img src="./assets/userDashboardImages/userBellDot.svg" alt="userBellDot"
+                                    class="w-5 h-5">
+                            </button> -->
+
+                            <button
+                                class="bg-[#14213D] text-white px-3 sm:px-5 py-2 rounded-lg font-medium text-xs sm:text-sm border border-[#14213D] hover:bg-white hover:text-[#14213D] transition-all whitespace-nowrap">
+                                <span class="hidden md:inline">Book Schedules</span>
+                                <span class="md:hidden">Book</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- section 1 end -->
+
+            <!-- section 2 start -->
+            <section>
+
+                <div class="w-full mx-auto mb-6 space-y-12">
+
+                    <div class="flex flex-col gap-6 xl:grid xl:grid-cols-3">
+
+    <!-- Card 1 -->
+    <div class="w-full">
+        <div class="rounded-2xl overflow-hidden bg-[#F0F4F9] h-full flex flex-col">
+
+            <!-- Responsive Image Height -->
+            <div class="w-full h-48 sm:h-64 md:h-72 rounded-t-2xl overflow-hidden">
+                <img src="./assets/userDashboardImages/userMB1.png" alt="userMB1"
+                    class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Responsive Padding and Layout Shift -->
+            <div class="pt-4 pb-3 px-3 flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-4 flex-1">
+
+                <div class="flex-1 space-y-2 sm:space-y-3">
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900 tracking-tight">
+                        Pent House
+                    </h3>
+
+                    <div class="flex items-center text-gray-600 gap-2">
+                        <img src="./assets/userDashboardImages/map-pin.svg" alt="map-pin"
+                            class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-gray-700">
+                        <span class="text-sm sm:text-base font-medium tracking-wide">
+                            Barasat, Chapadali More
+                        </span>
+                    </div>
+
+                    <div class="text-gray-700 font-semibold text-sm sm:text-base pt-0.5 tracking-wide">
+                        Sq.FT - 800, &nbsp;4BHK
+                    </div>
+                </div>
+
+                <!-- Responsive Button sizing -->
+                <div class="flex-shrink-0 w-full sm:w-auto pt-1">
+                    <button
+                        class="w-full sm:w-auto bg-[#43B40A] hover:bg-[#45a612] text-white font-semibold px-4 py-2.5 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl transition-colors duration-200 text-sm sm:text-lg tracking-wide focus:outline-none focus:ring-2 focus:ring-[#43B40A] focus:ring-offset-2">
+                        Booked
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>     
+
+    <!-- Card 2 -->
+    <div class="w-full">
+        <div class="rounded-2xl overflow-hidden bg-[#F0F4F9] h-full flex flex-col">
+
+            <div class="w-full h-48 sm:h-64 md:h-72 rounded-t-2xl overflow-hidden">
+                <img src="./assets/userDashboardImages/userMB2.png" alt="userMB2"
+                    class="w-full h-full object-cover" />
+            </div>
+
+            <div class="pt-4 pb-3 px-3 flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-4 flex-1">
+
+                <div class="flex-1 space-y-2 sm:space-y-3">
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900 tracking-tight">
+                        Apartment
+                    </h3>
+
+                    <div class="flex items-center text-gray-600 gap-2">
+                        <img src="./assets/userDashboardImages/map-pin.svg" alt="map-pin"
+                            class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-gray-700">
+                        <span class="text-sm sm:text-base font-medium tracking-wide">
+                            Barasat, Colony More
+                        </span>
+                    </div>
+
+                    <div class="text-gray-700 font-semibold text-sm sm:text-base pt-0.5 tracking-wide">
+                        Sq.FT - 1200, &nbsp;2BHK
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 w-full sm:w-auto pt-1">
+                    <button
+                        class="w-full sm:w-auto bg-[#ffaa16] hover:bg-[#e59813] text-white font-semibold px-4 py-2.5 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl transition-colors duration-200 text-sm sm:text-lg tracking-wide focus:outline-none focus:ring-2 focus:ring-[#ffaa16] focus:ring-offset-2">
+                        Under Radar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="w-full">
+        <div class="rounded-2xl overflow-hidden bg-[#F0F4F9] h-full flex flex-col">
+
+            <div class="w-full h-48 sm:h-64 md:h-72 rounded-t-2xl overflow-hidden">
+                <img src="./assets/userDashboardImages/userMB3.png" alt="userMB3"
+                    class="w-full h-full object-cover" />
+            </div>
+
+            <div class="pt-4 pb-3 px-3 flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-4 flex-1">
+
+                <div class="flex-1 space-y-2 sm:space-y-3">
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900 tracking-tight">
+                        Pent House
+                    </h3>
+
+                    <div class="flex items-center text-gray-600 gap-2">
+                        <img src="./assets/userDashboardImages/map-pin.svg" alt="map-pin"
+                            class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-gray-700">
+                        <span class="text-sm sm:text-base font-medium tracking-wide">
+                            Barasat, Chapadali More
+                        </span>
+                    </div>
+
+                    <div class="text-gray-700 font-semibold text-sm sm:text-base pt-0.5 tracking-wide">
+                        Sq.FT - 800, &nbsp;2BHK
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 w-full sm:w-auto pt-1">
+                    <button
+                        class="w-full sm:w-auto bg-[#ffaa16] hover:bg-[#e59813] text-white font-semibold px-4 py-2.5 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl transition-colors duration-200 text-sm sm:text-lg tracking-wide focus:outline-none focus:ring-2 focus:ring-[#ffaa16] focus:ring-offset-2">
+                        Under Radar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                        <!-- slides -->
+                        <div class="lg:col-span-7 space-y-4">
+                            <div
+                                class="relative h-64 md:h-[340px] w-full rounded-2xl overflow-hidden shadow-md bg-slate-900">
+
+                                <!-- Slide 1 -->
+                                <div class="slide-track-1 absolute inset-0 w-full h-full transition-transform">
+                                    <img src="./assets/userDashboardImages/userCYA1.png" alt="userCYA1"
+                                        class="w-full h-full object-cover object-top brightness-[0.7]">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 md:p-8 flex flex-col justify-start">
+                                        <h2
+                                            class="text-2xl md:text-3xl font-serif text-white tracking-wide leading-tight max-w-sm">
+                                            Get in Touch with Your Agent</h2>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="slide-track-2 absolute inset-0 w-full h-full opacity-0">
+                                    <img src="./assets/userDashboardImages/userCYA2.png" alt="userCYA2"
+                                        class="w-full h-full object-cover object-top brightness-[0.65]">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 md:p-8 flex flex-col justify-start">
+                                        <h2
+                                            class="text-2xl md:text-3xl font-serif text-white tracking-wide leading-tight max-w-sm">
+                                            Our Trusted Agents</h2>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 (Updated class to slide-track-3) -->
+                                <div class="slide-track-3 absolute inset-0 w-full h-full opacity-0">
+                                    <img src="./assets/userDashboardImages/userCYA3.png" alt="userCYA3"
+                                        class="w-full h-full object-cover object-top brightness-[0.65]">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 md:p-8 flex flex-col justify-start">
+                                        <h2
+                                            class="text-2xl md:text-3xl font-serif text-white tracking-wide leading-tight max-w-sm">
+                                            Our Efficient Agents</h2>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="flex">
+                                <a href="#"
+                                    class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]">
+                                    Call Your Agent
+                                    <div
+                                        class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]">
+                                        <i
+                                            class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- form -->
+                        <div class="lg:col-span-5 space-y-4">
+                            <h3 class="text-2xl font-serif font-bold text-[#0c1f3f] tracking-wide">Contact Us
+                            </h3>
+
+                            <form action="#" method="POST" class="space-y-4">
+                                <div>
+                                    <input type="text" name="name" placeholder="Your Name" required
+                                        class="w-full px-4 py-3 border border-slate-400 rounded-xl text-sm placeholder-slate-500 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all bg-transparent">
+                                </div>
+                                <div>
+                                    <input type="tel" name="phone" placeholder="Your Phone No" required
+                                        class="w-full px-4 py-3 border border-slate-400 rounded-xl text-sm placeholder-slate-500 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all bg-transparent">
+                                </div>
+                                <div>
+                                    <input type="email" name="email" placeholder="Your Email" required
+                                        class="w-full px-4 py-3 border border-slate-400 rounded-xl text-sm placeholder-slate-500 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all bg-transparent">
+                                </div>
+                                <div>
+                                    <textarea name="subject" placeholder="Subject" rows="2" required
+                                        class="w-full px-4 py-3 border border-slate-400 rounded-xl text-sm placeholder-slate-500 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all bg-transparent resize-none"></textarea>
+                                </div>
+
+                                <div class="pt-2">
+                                    <button type="submit"
+                                        class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]">
+                                        <span class="text-sm font-medium whitespace-nowrap">Submit</span>
+
+                                        <div
+                                            class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]">
+                                            <i
+                                                class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- recent activity -->
+                <div class="mt-4 flex items-center text-sm font-medium text-slate-800">
+
+                    <span>Recent Activity :</span>
+
+                    <div class="relative h-7 w-56 overflow-hidden">
+
+                        <div class="activity-line-1 absolute inset-0 flex items-center px-3 whitespace-nowrap">
+                            You viewed 2BHK in Newtown
+                        </div>
+
+                        <div
+                            class="activity-line-2 absolute inset-0 flex items-center px-3 whitespace-nowrap opacity-0">
+                            Agent replied to your inquiry
+                        </div>
+
+                        <div
+                            class="activity-line-3 absolute inset-0 flex items-center px-3 whitespace-nowrap opacity-0">
+                            Visit scheduled for Sunday
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- section 2 end -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="./js/userMyBookings.js"></script>
+</body>
+
+</html>

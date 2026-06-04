@@ -1,0 +1,1371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Properties</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assests/images/Properties-images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assests/css/cmn-style.css" />
+    <link rel="stylesheet" href="assests/css/properties/style.css" />
+  </head>
+  <body class="text-white antialiased">
+    <div
+      class="relative w-full h-[50vh] min-h-[400px] bg-cover bg-center bg-no-repeat flex flex-col"
+      style="
+        background-image: url(assests/images/Properties-images/prpperty-bg.png);
+      "
+    >
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <header class="relative z-40 w-full pt-4 md:pt-6 pb-2">
+        <div class="max-w-[1320px] mx-auto px-4 md:px-6">
+          <nav class="flex items-center justify-between w-full h-16">
+            <div class="flex-1 flex justify-start">
+              <a href="index.html" class="inline-block">
+                <img
+                  src="assests/images/index/logo.png"
+                  alt="Logo"
+                  class="w-[74px] h-[92px] object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <div
+              class="hidden lg:flex flex-none items-center gap-6 backdrop-blur-xl border-2 border-white/50 rounded-full px-6 py-1"
+            >
+              <a
+                href="index.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Home</a
+              >
+              <a
+                href="about.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >About US</a
+              >
+
+              <div class="relative group cursor-pointer">
+                <a
+                  href="properties.html"
+                  id="desktop-properties-btn"
+                  class="flex items-center py-2.5 text-sm text-white transition"
+                >
+                  <span
+                    class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                    >Properties</span
+                  >
+                  <span
+                    class="ml-1.5 text-[10px] text-white group-hover:text-[#facc15] inline-block transition-transform duration-300 group-hover:-rotate-180"
+                    ><i class="fa-solid fa-angle-down"></i
+                  ></span>
+                </a>
+
+                <div
+                  id="desktop-properties-dropdown"
+                  class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-50 backdrop-blur-md rounded-t-sm rounded-b-2xl border border-[#facc15] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden"
+                >
+                  <ul class="py-2">
+                    <li>
+                      <a
+                        href="properties.html"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >All Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Buy Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Rent Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Sell Properties</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <a
+                href="services.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Services</a
+              >
+              <a
+                href="blogs.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Blogs</a
+              >
+            </div>
+
+            <div class="hidden lg:flex flex-1 items-center justify-end gap-3">
+              <a
+                href="#"
+                aria-label="Favorite"
+                class="group inline-flex items-center justify-center w-11 h-11 rounded-full bg-slate-900 border-2 border-transparent transition-all duration-300 ease-in-out hover:border-red-500 hover:bg-white"
+              >
+                <i
+                  class="fa-regular fa-heart text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-red-500"
+                ></i>
+              </a>
+              <a
+                href="login.html"
+                aria-label="Favorite"
+                class="group inline-flex items-center justify-center w-11 h-11 rounded-full bg-slate-900 border-2 border-transparent transition-all duration-300 ease-in-out hover:border-[#0F172A] hover:bg-white"
+              >
+                <i
+                  class="fa-regular fa-user text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-[#0F172A]"
+                ></i>
+              </a>
+
+              <a
+                href="contacts.html"
+                class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]"
+              >
+                <span class="text-sm font-medium whitespace-nowrap"
+                  >Contact Us</span
+                >
+
+                <div
+                  class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]"
+                >
+                  <i
+                    class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"
+                  ></i>
+                </div>
+              </a>
+            </div>
+
+            <button
+              id="menu-btn"
+              class="lg:hidden text-white p-2 focus:outline-none z-50 relative ml-auto flex items-center justify-center"
+            >
+              <span id="icon-menu" class="text-3xl leading-none drop-shadow-md"
+                >&#9776;</span
+              >
+              <span
+                id="icon-close"
+                class="hidden text-3xl leading-none drop-shadow-md"
+                >&#10005;</span
+              >
+            </button>
+          </nav>
+        </div>
+        <div
+          id="menu-overlay"
+          class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 invisible"
+        ></div>
+
+        <div
+          id="mobile-menu"
+          class="fixed top-0 right-0 h-full w-[85%] max-w-[320px] backdrop-blur-md border-l border-white/40 z-50 translate-x-full overflow-y-auto"
+        >
+          <div
+            class="flex items-center justify-between p-6 border-b border-white/40"
+          >
+            <span class="text-white font-bold tracking-wider">
+              <a href="index.html" class="inline-block">
+                <img
+                  src="assests/images/index/logo.png"
+                  alt="Logo"
+                  class="w-[74px] h-[92px] object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </span>
+            <button
+              id="close-menu-btn"
+              class="text-gray-400 hover:text-white transition p-1 text-2xl leading-none"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <nav class="flex flex-col px-6 py-6 space-y-4">
+            <div>
+              <a
+                href="index.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Home</a
+              >
+            </div>
+            <div>
+              <a
+                href="about.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >About Us</a
+              >
+            </div>
+
+            <div class="flex flex-col group space-y-0">
+              <a
+                href="properties.html"
+                id="mobile-properties-btn"
+                class="text-white hover:text-[#facc15] text-lg font-semibold flex justify-between items-center w-full focus:outline-none transition"
+              >
+                <span class="nav-link">Properties</span>
+                <span
+                  id="mobile-properties-icon"
+                  class="inline-block transition-transform duration-300 text-sm"
+                  ><i class="fa-solid fa-angle-down"></i
+                ></span>
+              </a>
+              <div
+                id="mobile-properties-menu"
+                class="flex flex-col pl-4 mt-3 space-y-4"
+              >
+                <a
+                  href="properties.html"
+                  class="text-gray-300 hover:text-[#facc15] transition block pt-4"
+                  >All Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Buy Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Rent Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Sell Properties</a
+                >
+              </div>
+            </div>
+
+            <div>
+              <a
+                href="services.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Services</a
+              >
+            </div>
+            <div>
+              <a
+                href="blogs.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Blogs</a
+              >
+            </div>
+
+            <hr class="border-white/40 my-4" />
+
+            <div class="flex flex-col gap-4 mt-4">
+              <div class="flex gap-4 justify-center">
+                <a
+                  href="#"
+                  aria-label="Favorite"
+                  class="group inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 ease-in-out hover:border-red-500 hover:bg-white"
+                >
+                  <i
+                    class="fa-regular fa-heart text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-red-500"
+                  ></i>
+                </a>
+                <a
+                  href="login.html"
+                  aria-label="Favorite"
+                  class="group inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 ease-in-out hover:border-[#0F172A] hover:bg-white"
+                >
+                  <i
+                    class="fa-regular fa-user text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-[#0F172A]"
+                  ></i>
+                </a>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="contacts.html"
+                  class="group flex items-center justify-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border-2 border-white hover:border-[#0F172A]"
+                >
+                  <span class="text-sm font-medium whitespace-nowrap"
+                    >Contact Us</span
+                  >
+
+                  <div
+                    class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]"
+                  >
+                    <i
+                      class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"
+                    ></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div
+        class="relative z-10 flex-grow flex flex-col items-center justify-center text-center px-4"
+      >
+        <h1
+          class="text-white text-4xl sm:text-5xl md:text-7xl lg:text font-bold mb-4 leading-tight"
+        >
+          Property Listing
+        </h1>
+        <div
+          class="flex items-center gap-2 text-white/90 text-xs sm:text-sm md:text-base font-medium mt-2"
+        >
+          <a href="#" class="hover:text-yellow-400 transition">Home</a>
+          <span class="text-[10px] sm:text-xs"
+            ><i class="fa-solid fa-angle-right"></i
+          ></span>
+          <span class="text-white">Properties</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-[1320px] mx-auto px-4 md:px-6 py-12">
+      <div class="flex flex-col lg:flex-row gap-8 items-start">
+        <aside class="w-full lg:w-[400px] flex-shrink-0 flex flex-col gap-6">
+          <div class="bg-[#F0F4F9] rounded-3xl p-6 py-8">
+            <div
+              class="mb-5 border border-gray-100 rounded-xl px-4 py-3 bg-[#F9FBFC]"
+            >
+              <label class="block text-sm font-bold text-gray-700 mb-2"
+                >Country</label
+              >
+              <div class="relative">
+                <select
+                  class="w-full appearance-none p-2 pl-4 bg-[#202E5C] text-white text-sm font-bold rounded-xl outline-none cursor-pointer"
+                >
+                  <option>INDIA</option>
+                  <option>CHINA</option>
+                  <option>RUSSIA</option>
+                </select>
+                <span
+                  class="absolute right-0 top-1/2 -translate-y-1/2 text-white text-[10px] pointer-events-none text-white p-4"
+                  ><i class="fa-solid fa-angle-down"></i
+                ></span>
+              </div>
+            </div>
+
+            <div
+              class="mb-5 border border-gray-100 rounded-xl px-4 py-3 bg-[#F9FBFC]"
+            >
+              <label class="block text-sm font-bold text-gray-700 mb-2"
+                >City</label
+              >
+              <div class="relative">
+                <select
+                  class="w-full appearance-none p-2 pl-4 bg-[#202E5C] text-white text-sm font-bold rounded-xl outline-none cursor-pointer"
+                >
+                  <option>Barasat</option>
+                  <option>Barrackpore</option>
+                  <option>Baruipur</option>
+                </select>
+                <span
+                  class="absolute right-0 top-1/2 -translate-y-1/2 text-white text-[10px] pointer-events-none text-white p-4"
+                  ><i class="fa-solid fa-angle-down"></i
+                ></span>
+              </div>
+            </div>
+
+            <div
+              class="mb-8 border border-gray-100 rounded-xl px-4 py-3 bg-[#F9FBFC]"
+            >
+              <label class="block text-sm font-bold text-gray-700 mb-2"
+                >Category</label
+              >
+              <div class="relative">
+                <select
+                  class="w-full appearance-none p-2 pl-4 bg-[#202E5C] text-white text-sm font-bold rounded-xl outline-none cursor-pointer"
+                >
+                  <option>All</option>
+                  <option>Duplex House</option>
+                  <option>Bunglow</option>
+                  <option>Apartments</option>
+                </select>
+                <span
+                  class="absolute right-0 top-1/2 -translate-y-1/2 text-white text-[10px] pointer-events-none text-white p-4"
+                  ><i class="fa-solid fa-angle-down"></i
+                ></span>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label class="block text-sm font-bold text-[#171E2E] mb-3"
+                >BHK</label
+              >
+              <div class="grid grid-cols-2 gap-y-3 gap-x-2">
+                <label
+                  class="flex items-center gap-2 text-sm text-gray-600 font-medium cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    class="bg-black accent-[#171E2E] w-5 h-5 rounded border-2"
+                  />
+                  4 BHK
+                </label>
+                <!-- class="w-5 h-5 rounded border-2 border-gray-300 text-[#171E2E] focus:ring-0 checked:bg-[#171E2E]" -->
+                <label
+                  class="flex items-center gap-2 text-sm text-gray-600 font-medium cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    class="bg-black accent-[#171E2E] w-5 h-5 rounded border-2"
+                  />
+                  3 BHK
+                </label>
+                <label
+                  class="flex items-center gap-2 text-sm text-gray-600 font-medium cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    class="bg-black accent-[#171E2E] w-5 h-5 rounded border-2"
+                    checked
+                  />
+                  2 BHK
+                </label>
+                <label
+                  class="flex items-center gap-2 text-sm text-gray-600 font-medium cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    class="bg-black accent-[#171E2E] w-5 h-5 rounded border-2"
+                  />
+                  1 BHK
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <label class="block text-sm font-bold text-[#171E2E] mb-3"
+                >Apartment</label
+              >
+              <div class="grid grid-cols-2 gap-y-3 gap-x-2">
+                <label
+                  class="flex items-center gap-2 text-sm text-gray-600 font-medium cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    class="bg-black accent-[#171E2E] w-5 h-5 rounded border-2"
+                  />
+                  Studio
+                </label>
+                <label
+                  class="flex items-center gap-2 text-sm text-gray-600 font-medium cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    class="bg-black accent-[#171E2E] w-5 h-5 rounded border-2"
+                  />
+                  Penthouse
+                </label>
+                <label
+                  class="flex items-center gap-2 text-sm text-gray-600 font-medium cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    class="bg-black accent-[#171E2E] w-5 h-5 rounded border-2"
+                    checked
+                  />
+                  Duplex
+                </label>
+                <label
+                  class="flex items-center gap-2 text-sm text-gray-600 font-medium cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    class="bg-black accent-[#171E2E] w-5 h-5 rounded border-2"
+                  />
+                  Lofts
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label class="block text-sm font-bold text-[#171E2E] mb-2"
+                >Square feet</label
+              >
+              <div
+                class="border border-yellow-400 rounded-xl px-4 py-4 bg-white"
+              >
+                <input
+                  type="range"
+                  min="0"
+                  max="3200"
+                  value="1600"
+                  class="w-full appearance-none bg-transparent cursor-pointer"
+                />
+                <div
+                  class="flex justify-between text-xs font-semibold text-gray-600 mt-2 relative"
+                >
+                  <span>0</span>
+                  <span
+                    class="absolute left-1/2 -translate-x-1/2 text-[#171E2E] font-bold"
+                    >1600Sq.Ft</span
+                  >
+                  <span>3200Sq.Ft</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <label class="block text-sm font-bold text-[#171E2E] mb-2"
+                >Price</label
+              >
+              <div
+                class="border border-yellow-400 rounded-xl px-4 py-4 bg-white"
+              >
+                <input
+                  type="range"
+                  min="30"
+                  max="60"
+                  value="45"
+                  class="w-full appearance-none bg-transparent cursor-pointer"
+                />
+                <div
+                  class="flex justify-between text-xs font-semibold text-gray-600 mt-2 relative"
+                >
+                  <span>30L</span>
+                  <span
+                    class="absolute left-1/2 -translate-x-1/2 text-[#171E2E] font-bold"
+                    >45L</span
+                  >
+                  <span>60L</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <a
+                href="#"
+                class="group flex items-center justify-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border-2 border-white hover:border-[#0F172A]"
+              >
+                <span class="text-sm font-medium whitespace-nowrap"
+                  >Search Properties</span
+                >
+
+                <div
+                  class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]"
+                >
+                  <i
+                    class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"
+                  ></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-[#F0F4F9] rounded-3xl p-6 text-center">
+            <h3 class="font-bold text-gray-800 mb-5 text-lg">Broker List</h3>
+            <div class="flex justify-center items-center flex-row gap-8 mb-6">
+              <div class="flex flex-col items-center">
+                <img
+                  src="assests/images/Properties-images/chandana.png"
+                  class="w-14 h-14 rounded-full border-2 border-white shadow-sm object-cover mb-2"
+                  alt="Chandana"
+                  loading="lazy"
+                />
+                <span class="text-sm font-semibold text-gray-800"
+                  >Chandana</span
+                >
+                <span class="text-[10px] font-bold text-orange-400"
+                  >15+ Years Of<br />Experience</span
+                >
+              </div>
+              <div class="flex flex-col items-center">
+                <img
+                  src="assests/images/Properties-images/akshay.png"
+                  class="w-14 h-14 rounded-full border-2 border-white shadow-sm object-cover mb-2"
+                  alt="Akshay"
+                  loading="lazy"
+                />
+                <span class="text-sm font-semibold text-gray-800">Akshay</span>
+                <span class="text-[10px] font-bold text-orange-400"
+                  >10+ Years Of<br />Experience</span
+                >
+              </div>
+              <div class="flex flex-col items-center">
+                <img
+                  src="assests/images/Properties-images/ankita.png"
+                  class="w-14 h-14 rounded-full border-2 border-white shadow-sm object-cover mb-2"
+                  alt="Ankita"
+                  loading="lazy"
+                />
+                <span class="text-sm font-semibold text-gray-800">Ankita</span>
+                <span class="text-[10px] font-bold text-orange-400"
+                  >17+ Years Of<br />Experience</span
+                >
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <a
+                href="#"
+                class="group flex items-center justify-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border-2 border-white hover:border-[#0F172A]"
+              >
+                <span class="text-sm font-medium whitespace-nowrap"
+                  >View All</span
+                >
+
+                <div
+                  class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]"
+                >
+                  <i
+                    class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"
+                  ></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <div class="flex-1 w-full">
+          <div
+            class="bg-[#F0F4F9] py-3 rounded-2xl flex justify-center mb-8 gap-4"
+          >
+            <a
+              href="#"
+              class="px-8 py-2.5 bg-[#202E5C] text-white text-sm font-bold rounded-xl border-2 border-[#202E5C] hover:bg-white hover:text-[#202E5C] hover:shadow-md transition-all duration-300"
+            >
+              For Sell
+            </a>
+            <a
+              href="#"
+              class="px-8 py-2.5 bg-white text-gray-600 text-sm font-bold rounded-xl border-2 border-gray-200 hover:border-[#202E5C] hover:text-[#202E5C] hover:shadow-md transition-all duration-300"
+            >
+              For Rent
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div
+              class="bg-[#F0F4F9] rounded-2xl overflow-hidden transition duration-300 flex flex-col"
+            >
+              <div class="relative h-48 w-full">
+                <img
+                  src="assests/images/Properties-images/property-box-img-1.png"
+                  alt="Duplex House"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <button
+                  class="absolute top-3 right-3 bg-white w-8 h-8 rounded-full flex items-center justify-center text-yellow-400 text-lg leading-none hover:bg-gray-50 transition"
+                >
+                  <i class="fa-regular fa-heart text-sm"></i>
+                </button>
+              </div>
+              <div class="p-5 flex flex-col flex-1">
+                <div class="flex justify-between items-center mb-1.5">
+                  <h3 class="font-bold text-gray-900 text-[16px]">
+                    Duplex House
+                  </h3>
+                  <span class="text-[13px] font-bold text-gray-600">2BHK</span>
+                </div>
+                <div class="flex justify-between items-center mb-2">
+                  <div
+                    class="flex items-center text-[12px] text-gray-500 gap-1"
+                  >
+                    <span class="text-[#0F172A] text-sm leading-none"
+                      ><i class="fa-solid fa-location-dot"></i
+                    ></span>
+                    Barasat, Chapadali More
+                  </div>
+                  <div class="text-[11px] text-gray-500 font-medium">
+                    Starting From
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mb-6">
+                  <div class="text-[12px] text-gray-500">
+                    Status -
+                    <span class="text-gray-900 font-medium">Ready To Move</span>
+                  </div>
+                  <div class="font-bold text-[22px] text-gray-900 leading-none">
+                    45L
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="text-[12px] text-gray-500">
+                    Sq.FT - <span class="text-gray-900 font-bold">800</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-yellow-400 hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200"
+                  >
+                    Get Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#F0F4F9] rounded-2xl overflow-hidden transition duration-300 flex flex-col"
+            >
+              <div class="relative h-48 w-full">
+                <img
+                  src="assests/images/Properties-images/property-box-img-2.png"
+                  alt="Apartments"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <button
+                  class="absolute top-3 right-3 bg-white w-8 h-8 rounded-full flex items-center justify-center text-yellow-400 text-lg leading-none hover:bg-gray-50 transition"
+                >
+                  <i class="fa-regular fa-heart text-sm"></i>
+                </button>
+              </div>
+              <div class="p-5 flex flex-col flex-1">
+                <div class="flex justify-between items-center mb-1.5">
+                  <h3 class="font-bold text-gray-900 text-[16px]">
+                    Apartments
+                  </h3>
+                  <span class="text-[13px] font-bold text-gray-600">2BHK</span>
+                </div>
+                <div class="flex justify-between items-center mb-2">
+                  <div
+                    class="flex items-center text-[12px] text-gray-500 gap-1"
+                  >
+                    <span class="text-[#0F172A] text-sm leading-none"
+                      ><i class="fa-solid fa-location-dot"></i
+                    ></span>
+                    Barasat, Colony More
+                  </div>
+                  <div class="text-[11px] text-gray-500 font-medium">
+                    Starting From
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mb-6">
+                  <div class="text-[12px] text-gray-500">
+                    Status -
+                    <span class="text-gray-900 font-medium"
+                      >Under Construction</span
+                    >
+                  </div>
+                  <div class="font-bold text-[22px] text-gray-900 leading-none">
+                    50L
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="text-[12px] text-gray-500">
+                    Sq.FT - <span class="text-gray-900 font-bold">1200</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-yellow-400 hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200"
+                  >
+                    Get Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#F0F4F9] rounded-2xl overflow-hidden transition duration-300 flex flex-col"
+            >
+              <div class="relative h-48 w-full">
+                <img
+                  src="assests/images/Properties-images/property-box-img-3.png"
+                  alt="Housing Complex"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <button
+                  class="absolute top-3 right-3 bg-white w-8 h-8 rounded-full flex items-center justify-center text-yellow-400 text-lg leading-none hover:bg-gray-50 transition"
+                >
+                  <i class="fa-regular fa-heart text-sm"></i>
+                </button>
+              </div>
+              <div class="p-5 flex flex-col flex-1">
+                <div class="flex justify-between items-center mb-1.5">
+                  <h3 class="font-bold text-gray-900 text-[16px]">
+                    Housing Complex
+                  </h3>
+                  <span class="text-[13px] font-bold text-gray-600">2BHK</span>
+                </div>
+                <div class="flex justify-between items-center mb-2">
+                  <div
+                    class="flex items-center text-[12px] text-gray-500 gap-1"
+                  >
+                    <span class="text-[#0F172A] text-sm leading-none"
+                      ><i class="fa-solid fa-location-dot"></i
+                    ></span>
+                    Barasat, Hatkhola
+                  </div>
+                  <div class="text-[11px] text-gray-500 font-medium">
+                    Starting From
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mb-6">
+                  <div class="text-[12px] text-gray-500">
+                    Status -
+                    <span class="text-gray-900 font-medium">Ready To Move</span>
+                  </div>
+                  <div class="font-bold text-[22px] text-gray-900 leading-none">
+                    52L
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="text-[12px] text-gray-500">
+                    Sq.FT - <span class="text-gray-900 font-bold">1000</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-yellow-400 hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200"
+                  >
+                    Get Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#F0F4F9] rounded-2xl overflow-hidden transition duration-300 flex flex-col"
+            >
+              <div class="relative h-48 w-full">
+                <img
+                  src="assests/images/Properties-images/property-box-img-4.png"
+                  alt="Bunglows"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <button
+                  class="absolute top-3 right-3 bg-white w-8 h-8 rounded-full flex items-center justify-center text-yellow-400 text-lg leading-none hover:bg-gray-50 transition"
+                >
+                  <i class="fa-regular fa-heart text-sm"></i>
+                </button>
+              </div>
+              <div class="p-5 flex flex-col flex-1">
+                <div class="flex justify-between items-center mb-1.5">
+                  <h3 class="font-bold text-gray-900 text-[16px]">Bunglows</h3>
+                  <span class="text-[13px] font-bold text-gray-600">2BHK</span>
+                </div>
+                <div class="flex justify-between items-center mb-2">
+                  <div
+                    class="flex items-center text-[12px] text-gray-500 gap-1"
+                  >
+                    <span class="text-[#0F172A] text-sm leading-none"
+                      ><i class="fa-solid fa-location-dot"></i
+                    ></span>
+                    Barasat, Station Road
+                  </div>
+                  <div class="text-[11px] text-gray-500 font-medium">
+                    Starting From
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mb-6">
+                  <div class="text-[12px] text-gray-500">
+                    Status -
+                    <span class="text-gray-900 font-medium">Ready To Move</span>
+                  </div>
+                  <div class="font-bold text-[22px] text-gray-900 leading-none">
+                    55L
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="text-[12px] text-gray-500">
+                    Sq.FT - <span class="text-gray-900 font-bold">2200</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-yellow-400 hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200"
+                  >
+                    Get Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#F0F4F9] rounded-2xl overflow-hidden transition duration-300 flex flex-col"
+            >
+              <div class="relative h-48 w-full">
+                <img
+                  src="assests/images/Properties-images/property-box-img-5.png"
+                  alt="Single Flats"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <button
+                  class="absolute top-3 right-3 bg-white w-8 h-8 rounded-full flex items-center justify-center text-yellow-400 text-lg leading-none hover:bg-gray-50 transition"
+                >
+                  <i class="fa-regular fa-heart text-sm"></i>
+                </button>
+              </div>
+              <div class="p-5 flex flex-col flex-1">
+                <div class="flex justify-between items-center mb-1.5">
+                  <h3 class="font-bold text-gray-900 text-[16px]">
+                    Single Flats
+                  </h3>
+                  <span class="text-[13px] font-bold text-gray-600">2BHK</span>
+                </div>
+                <div class="flex justify-between items-center mb-2">
+                  <div
+                    class="flex items-center text-[12px] text-gray-500 gap-1"
+                  >
+                    <span class="text-[#0F172A] text-sm leading-none"
+                      ><i class="fa-solid fa-location-dot"></i
+                    ></span>
+                    Barasat, Noapara
+                  </div>
+                  <div class="text-[11px] text-gray-500 font-medium">
+                    Starting From
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mb-6">
+                  <div class="text-[12px] text-gray-500">
+                    Status -
+                    <span class="text-gray-900 font-medium">Ready To Move</span>
+                  </div>
+                  <div class="font-bold text-[22px] text-gray-900 leading-none">
+                    52L
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="text-[12px] text-gray-500">
+                    Sq.FT - <span class="text-gray-900 font-bold">1100</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-yellow-400 hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200"
+                  >
+                    Get Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#F0F4F9] rounded-2xl overflow-hidden transition duration-300 flex flex-col"
+            >
+              <div class="relative h-48 w-full">
+                <img
+                  src="assests/images/Properties-images/property-box-img-6.png"
+                  alt="Duplex House"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <button
+                  class="absolute top-3 right-3 bg-white w-8 h-8 rounded-full flex items-center justify-center text-yellow-400 text-lg leading-none hover:bg-gray-50 transition"
+                >
+                  <i class="fa-regular fa-heart text-sm"></i>
+                </button>
+              </div>
+              <div class="p-5 flex flex-col flex-1">
+                <div class="flex justify-between items-center mb-1.5">
+                  <h3 class="font-bold text-gray-900 text-[16px]">
+                    Duplex House
+                  </h3>
+                  <span class="text-[13px] font-bold text-gray-600">2BHK</span>
+                </div>
+                <div class="flex justify-between items-center mb-2">
+                  <div
+                    class="flex items-center text-[12px] text-gray-500 gap-1"
+                  >
+                    <span class="text-[#0F172A] text-sm leading-none"
+                      ><i class="fa-solid fa-location-dot"></i
+                    ></span>
+                    Barasat, Pioneer Park
+                  </div>
+                  <div class="text-[11px] text-gray-500 font-medium">
+                    Starting From
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mb-6">
+                  <div class="text-[12px] text-gray-500">
+                    Status -
+                    <span class="text-gray-900 font-medium">Ready To Move</span>
+                  </div>
+                  <div class="font-bold text-[22px] text-gray-900 leading-none">
+                    60L
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="text-[12px] text-gray-500">
+                    Sq.FT - <span class="text-gray-900 font-bold">2000</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-yellow-400 hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200"
+                  >
+                    Get Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- pagination -->
+          <div
+            class="flex justify-center items-center gap-1 sm:gap-2 mt-auto w-full flex-wrap"
+          >
+            <button
+              class="px-3 sm:px-4 text-xs sm:text-sm font-medium text-[#14213D] hover:text-[#FCAA31] transition mr-1 sm:mr-2"
+            >
+              Prev.
+            </button>
+            <!-- When Active -->
+            <!-- <button
+                class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-[#14213D] text-white text-xs sm:text-sm font-medium shadow-sm transition"
+              >
+                1
+              </button> -->
+            <button
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl border-2 border-[#14213D] text-gray-600 hover:bg-[#14213D] hover:text-white text-xs sm:text-sm font-medium transition"
+            >
+              1
+            </button>
+            <button
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl border-2 border-[#14213D] text-gray-600 hover:bg-[#14213D] hover:text-white text-xs sm:text-sm font-medium transition"
+            >
+              2
+            </button>
+            <button
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl border-2 border-[#14213D] text-gray-600 hover:bg-[#14213D] hover:text-white text-xs sm:text-sm font-medium transition"
+            >
+              3
+            </button>
+            <button
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl border-2 border-[#14213D] text-gray-600 hover:bg-[#14213D] hover:text-white text-xs sm:text-sm font-medium transition"
+            >
+              4
+            </button>
+            <button
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl border-2 border-[#14213D] text-gray-600 hover:bg-[#14213D] hover:text-white text-xs sm:text-sm font-medium transition"
+            >
+              5
+            </button>
+            <button
+              class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl border-2 border-[#14213D] text-gray-600 hover:bg-[#14213D] hover:text-white text-xs sm:text-sm font-medium transition"
+            >
+              6
+            </button>
+
+            <button
+              class="px-3 sm:px-4 rounded-xl text-xs sm:text-sm font-medium text-[#14213D] hover:text-[#FCAA31] transition ml-1 sm:ml-2"
+            >
+              Next
+            </button>
+          </div>
+          <!-- pagination -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Starts -->
+    <footer
+      class="bg-[#12192b] pt-8 pb-2 relative overflow-hidden group mt-auto border-t border-white/10"
+    >
+      <img
+        src="assests/images/services-images/ftr-1.png"
+        alt="Building Cityscape"
+        class="absolute bottom-0 left-0 w-full h-[250px] object-cover object-bottom opacity-90 transform translate-y-2/3 group-hover:translate-y-0 transition-transform duration-700 ease-out z-0 pointer-events-none"
+        loading="lazy"
+      />
+
+      <div class="max-w-[1320px] mx-auto px-4 md:px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-2">
+          <div class="lg:col-span-4 flex flex-col justify-between">
+            <div>
+              <div class="mb-1">
+                <a href="index.html" class="inline-block">
+                  <img
+                    src="assests/images/ongoing-projects/logo.png"
+                    alt="Logo"
+                    class="w-[74px] h-[92px] object-contain"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <h2 class="text-3xl text-white mb-4">
+                <span class="italic font-medium">Smart Moves</span>
+                <span class="font-bold">Start With Us</span>
+              </h2>
+
+              <p class="text-gray-300 text-sm leading-relaxed mb-6 pr-4">
+                Redefining real estate through institutional-grade advisory and
+                world-class inventory.
+              </p>
+
+              <div class="flex gap-3 mb-6">
+                <a
+                  href="https://www.instagram.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-instagram" style="color: #fca311"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-facebook-f" style="color: #fca311"></i
+                ></a>
+                <a
+                  href="https://x.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-twitter" style="color: #fca311"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="mt-auto">
+              <p class="text-white text-sm mb-3">
+                Receive monthly market reports and exclusive listing updates.
+              </p>
+              <form method="get">
+                <div
+                  class="flex bg-white rounded-lg overflow-hidden w-full max-w-[350px]"
+                >
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    class="w-full px-4 py-3 text-sm text-gray-800 outline-none bg-white"
+                    required
+                  />
+
+                  <input
+                    type="submit"
+                    class="bg-[#fca311] hover:bg-[#e5930f] text-black font-bold text-sm px-6 py-3 transition"
+                    value="Join"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                NAVIGATION
+              </div>
+
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-house" style="color: #fca311"></i>
+                    </span>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-user-group"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="properties.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-house-chimney-window"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    Property List
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-gear" style="color: #fca311"></i>
+                    </span>
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="blogs.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-pen-to-square"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    Blogs
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                CONTACTS
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="mailto:infinityhorizon@gmail.com"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white text-[#fca311] flex items-center justify-center text-[10px] shadow-sm"
+                    >
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    infinity@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="tel:+2835203202-940"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white text-[#fca311] flex items-center justify-center text-[10px] shadow-sm"
+                      ><i class="fa-solid fa-phone"></i
+                    ></span>
+                    +2835203202-940
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                EXPERTISE
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Luxury Residential</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Commercial Assets</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Market Analysis</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                OFFICES
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Kolkata</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Mumbai</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Bangalore</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-white text-xs md:text-sm pt-5 pb-3 relative z-20"
+        >
+          <span class="mb-4 md:mb-0 text-white"
+            >&copy; 2026
+            <a
+              href="index.html"
+              class="hover:text-yellow-400 transition-colors"
+            >
+              INFINITY HORIZON
+            </a>
+            ALL RIGHT RESERVED
+          </span>
+          <div
+            class="flex flex-wrap justify-center gap-6 md:gap-8 font-semibold tracking-wider uppercase text-[10px] sm:text-xs"
+          >
+            <a href="#" class="hover:text-[#fca311] transition">OFFERS</a>
+            <a href="#" class="hover:text-[#fca311] transition"
+              >TERMS OF SERVICE</a
+            >
+            <a href="#" class="hover:text-[#fca311] transition"
+              >PRIVACY POLICY</a
+            >
+            <a href="#" class="hover:text-[#fca311] transition"
+              >COOKIE SETTINGS</a
+            >
+          </div>
+        </div>
+
+        <button
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          class="absolute right-4 md:right-6 bottom-11 w-12 h-12 rounded-full bg-white/95 text-[#fca311] flex items-center justify-center shadow-lg hover:bg-[#fca311] hover:text-white transition duration-300 text-xl z-30 leading-none"
+        >
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <script src="assests/js/properties/script.js"></script>
+    <script src="assests/js/cmn-script.js"></script>
+  </body>
+</html>

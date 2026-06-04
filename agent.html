@@ -1,0 +1,1259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assests/images/Properties-images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assests/css/cmn-style.css" />
+    <link rel="stylesheet" href="assests/css/agent/style.css" />
+  </head>
+  <body class="overflow-x-hidden bg-[#f3f4f6]">
+    <!-- Hero With Nav Bar Starts -->
+    <div
+      class="relative w-full h-[37vh] min-h-[320px] bg-cover bg-center bg-no-repeat flex flex-col"
+      style="background-image: url(assests/images/agent-images/agent-bg.png)"
+    >
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <header class="relative z-40 w-full pt-4 md:pt-6 pb-2">
+        <div class="max-w-[1320px] mx-auto px-4 md:px-6">
+          <nav class="flex items-center justify-between w-full h-16">
+            <div class="flex-1 flex justify-start">
+              <a href="index.html" class="inline-block">
+                <img
+                  src="assests/images/index/logo.png"
+                  alt="Logo"
+                  class="w-[74px] h-[92px] object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <div
+              class="hidden lg:flex flex-none items-center gap-6 backdrop-blur-xl border-2 border-white/50 rounded-full px-6 py-1"
+            >
+              <a
+                href="index.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Home</a
+              >
+              <a
+                href="about.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >About US</a
+              >
+
+              <div class="relative group cursor-pointer">
+                <a
+                  href="properties.html"
+                  id="desktop-properties-btn"
+                  class="flex items-center py-2.5 text-sm text-white transition"
+                >
+                  <span
+                    class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                    >Properties</span
+                  >
+                  <span
+                    class="ml-1.5 text-[10px] text-white group-hover:text-[#facc15] inline-block transition-transform duration-300 group-hover:-rotate-180"
+                    ><i class="fa-solid fa-angle-down"></i
+                  ></span>
+                </a>
+
+                <div
+                  id="desktop-properties-dropdown"
+                  class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-50 backdrop-blur-md rounded-t-sm rounded-b-2xl border border-[#facc15] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden"
+                >
+                  <ul class="py-2">
+                    <li>
+                      <a
+                        href="properties.html"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >All Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Buy Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Rent Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Sell Properties</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <a
+                href="services.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Services</a
+              >
+              <a
+                href="blogs.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Blogs</a
+              >
+            </div>
+
+            <div class="hidden lg:flex flex-1 items-center justify-end gap-3">
+              <a
+                href="#"
+                aria-label="Favorite"
+                class="group inline-flex items-center justify-center w-11 h-11 rounded-full bg-slate-900 border-2 border-transparent transition-all duration-300 ease-in-out hover:border-red-500 hover:bg-white"
+              >
+                <i
+                  class="fa-regular fa-heart text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-red-500"
+                ></i>
+              </a>
+              <a
+                href="login.html"
+                aria-label="Favorite"
+                class="group inline-flex items-center justify-center w-11 h-11 rounded-full bg-slate-900 border-2 border-transparent transition-all duration-300 ease-in-out hover:border-[#0F172A] hover:bg-white"
+              >
+                <i
+                  class="fa-regular fa-user text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-[#0F172A]"
+                ></i>
+              </a>
+
+              <a
+                href="contacts.html"
+                class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]"
+              >
+                <span class="text-sm font-medium whitespace-nowrap"
+                  >Contact Us</span
+                >
+
+                <div
+                  class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]"
+                >
+                  <i
+                    class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"
+                  ></i>
+                </div>
+              </a>
+            </div>
+
+            <button
+              id="menu-btn"
+              class="lg:hidden text-white p-2 focus:outline-none z-50 relative ml-auto flex items-center justify-center"
+            >
+              <span id="icon-menu" class="text-3xl leading-none drop-shadow-md"
+                >&#9776;</span
+              >
+              <span
+                id="icon-close"
+                class="hidden text-3xl leading-none drop-shadow-md"
+                >&#10005;</span
+              >
+            </button>
+          </nav>
+        </div>
+        <div
+          id="menu-overlay"
+          class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 invisible"
+        ></div>
+
+        <div
+          id="mobile-menu"
+          class="fixed top-0 right-0 h-full w-[85%] max-w-[320px] backdrop-blur-md border-l border-white/40 z-50 translate-x-full overflow-y-auto"
+        >
+          <div
+            class="flex items-center justify-between p-6 border-b border-white/40"
+          >
+            <span class="text-white font-bold tracking-wider">
+              <a href="index.html" class="inline-block">
+                <img
+                  src="assests/images/index/logo.png"
+                  alt="Logo"
+                  class="w-[74px] h-[92px] object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </span>
+            <button
+              id="close-menu-btn"
+              class="text-gray-400 hover:text-white transition p-1 text-2xl leading-none"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <nav class="flex flex-col px-6 py-6 space-y-4">
+            <div>
+              <a
+                href="index.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Home</a
+              >
+            </div>
+            <div>
+              <a
+                href="about.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >About Us</a
+              >
+            </div>
+
+            <div class="flex flex-col group space-y-0">
+              <a
+                href="properties.html"
+                id="mobile-properties-btn"
+                class="text-white hover:text-[#facc15] text-lg font-semibold flex justify-between items-center w-full focus:outline-none transition"
+              >
+                <span class="nav-link">Properties</span>
+                <span
+                  id="mobile-properties-icon"
+                  class="inline-block transition-transform duration-300 text-sm"
+                  ><i class="fa-solid fa-angle-down"></i
+                ></span>
+              </a>
+              <div
+                id="mobile-properties-menu"
+                class="flex flex-col pl-4 mt-3 space-y-4"
+              >
+                <a
+                  href="properties.html"
+                  class="text-gray-300 hover:text-[#facc15] transition block pt-4"
+                  >All Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Buy Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Rent Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Sell Properties</a
+                >
+              </div>
+            </div>
+
+            <div>
+              <a
+                href="services.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Services</a
+              >
+            </div>
+            <div>
+              <a
+                href="blogs.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Blogs</a
+              >
+            </div>
+
+            <hr class="border-white/40 my-4" />
+
+            <div class="flex flex-col gap-4 mt-4">
+              <div class="flex gap-4 justify-center">
+                <a
+                  href="#"
+                  aria-label="Favorite"
+                  class="group inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 ease-in-out hover:border-red-500 hover:bg-white"
+                >
+                  <i
+                    class="fa-regular fa-heart text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-red-500"
+                  ></i>
+                </a>
+                <a
+                  href="login.html"
+                  aria-label="Favorite"
+                  class="group inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 ease-in-out hover:border-[#0F172A] hover:bg-white"
+                >
+                  <i
+                    class="fa-regular fa-user text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-[#0F172A]"
+                  ></i>
+                </a>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="contacts.html"
+                  class="group flex items-center justify-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border-2 border-white hover:border-[#0F172A]"
+                >
+                  <span class="text-sm font-medium whitespace-nowrap"
+                    >Contact Us</span
+                  >
+
+                  <div
+                    class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]"
+                  >
+                    <i
+                      class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"
+                    ></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <!-- Hero With Nav Bar Ends -->
+
+    <!-- Agent Section Starts -->
+    <section class="px-4 md:px-6">
+      <div class="container mx-auto">
+        <div
+          class="max-w-[1320px] mx-auto bg-white rounded-3xl relative z-20 -mt-20 md:-mt-32 p-6 md:p-12 mb-16 lg:mb-20"
+        >
+          <div class="flex flex-col lg:flex-row gap-8 lg:gap-10">
+            <div class="flex-shrink-0 w-full sm:w-[320px] mx-auto lg:mx-0">
+              <img
+                src="assests/images/agent-images/agent-1.png"
+                alt="Jason Malfr"
+                class="w-full h-[320px] object-cover rounded-2xl shadow-sm"
+              />
+            </div>
+            <div class="flex flex-col justify-center w-full">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="text-yellow-400 flex gap-1 text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-gray-500 text-sm ml-1">1 review</span>
+              </div>
+              <span
+                class="text-3xl sm:text-4xl lg:text-[40px] font-bold text-gray-900 leading-tight"
+              >
+                Jason Malfr
+              </span>
+              <p class="text-gray-500 text-sm mt-1 mb-6">Buying Agent</p>
+              <div class="space-y-2 text-sm text-gray-800 break-words">
+                <p>
+                  <span class="font-bold text-gray-900">Primary Phone:</span>
+                  <a href="tel:3055559999" class="hover:text-blue-600"
+                    >(305) 555-9999</a
+                  >
+                </p>
+                <p>
+                  <span class="font-bold text-gray-900 uppercase">Email:</span>
+                  <a
+                    href="mailto:Michael@Website.Net"
+                    class="hover:text-blue-600"
+                    >Michael@Website.Net</a
+                  >
+                </p>
+              </div>
+              <div
+                class="flex flex-wrap gap-5 lg:gap-6 mt-6 text-gray-800 items-center"
+              >
+                <a href="#" class="hover:text-pink-600 transition"
+                  ><i class="fa-brands fa-instagram text-xl"></i
+                ></a>
+                <a href="#" class="hover:text-green-500 transition"
+                  ><i class="fa-brands fa-whatsapp text-xl"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600 transition"
+                  ><i class="fa-brands fa-facebook-f text-xl"></i
+                ></a>
+                <a href="#" class="hover:text-black transition"
+                  ><i class="fa-brands fa-x-twitter text-xl"></i
+                ></a>
+                <a href="#" class="hover:text-blue-700 transition"
+                  ><i class="fa-brands fa-linkedin-in text-xl"></i
+                ></a>
+                <a href="#" class="hover:text-black transition"
+                  ><i class="fa-brands fa-tiktok text-xl"></i
+                ></a>
+              </div>
+              <div class="flex flex-wrap gap-3 md:gap-4 mt-8 w-full">
+                <button
+                  class="flex-1 sm:flex-none border-2 border-gray-200 text-gray-700 px-4 sm:px-6 py-2.5 rounded-md text-[10px] sm:text-xs font-bold tracking-widest hover:bg-[#facc15] hover:text-[#171E2E] transition uppercase text-center"
+                >
+                  Email Agent
+                </button>
+                <button
+                  class="flex-1 sm:flex-none border-2 border-gray-200 text-gray-700 px-4 sm:px-6 py-2.5 rounded-md text-[10px] sm:text-xs font-bold tracking-widest hover:bg-[#facc15] hover:text-[#171E2E] transition flex items-center justify-center gap-2 uppercase"
+                >
+                  <i class="fa-brands fa-whatsapp text-green-500 text-base"></i>
+                  Whatsapp
+                </button>
+                <button
+                  class="w-full sm:w-auto border-2 border-gray-200 text-gray-700 px-4 sm:px-6 py-2.5 rounded-md text-[10px] sm:text-xs font-bold tracking-widest hover:bg-[#facc15] hover:text-[#171E2E] transition text-center"
+                >
+                  305 555 9999
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="h-10 lg:h-16 w-full border-b border-gray-100 mb-10 lg:mb-16"
+          ></div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+            <div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                A Brief Introduction
+              </h2>
+              <p
+                class="text-[13px] sm:text-sm text-gray-600 leading-relaxed font-medium"
+              >
+                Whether It Is Working With A First Time Homebuyer, A Luxury Home
+                Listing Or A Seasoned Investor, Michael Prides Himself On His
+                Unparalleled Service With An Aptitude For Problem Solving –
+                Something Essential For Navigating Clients Through The
+                Challenges Of Today's Real Estate Market. My Focus Is Always On
+                Serving My Clients With Honesty, Integrity And Discretion As A
+                Dependable And Knowledgeable Broker Committed To Exceptional
+                Results.
+              </p>
+              <h3
+                class="text-base sm:text-[17px] font-bold text-gray-900 mt-8 lg:mt-10 mb-4"
+              >
+                Specialties & Service Areas
+              </h3>
+              <div class="flex flex-wrap gap-2 sm:gap-3">
+                <span
+                  class="bg-[#111827] text-white px-4 sm:px-5 py-2 rounded-full text-[11px] sm:text-xs font-medium"
+                  >Residential</span
+                >
+                <span
+                  class="bg-[#111827] text-white px-4 sm:px-5 py-2 rounded-full text-[11px] sm:text-xs font-medium"
+                  >Commercial</span
+                >
+                <span
+                  class="bg-[#111827] text-white px-4 sm:px-5 py-2 rounded-full text-[11px] sm:text-xs font-medium"
+                  >Nashville</span
+                >
+              </div>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6 mt-10 lg:mt-12"
+              >
+                <div>
+                  <h4 class="text-[13px] sm:text-sm font-bold text-gray-900">
+                    Experience
+                  </h4>
+                  <p
+                    class="text-[11px] sm:text-xs text-gray-600 mt-1.5 leading-relaxed"
+                  >
+                    18 Years As Expert Realtor
+                  </p>
+                </div>
+                <div>
+                  <h4 class="text-[13px] sm:text-sm font-bold text-gray-900">
+                    Realtor Awards
+                  </h4>
+                  <p
+                    class="text-[11px] sm:text-xs text-gray-600 mt-1.5 leading-relaxed"
+                  >
+                    Best Realtor In Seattle<br />From 2000-2018
+                  </p>
+                </div>
+                <div>
+                  <h4 class="text-[13px] sm:text-sm font-bold text-gray-900">
+                    Office Hours
+                  </h4>
+                  <p
+                    class="text-[11px] sm:text-xs text-gray-600 mt-1.5 leading-relaxed"
+                  >
+                    9 AM - 5 PM, Monday -<br />Saturday
+                  </p>
+                </div>
+                <div>
+                  <h4 class="text-[13px] sm:text-sm font-bold text-gray-900">
+                    MLS Number
+                  </h4>
+                  <p
+                    class="text-[11px] sm:text-xs text-gray-600 mt-1.5 leading-relaxed"
+                  >
+                    12345 MYID - Until<br />12/12/2025
+                  </p>
+                </div>
+                <div>
+                  <h4 class="text-[13px] sm:text-sm font-bold text-gray-900">
+                    Languages Spoken
+                  </h4>
+                  <p
+                    class="text-[11px] sm:text-xs text-gray-600 mt-1.5 leading-relaxed"
+                  >
+                    French, Spanish, English
+                  </p>
+                </div>
+                <div>
+                  <h4 class="text-[13px] sm:text-sm font-bold text-gray-900">
+                    Office Address
+                  </h4>
+                  <p
+                    class="text-[11px] sm:text-xs text-gray-600 mt-1.5 leading-relaxed"
+                  >
+                    1001 4th Ave, Seattle, WA<br />USA
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">Contact Me</h2>
+              <div
+                class="space-y-4 sm:space-y-5 text-[12px] sm:text-[13px] text-gray-700 font-medium mb-8 sm:mb-10 break-all sm:break-normal"
+              >
+                <div class="flex items-center gap-3 sm:gap-4">
+                  <i
+                    class="fa-solid fa-phone text-gray-400 text-base sm:text-lg w-5 text-center flex-shrink-0"
+                  ></i>
+                  <p>305 555 9999</p>
+                </div>
+                <div class="flex items-center gap-3 sm:gap-4">
+                  <i
+                    class="fa-solid fa-envelope text-gray-400 text-base sm:text-lg w-5 text-center flex-shrink-0"
+                  ></i>
+                  <p>Akshaydutta5454@Gmail.Com</p>
+                </div>
+                <div class="flex items-center gap-3 sm:gap-4">
+                  <i
+                    class="fa-solid fa-globe text-gray-400 text-base sm:text-lg w-5 text-center flex-shrink-0"
+                  ></i>
+                  <p>Website.Net</p>
+                </div>
+                <div class="flex items-center gap-3 sm:gap-4">
+                  <i
+                    class="fa-brands fa-skype text-gray-400 text-base sm:text-lg w-5 text-center flex-shrink-0"
+                  ></i>
+                  <p>Akshay .Wp</p>
+                </div>
+              </div>
+
+              <form class="space-y-4 w-full" onsubmit="event.preventDefault()">
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4"
+                >
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    class="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2.5 sm:py-3 text-[13px] sm:text-sm outline-none focus:border-blue-500 transition"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2.5 sm:py-3 text-[13px] sm:text-sm outline-none focus:border-blue-500 transition"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    class="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-2.5 sm:py-3 text-[13px] sm:text-sm outline-none focus:border-blue-500 transition"
+                  />
+                </div>
+                <textarea
+                  class="w-full border border-gray-300 rounded-md px-3 sm:px-4 py-3 text-[13px] sm:text-sm h-24 sm:h-32 resize-none outline-none focus:border-blue-500 transition"
+                ></textarea>
+                <div class="flex items-start gap-2 sm:gap-3 pt-2">
+                  <input
+                    type="checkbox"
+                    id="consent"
+                    class="mt-1 flex-shrink-0 cursor-pointer border-gray-300 rounded"
+                  />
+                  <label
+                    for="consent"
+                    class="text-[10px] sm:text-[11px] text-gray-500 leading-relaxed cursor-pointer font-medium"
+                  >
+                    I Consent To My Information To Be Added For Marketing
+                    Communications. You May Periodically Receive Email
+                    Communications. At Any Time, You May Opt To Unsubscribe. I
+                    Will Not Sell Your Information To Any 3rd Party. I Agree To
+                    The
+                    <a href="#" class="underline text-gray-700"
+                      >Privacy Policy.</a
+                    >
+                  </label>
+                </div>
+                <div class="pt-2">
+                  <button
+                    type="submit"
+                    class="w-full sm:w-auto bg-[#111827] hover:bg-[#facc15] hover:text-[#171E2E] text-white font-bold text-[11px] sm:text-xs tracking-widest px-6 sm:px-8 py-3 sm:py-3.5 rounded-md uppercase transition duration-200"
+                  >
+                    Send
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Agent Section Ends -->
+
+    <!-- Listing Section Starts -->
+    <section class="px-4 md:px-6 mb-16">
+      <div class="container mx-auto max-w-[1320px]">
+        <h2
+          class="text-2xl sm:text-[32px] text-gray-900 mb-4 sm:mb-6 font-serif-heading"
+        >
+          My Listing
+        </h2>
+
+        <div
+          class="bg-white rounded-lg p-1.5 flex flex-col sm:flex-row gap-2 mb-8 sm:mb-10 shadow-sm border border-gray-100 w-full sm:max-w-fit overflow-x-auto hide-scrollbar"
+        >
+          <div
+            id="filter-container"
+            class="flex sm:flex-wrap gap-2 w-full min-w-max"
+          >
+            <button
+              class="filter-btn bg-[#111827] text-white px-5 sm:px-8 py-2.5 sm:py-3 rounded-md text-[13px] sm:text-[15px] font-semibold transition"
+              data-filter="all"
+            >
+              All (4)
+            </button>
+            <button
+              class="filter-btn text-gray-800 hover:bg-gray-50 px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-[13px] sm:text-[15px] font-semibold transition"
+              data-filter="apartment"
+            >
+              Apartment (1)
+            </button>
+            <button
+              class="filter-btn text-gray-800 hover:bg-gray-50 px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-[13px] sm:text-[15px] font-semibold transition"
+              data-filter="residential"
+            >
+              Residential (1)
+            </button>
+            <button
+              class="filter-btn text-gray-800 hover:bg-gray-50 px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-[13px] sm:text-[15px] font-semibold transition"
+              data-filter="single-family"
+            >
+              Single Family Home (1)
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="property-slider"
+          class="flex overflow-x-auto gap-4 sm:gap-6 snap-x snap-mandatory hide-scrollbar pb-6 w-full"
+        >
+          <!-- Card 1 -->
+          <div
+            class="property-card flex-shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100"
+            data-category="residential"
+          >
+            <div class="relative h-48 sm:h-56 md:h-64 w-full">
+              <img
+                src="assests/images/agent-images/list-img-1.png"
+                alt="Duplex House"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute top-4 left-0 bg-[#FCA311] text-white text-xs font-bold px-4 py-1.5 ribbon pr-6"
+              >
+                Special Offers
+              </div>
+            </div>
+            <div class="p-4 sm:p-6">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="font-bold text-gray-900 text-base sm:text-lg">
+                  Duplex House
+                </h3>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <span
+                    class="text-[11px] sm:text-sm font-semibold text-gray-700 flex items-center gap-1 sm:gap-1.5"
+                  >
+                    <i class="fa-solid fa-location-dot text-gray-800"></i> BT
+                    Road
+                  </span>
+                  <button class="text-gray-800 hover:text-red-500 transition">
+                    <i class="fa-regular fa-heart text-base sm:text-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-gray-600 text-[12px] sm:text-sm font-medium mb-4 sm:mb-6"
+              >
+                Size: 9580 sq. ft.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0"
+              >
+                <p class="text-[13px] sm:text-[15px] font-bold text-gray-800">
+                  Start From: ₹ 48 Lacs
+                </p>
+                <a
+                  href="#"
+                  class="bg-[#171e2e] text-white text-center px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-[#facc15] hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200"
+                >
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="property-card flex-shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100"
+            data-category="single-family"
+          >
+            <div class="relative h-48 sm:h-56 md:h-64 w-full">
+              <img
+                src="assests/images/agent-images/list-img-2.png"
+                alt="Single Family House"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute top-4 left-0 bg-[#1e293b] text-white text-xs font-bold px-4 py-1.5 ribbon pr-6"
+              >
+                Featured
+              </div>
+            </div>
+            <div class="p-4 sm:p-6">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="font-bold text-gray-900 text-base sm:text-lg">
+                  Single Family House
+                </h3>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <span
+                    class="text-[11px] sm:text-sm font-semibold text-gray-700 flex items-center gap-1 sm:gap-1.5"
+                  >
+                    <i class="fa-solid fa-location-dot text-gray-800"></i>
+                    Sonarpur
+                  </span>
+                  <button class="text-gray-800 hover:text-red-500 transition">
+                    <i class="fa-regular fa-heart text-base sm:text-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-gray-600 text-[12px] sm:text-sm font-medium mb-4 sm:mb-6"
+              >
+                Size: 4580 sq. ft.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0"
+              >
+                <p class="text-[13px] sm:text-[15px] font-bold text-gray-800">
+                  Start From: ₹ 38 Lacs
+                </p>
+                <a
+                  href="#"
+                  class="bg-[#171e2e] text-white text-center px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-[#facc15] hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200"
+                >
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="property-card flex-shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100"
+            data-category="apartment"
+          >
+            <div class="relative h-48 sm:h-56 md:h-64 w-full">
+              <img
+                src="assests/images/agent-images/list-img-3.png"
+                alt="Luxury Apartment"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 sm:p-6">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="font-bold text-gray-900 text-base sm:text-lg">
+                  Luxury Apartment
+                </h3>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <span
+                    class="text-[11px] sm:text-sm font-semibold text-gray-700 flex items-center gap-1 sm:gap-1.5"
+                  >
+                    <i class="fa-solid fa-location-dot text-gray-800"></i>
+                    Baruipur
+                  </span>
+                  <button class="text-gray-800 hover:text-red-500 transition">
+                    <i class="fa-regular fa-heart text-base sm:text-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-gray-600 text-[12px] sm:text-sm font-medium mb-4 sm:mb-6"
+              >
+                Size: 1250 sq. ft.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0"
+              >
+                <p class="text-[13px] sm:text-[15px] font-bold text-gray-800">
+                  Start From: ₹ 18 Lacs
+                </p>
+                <a
+                  href="#"
+                  class="bg-[#171e2e] text-white text-center px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-[#facc15] hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200"
+                >
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 clone -->
+          <div
+            class="property-card flex-shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100"
+            data-category="apartment"
+          >
+            <div class="relative h-48 sm:h-56 md:h-64 w-full">
+              <img
+                src="assests/images/agent-images/list-img-3.png"
+                alt="Luxury Apartment"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 sm:p-6">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="font-bold text-gray-900 text-base sm:text-lg">
+                  Luxury Apartment
+                </h3>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <span
+                    class="text-[11px] sm:text-sm font-semibold text-gray-700 flex items-center gap-1 sm:gap-1.5"
+                  >
+                    <i class="fa-solid fa-location-dot text-gray-800"></i>
+                    Baruipur
+                  </span>
+                  <button class="text-gray-800 hover:text-red-500 transition">
+                    <i class="fa-regular fa-heart text-base sm:text-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-gray-600 text-[12px] sm:text-sm font-medium mb-4 sm:mb-6"
+              >
+                Size: 1250 sq. ft.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0"
+              >
+                <p class="text-[13px] sm:text-[15px] font-bold text-gray-800">
+                  Start From: ₹ 18 Lacs
+                </p>
+                <a
+                  href="#"
+                  class="bg-[#171e2e] text-white text-center px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-[#facc15] hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200"
+                >
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 sm:mt-8">
+          <a
+            href="#"
+            class="bg-[#171e2e] text-white px-5 py-4 rounded-lg text-m font-bold hover:bg-[#facc15] hover:text-[#171E2E] shadow hover:shadow-md transition-all duration-200"
+          >
+            Load More Properties
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Listing Section Ends -->
+
+    <!-- Review Section Starts -->
+    <section class="px-4 md:px-6 mb-24">
+      <div class="container mx-auto max-w-[1320px]">
+        <div
+          class="bg-white rounded-[24px] sm:rounded-[32px] p-5 sm:p-8 md:p-12 shadow-sm border border-gray-100"
+        >
+          <h2
+            class="text-xl sm:text-[26px] md:text-[28px] font-semibold text-gray-900 leading-tight"
+          >
+            Property Reviews
+          </h2>
+
+          <div class="flex items-center gap-2 mt-2 md:mt-3 mb-6 md:mb-10">
+            <div
+              class="text-[#ffc107] flex gap-1 text-base sm:text-xl md:text-[22px]"
+            >
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <span class="text-gray-800 text-xs sm:text-[15px] font-medium ml-1"
+              >1 review</span
+            >
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 md:gap-6">
+            <div class="flex-shrink-0">
+              <img
+                src="assests/images/agent-images/review-1.png"
+                alt="Reviewer Avatar"
+                class="w-12 h-12 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px] rounded-full object-cover bg-gray-200"
+              />
+            </div>
+            <div class="flex-1 sm:pt-1">
+              <div
+                class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-4 mb-2"
+              >
+                <div>
+                  <p
+                    class="text-gray-900 font-semibold text-[13px] sm:text-[15px]"
+                  >
+                    Posted by admin
+                  </p>
+                  <p
+                    class="text-gray-900 font-bold text-[14px] sm:text-base mt-0.5"
+                  >
+                    Excellent service!
+                  </p>
+                </div>
+                <p
+                  class="text-gray-800 text-[11px] sm:text-[14px] font-medium mt-1 sm:mt-0"
+                >
+                  Posted on 7 July 2025
+                </p>
+              </div>
+              <p
+                class="text-gray-700 text-[12px] sm:text-[14px] md:text-[15px] leading-relaxed mt-2 md:mt-4"
+              >
+                I recently had the pleasure of working with Sam Daniels from
+                [Agency Name] in my quest to find the perfect home, and I cannot
+                speak highly enough of his professionalism, expertise, and
+                dedication to his clients. From our initial meeting, it was
+                evident that Sam possesses a profound understanding of the local
+                real estate market. He took the time to listen attentively to my
+                preferences, priorities, and budget constraints, ensuring that
+                he had a clear understanding of my needs before embarking on our
+                house-hunting journey. What truly sets Sam apart is his
+                unwavering commitment to his clients. Throughout the entire
+                process, he was consistently accessible, responsive, and
+                proactive in his communication. Whether it was promptly
+                answering my questions, providing valuable insights into
+                different neighborhoods,or scheduling property viewings at my
+                convenience, Sam's dedication to ensuring my satisfaction was
+                truly remarkable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Review Section Ends -->
+
+    <!-- Footer Starts -->
+    <footer
+      class="bg-[#12192b] pt-8 pb-2 relative overflow-hidden group mt-auto border-t border-white/10"
+    >
+      <img
+        src="assests/images/services-images/ftr-1.png"
+        alt="Building Cityscape"
+        class="absolute bottom-0 left-0 w-full h-[250px] object-cover object-bottom opacity-90 transform translate-y-2/3 group-hover:translate-y-0 transition-transform duration-700 ease-out z-0 pointer-events-none"
+        loading="lazy"
+      />
+
+      <div class="max-w-[1320px] mx-auto px-4 md:px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-2">
+          <div class="lg:col-span-4 flex flex-col justify-between">
+            <div>
+              <div class="mb-1">
+                <a href="index.html" class="inline-block">
+                  <img
+                    src="assests/images/ongoing-projects/logo.png"
+                    alt="Logo"
+                    class="w-[74px] h-[92px] object-contain"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <h2 class="text-3xl text-white mb-4">
+                <span class="italic font-medium">Smart Moves</span>
+                <span class="font-bold">Start With Us</span>
+              </h2>
+
+              <p class="text-gray-300 text-sm leading-relaxed mb-6 pr-4">
+                Redefining real estate through institutional-grade advisory and
+                world-class inventory.
+              </p>
+
+              <div class="flex gap-3 mb-6">
+                <a
+                  href="https://www.instagram.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-instagram" style="color: #fca311"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-facebook-f" style="color: #fca311"></i
+                ></a>
+                <a
+                  href="https://x.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-twitter" style="color: #fca311"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="mt-auto">
+              <p class="text-white text-sm mb-3">
+                Receive monthly market reports and exclusive listing updates.
+              </p>
+              <form method="get">
+                <div
+                  class="flex bg-white rounded-lg overflow-hidden w-full max-w-[350px]"
+                >
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    class="w-full px-4 py-3 text-sm text-gray-800 outline-none bg-white"
+                    required
+                  />
+
+                  <input
+                    type="submit"
+                    class="bg-[#fca311] hover:bg-[#e5930f] text-black font-bold text-sm px-6 py-3 transition"
+                    value="Join"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                NAVIGATION
+              </div>
+
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-house" style="color: #fca311"></i>
+                    </span>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-user-group"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="properties.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-house-chimney-window"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    Property List
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-gear" style="color: #fca311"></i>
+                    </span>
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="blogs.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-pen-to-square"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    Blogs
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                CONTACTS
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="mailto:infinityhorizon@gmail.com"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white text-[#fca311] flex items-center justify-center text-[10px] shadow-sm"
+                    >
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    infinity@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="tel:+2835203202-940"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white text-[#fca311] flex items-center justify-center text-[10px] shadow-sm"
+                      ><i class="fa-solid fa-phone"></i
+                    ></span>
+                    +2835203202-940
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                EXPERTISE
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Luxury Residential</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Commercial Assets</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Market Analysis</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                OFFICES
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Kolkata</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Mumbai</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block"
+                    >Bangalore</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-white text-xs md:text-sm pt-5 pb-3 relative z-20"
+        >
+          <span class="mb-4 md:mb-0 text-white"
+            >&copy; 2026
+            <a href="index.html" class="hover:text-[#facc15] transition-colors">
+              INFINITY HORIZON
+            </a>
+            ALL RIGHT RESERVED
+          </span>
+          <div
+            class="flex flex-wrap justify-center gap-6 md:gap-8 font-semibold tracking-wider uppercase text-[10px] sm:text-xs"
+          >
+            <a href="#" class="hover:text-[#fca311] transition">OFFERS</a>
+            <a href="#" class="hover:text-[#fca311] transition"
+              >TERMS OF SERVICE</a
+            >
+            <a href="#" class="hover:text-[#fca311] transition"
+              >PRIVACY POLICY</a
+            >
+            <a href="#" class="hover:text-[#fca311] transition"
+              >COOKIE SETTINGS</a
+            >
+          </div>
+        </div>
+
+        <button
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          class="absolute right-4 md:right-6 bottom-11 w-12 h-12 rounded-full bg-white/95 text-[#fca311] flex items-center justify-center shadow-lg hover:bg-[#fca311] hover:text-white transition duration-300 text-xl z-30 leading-none"
+        >
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <script src="assests/js/cmn-script.js"></script>
+    <script src="assests/js/agent/script.js"></script>
+  </body>
+</html>

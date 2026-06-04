@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinity Horizon - Calendar</title>
+  <link rel="shortcut icon" href="assests/images/about-images/logo.png" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style type="text/tailwindcss">
+    @theme {
+    --color-ink: #06092c;
+    --color-sidebar: #171f5c;
+    --color-panel: #eef4fb;
+  }
+</style>
+</head>
+
+<body class="min-h-screen bg-panel text-ink lg:overflow-hidden">
+
+  <!-- Mobile Menu Backdrop -->
+  <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden transition-opacity duration-300">
+  </div>
+
+  <!-- Sidebar Layout -->
+  <aside id="appSidebar"
+    class="fixed top-0 bottom-0 left-0 lg:top-6 lg:left-[34px] w-[240px] lg:w-[203px] h-screen lg:h-[calc(100vh-40px)] lg:rounded-xl bg-[#171f5c] flex flex-col py-8 px-4 lg:px-3 z-50 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+    <!-- Close Button for Mobile -->
+    <button id="closeSidebar" class="lg:hidden absolute top-4 right-4 text-white text-xl p-1">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Logo -->
+    <div class="flex flex-col items-center mb-8">
+      <img src="image/infinity horizon logo finale 1.png" alt="Infinity Horizon Logo"
+        class="w-[90px] h-[72px] object-contain" />
+    </div>
+
+    <!-- Nav -->
+    <nav class="flex flex-col gap-1 overflow-y-auto scrollbar-hide flex-1">
+      <a href="admin.html"
+        class="flex items-center gap-2.5 rounded-xl  px-3.5 py-2.5 text-[13px] font-bold text-white  transition">
+        <img src="image/icon/desktop-white.png" alt="Chat icon" class=" h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Dashboard</span>
+      </a>
+      <a href="chat.html"
+        class=" flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white transition hover:bg-white/10">
+        <img src="image/icon/chat_icon.png" alt="Chat icon" class=" h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Chat</span>
+      </a>
+      <a href="calendar.html"
+        class=" flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold  bg-white text-[#171f5c]  transition">
+        <img src="image/icon/calendar-black.png" alt="Dashboard icon"
+          class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Calendar</span>
+      </a>
+      <a href="castomer.html"
+        class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white transition hover:bg-white/10">
+        <img src="image/icon/castomer_icon.png" alt="Customer icon" class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Customer</span>
+      </a>
+      <a href="revenue.html"
+        class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white transition hover:bg-white/10">
+        <img src="image/icon/revenu_icon.png" alt="Revenue icon" class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Revenue</span>
+      </a>
+    </nav>
+
+    <!-- User Section -->
+    <div class="mt-auto pt-4 border-t border-white/10">
+      <div class="mb-4 flex items-center gap-3 rounded-xl bg-white px-3 py-3">
+        <img src="image/logo_us.png" alt="Sneha Paul" class="h-10 w-10 rounded-xl object-cover" />
+        <div class="min-w-0">
+          <p class="truncate text-xs font-bold text-[#26306a]">Sneha Paul</p>
+          <p class="truncate text-[11px] font-bold text-[#26306a]">dcdh@gmail.com</p>
+        </div>
+      </div>
+      <button
+        class="flex h-7 w-full items-center justify-center gap-2 rounded-full bg-white/30 text-xs font-bold text-white transition hover:bg-white/40">
+        <i class="fa-solid fa-right-from-bracket text-[13px]" aria-hidden="true"></i>
+        Logout
+      </button>
+    </div>
+  </aside>
+
+
+  <!-- Main Area -->
+  <main class="app-main lg:ml-[237px] h-screen overflow-y-auto pb-8 pt-0 hide-scrollbar">
+
+    <!-- Sticky Topbar Container -->
+    <div class="sticky top-0 bg-[#eef4fb]/95 backdrop-blur-md z-40 px-4 md:px-[17px] pt-4 pb-2">
+      <div class="w-full max-w-[1580px] mx-auto flex items-center justify-between">
+
+        <!-- Left side: Toggle button and Title -->
+        <div class="flex items-center gap-3">
+          <button id="toggleSidebar"
+            class="lg:hidden p-2 text-[#070b2d] bg-white rounded-full shadow-sm text-lg focus:outline-none cursor-pointer">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h1 class="text-xl md:text-[29px] leading-none font-bold text-[#070b2d]">Calendar</h1>
+        </div>
+
+        <!-- Right side: Actions -->
+        <div class="flex items-center gap-2 md:gap-3">
+          <button
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-slate-50 transition cursor-pointer">
+            <i class="fa-solid fa-magnifying-glass text-sm md:text-[17px] text-[#64748b]" aria-hidden="true"></i>
+          </button>
+          <button
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-slate-50 transition cursor-pointer">
+            <i class="fa-solid fa-comment-dots text-sm md:text-[17px] text-[#64748b]" aria-hidden="true"></i>
+          </button>
+          <button
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center shadow-sm relative hover:bg-slate-50 transition cursor-pointer">
+            <i class="fa-solid fa-bell text-sm md:text-[17px] text-[#64748b]" aria-hidden="true"></i>
+            <span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-red-500"></span>
+          </button>
+          <img src="image/Ellipse 3 (1).png" alt="Profile"
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover cursor-pointer border border-white shadow-sm" />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT SECTION -->
+    <section class="mx-auto max-w-[1580px] px-4 md:px-[17px] mt-4">
+
+      <h2 class="mb-3 text-xl font-bold text-ink">Default</h2>
+
+      <!-- Tags/Filters -->
+      <div class="mb-4 flex flex-wrap gap-2.5">
+        <button
+          class="rounded-lg bg-[#5cc42a] px-3.5 py-2 text-[14px] sm:text-[16px] font-medium text-white transition hover:opacity-90 cursor-pointer">Events</button>
+        <button
+          class="rounded-lg bg-[#7c82ee] px-3.5 py-2 text-[14px] sm:text-[16px] font-medium text-white transition hover:opacity-90 cursor-pointer">Personal</button>
+        <button
+          class="rounded-lg bg-[#ef2f99] px-3.5 py-2 text-[14px] sm:text-[16px] font-medium text-white transition hover:opacity-90 cursor-pointer">Meeting</button>
+        <button
+          class="rounded-lg bg-[#a821a8] px-3.5 py-2 text-[14px] sm:text-[16px] font-medium text-white transition hover:opacity-90 cursor-pointer">Festival
+          Function</button>
+      </div>
+
+      <!-- Calendar Card Container -->
+      <section class="rounded-2xl bg-white px-4 sm:px-7 pb-5 pt-[18px]">
+
+        <!-- Calendar View Controls Header -->
+        <div class="mb-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex items-center justify-between sm:justify-start sm:grid sm:grid-cols-3 sm:w-full items-center">
+            <div>
+              <button
+                class="rounded-lg bg-sidebar px-3.5 py-2 text-[16px] sm:text-[18px] font-medium lowercase text-white transition hover:bg-sidebar/90 cursor-pointer">today</button>
+            </div>
+            <h3 class="text-center text-[16px] sm:text-[18px] font-bold text-[#111] my-2 sm:my-0">March 2026</h3>
+            <div class="flex items-center justify-end gap-4 sm:gap-6">
+              <div class="flex h-[34px] overflow-hidden rounded-lg bg-sidebar text-white">
+                <button class="flex w-8 items-center justify-center px-3 transition hover:bg-white/10 cursor-pointer"
+                  aria-label="Previous month">
+                  <i class="fa-solid fa-chevron-left text-[16px]" aria-hidden="true"></i>
+                </button>
+                <button class="flex w-8 items-center justify-center px-3 transition hover:bg-white/10 cursor-pointer"
+                  aria-label="Next month">
+                  <i class="fa-solid fa-chevron-right text-[16px]" aria-hidden="true"></i>
+                </button>
+              </div>
+              <button
+                class="rounded-lg bg-sidebar px-3.5 py-2 text-[16px] sm:text-[18px] font-medium lowercase text-white transition hover:bg-sidebar/90 cursor-pointer">month</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calendar Main Grid Wrapper -->
+        <div class="overflow-x-auto hide-scrollbar">
+          <div class="min-w-[930px] border-l border-t border-[#a7a7a7]">
+
+            <!-- Days of Week Title Grid -->
+            <div class="grid grid-cols-7">
+              <div
+                class="flex h-11 items-center justify-center border-b border-r border-[#a7a7a7] text-[14px] font-bold">
+                SUN</div>
+              <div
+                class="flex h-11 items-center justify-center border-b border-r border-[#a7a7a7] text-[14px] font-bold">
+                MON</div>
+              <div
+                class="flex h-11 items-center justify-center border-b border-r border-[#a7a7a7] text-[14px] font-bold">
+                TUE</div>
+              <div
+                class="flex h-11 items-center justify-center border-b border-r border-[#a7a7a7] text-[14px] font-bold">
+                WED</div>
+              <div
+                class="flex h-11 items-center justify-center border-b border-r border-[#a7a7a7] text-[14px] font-bold">
+                THU</div>
+              <div
+                class="flex h-11 items-center justify-center border-b border-r border-[#a7a7a7] text-[14px] font-bold">
+                FRI</div>
+              <div
+                class="flex h-11 items-center justify-center border-b border-r border-[#a7a7a7] text-[14px] font-bold">
+                SAT</div>
+            </div>
+
+            <!-- Date Matrix Cells Grid -->
+            <div class="grid grid-cols-7">
+              <!-- Row 1 -->
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">1</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">2</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">3</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">4</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">5</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">6</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">7</span></div>
+
+              <!-- Row 2 -->
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">8</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">9</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">10</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">11</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">12</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">13</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">14</span></div>
+
+              <!-- Row 3 -->
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">15</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">16</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">17</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">18</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]">
+                <span class="absolute right-3 top-2 text-[18px]">19</span>
+                <div
+                  class="absolute left-1 top-[38px] flex h-[42px] w-[88%] items-center rounded-md bg-[#c4e9ad] pl-4 text-[16px] font-medium text-[#65bc24]">
+                  <span class="absolute left-1 top-2 h-7 w-1 rounded-full bg-[#65bc24]"></span>
+                  Events
+                </div>
+              </div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">20</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">21</span></div>
+
+              <!-- Row 4 -->
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">22</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">23</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">24</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]">
+                <span class="absolute right-3 top-2 text-[18px]">25</span>
+                <div
+                  class="absolute left-1 top-[38px] flex h-[42px] w-[94%] items-center rounded-md bg-[#f5a0ce] pl-5 text-[16px] font-medium text-[#ef2f99]">
+                  <span class="absolute left-1 top-2 h-7 w-1 rounded-full bg-[#ef2f99]"></span>
+                  Meeting
+                </div>
+              </div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">26</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">27</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">28</span></div>
+
+              <!-- Row 5 -->
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">29</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">30</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px]">31</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">1</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">2</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">3</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">4</span></div>
+
+              <!-- Row 6 -->
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">5</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">6</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">7</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">8</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">9</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">10</span></div>
+              <div class="relative h-[100px] border-b border-r border-[#a7a7a7]"><span
+                  class="absolute right-3 top-2 text-[18px] text-[#adadad]">11</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+
+  <script src="js/app.js">
+  </script>
+
+</body>
+
+</html>

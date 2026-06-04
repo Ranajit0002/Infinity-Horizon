@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="assests/images/login_Signup/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assests/css/cmn-style.css" />
+</head>
+
+<body class="bg-white">
+  <div class="flex w-full min-h-screen">
+    <div class="hidden lg:flex lg:fixed lg:left-0 lg:top-0 lg:w-1/2 lg:h-screen relative bg-cover bg-center"
+      style="background-image: url(assests/images/login_Signup/login-bg.png)">
+      <div class="relative z-10 w-full flex flex-col justify-between p-12 lg:p-16 h-full">
+        <div class="flex justify-start mt-4">
+          <div class="text-center flex flex-col items-center gap-3">
+            <a href="index.html" class="w-[74px] h-[92px]">
+              <img src="assests/images/login_Signup/logo.png" alt="logo" loading="lazy" />
+            </a>
+          </div>
+        </div>
+        <div class="text-white max-w-md mb-8">
+          <h2 class="text-4xl font-bold mb-4">Find your sweet home</h2>
+          <p class="text-gray-200 text-sm leading-relaxed font-medium">
+            Schedule visits in just a few clicks and discover a curated
+            collection of premium estates.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full lg:w-1/2 lg:ml-[50%] flex flex-col min-h-screen">
+      <div class="flex-1 flex flex-col justify-center py-12 px-6 sm:px-12 md:px-16 w-full max-w-xl mx-auto">
+        <div class="flex lg:hidden justify-center mb-10">
+          <div class="text-center flex flex-col items-center gap-2">
+            <a href="index.html" class="w-[74px] h-[92px]">
+              <img src="assests/images/login_Signup/logo.png" alt="logo" loading="lazy" />
+            </a>
+          </div>
+        </div>
+
+        <h1 class="text-3xl sm:text-[2.5rem] leading-tight font-bold text-gray-900 mb-3">
+          Welcome Back to Infinity Horizon!
+        </h1>
+        <p class="text-gray-500 text-sm mb-10">
+          Sign in your account to continue your journey.
+        </p>
+
+        <form>
+          <div class="mb-5">
+            <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2">Your Email</label>
+            <input type="email" placeholder="name@example.com"
+              class="w-full px-4 py-3.5 rounded-md border border-gray-200 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 transition-colors text-sm placeholder-gray-400 text-gray-800" />
+          </div>
+
+          <div class="mb-5">
+            <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2">Password</label>
+            <input type="password" placeholder="••••••••"
+              class="w-full px-4 py-3.5 rounded-md border border-gray-200 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 transition-colors text-sm placeholder-gray-400 text-gray-800" />
+          </div>
+
+          <div class="flex items-center justify-between mb-8 mt-4">
+            <label class="flex items-center cursor-pointer group">
+              <input type="checkbox"
+                class="w-4 h-4 rounded border-gray-300 text-[#111827] focus:ring-[#111827] cursor-pointer" />
+              <span class="ml-2 text-sm text-gray-500 group-hover:text-gray-800 transition-colors">Remember me</span>
+            </label>
+            <a href="forgot.html" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">Forgot
+              Password?</a>
+          </div>
+
+          <input type="submit" value="Login"
+            class="w-full bg-[#111827] text-white rounded-md py-3.5 text-base font-medium transition-all duration-300 hover:bg-[#FCA311] hover:shadow-md active:scale-[0.98] cursor-pointer outline-none mb-8" />
+        </form>
+
+        <div class="flex items-center mb-8">
+          <div class="flex-1 h-px bg-gray-100"></div>
+          <span class="px-4 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Instant Sign Up</span>
+          <div class="flex-1 h-px bg-gray-100"></div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-4">
+          <button type="button"
+            class="flex-1 flex items-center justify-center gap-3 py-3 border border-gray-200 bg-white rounded-md transition-all duration-300 hover:border-[#FCA311] hover:bg-gray-50 hover:shadow-sm active:scale-[0.98]">
+            <figure class="h-[21px] w-[21px]">
+              <img src="assests/images/login_Signup/google-icon.png" alt="google-icon" loading="lazy" />
+            </figure>
+            <span class="text-sm font-medium text-gray-700">Google</span>
+          </button>
+          <button type="button"
+            class="flex-1 flex items-center justify-center gap-3 py-3 border border-gray-200 bg-white rounded-md transition-all duration-300 hover:border-[#FCA311] hover:bg-gray-50 hover:shadow-sm active:scale-[0.98]">
+            <figure class="h-[18px] w-[18px]">
+              <img src="assests/images/login_Signup/fb-icon.png" alt="fb-icon" loading="lazy" />
+            </figure>
+            <span class="text-sm font-medium text-gray-700">Facebook</span>
+          </button>
+        </div>
+
+        <div class="text-center mt-2">
+          <p class="text-sm text-gray-600">
+            Don't have an account?
+            <a href="signup.html" class="text-[#4A90E2] hover:text-blue-700 font-medium transition-colors">Register</a>
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="w-full mt-auto flex flex-col sm:flex-row justify-between items-center px-6 sm:px-12 md:px-16 py-8 bg-white text-[9px] sm:text-[10px] text-gray-400 font-bold uppercase tracking-widest gap-4 sm:gap-0">
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-gray-700 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-700 transition-colors">Terms</a>
+        </div>
+        <div>
+          © 2026
+          <a href="index.html" class="hover:text-gray-700 transition-colors">Infinity Horizon</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

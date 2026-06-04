@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Details</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="assests/images/Properties-images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assests/css/cmn-style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Header With Banner Starts -->
+    <div
+      class="relative w-full h-[50vh] min-h-[400px] bg-cover bg-center bg-no-repeat flex flex-col"
+      style="background-image: url(assests/images/blog/blog-bg.png)"
+    >
+      <header class="relative z-40 w-full pt-4 md:pt-6 pb-2">
+        <div class="max-w-[1320px] mx-auto px-4 md:px-6">
+          <nav class="flex items-center justify-between w-full h-16">
+            <div class="flex-1 flex justify-start">
+              <a href="index.html" class="inline-block">
+                <img
+                  src="assests/images/index/logo.png"
+                  alt="Logo"
+                  class="w-[74px] h-[92px] object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <div
+              class="hidden lg:flex flex-none items-center gap-6 backdrop-blur-xl border-2 border-white/50 rounded-full px-6 py-1"
+            >
+              <a
+                href="index.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Home</a
+              >
+              <a
+                href="about.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >About US</a
+              >
+
+              <div class="relative group cursor-pointer">
+                <a
+                  href="properties.html"
+                  id="desktop-properties-btn"
+                  class="flex items-center py-2.5 text-sm text-white transition"
+                >
+                  <span
+                    class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                    >Properties</span
+                  >
+                  <span
+                    class="ml-1.5 text-[10px] text-white group-hover:text-[#facc15] inline-block transition-transform duration-300 group-hover:-rotate-180"
+                    ><i class="fa-solid fa-angle-down"></i
+                  ></span>
+                </a>
+
+                <div
+                  id="desktop-properties-dropdown"
+                  class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-50 backdrop-blur-md rounded-t-sm rounded-b-2xl border border-[#facc15] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden"
+                >
+                  <ul class="py-2">
+                    <li>
+                      <a
+                        href="properties.html"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >All Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Buy Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Rent Properties</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition"
+                        >Sell Properties</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <a
+                href="services.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Services</a
+              >
+              <a
+                href="blogs.html"
+                class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors"
+                >Blogs</a
+              >
+            </div>
+
+            <div class="hidden lg:flex flex-1 items-center justify-end gap-3">
+              <a
+                href="#"
+                aria-label="Favorite"
+                class="group inline-flex items-center justify-center w-11 h-11 rounded-full bg-slate-900 border-2 border-transparent transition-all duration-300 ease-in-out hover:border-red-500 hover:bg-white"
+              >
+                <i
+                  class="fa-regular fa-heart text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-red-500"
+                ></i>
+              </a>
+              <a
+                href="login.html"
+                aria-label="Favorite"
+                class="group inline-flex items-center justify-center w-11 h-11 rounded-full bg-slate-900 border-2 border-transparent transition-all duration-300 ease-in-out hover:border-[#0F172A] hover:bg-white"
+              >
+                <i
+                  class="fa-regular fa-user text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-[#0F172A]"
+                ></i>
+              </a>
+
+              <a
+                href="contacts.html"
+                class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]"
+              >
+                <span class="text-sm font-medium whitespace-nowrap"
+                  >Contact Us</span
+                >
+
+                <div
+                  class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]"
+                >
+                  <i
+                    class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"
+                  ></i>
+                </div>
+              </a>
+            </div>
+
+            <button
+              id="menu-btn"
+              class="lg:hidden text-white p-2 focus:outline-none z-50 relative ml-auto flex items-center justify-center"
+            >
+              <span id="icon-menu" class="text-3xl leading-none drop-shadow-md"
+                >&#9776;</span
+              >
+              <span
+                id="icon-close"
+                class="hidden text-3xl leading-none drop-shadow-md"
+                >&#10005;</span
+              >
+            </button>
+          </nav>
+        </div>
+        <div
+          id="menu-overlay"
+          class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 invisible"
+        ></div>
+
+        <div
+          id="mobile-menu"
+          class="fixed top-0 right-0 h-full w-[85%] max-w-[320px] backdrop-blur-md border-l border-white/40 z-50 translate-x-full overflow-y-auto"
+        >
+          <div
+            class="flex items-center justify-between p-6 border-b border-white/40"
+          >
+            <span class="text-white font-bold tracking-wider">
+              <a href="index.html" class="inline-block">
+                <img
+                  src="assests/images/index/logo.png"
+                  alt="Logo"
+                  class="w-[74px] h-[92px] object-contain"
+                  loading="lazy"
+                />
+              </a>
+            </span>
+            <button
+              id="close-menu-btn"
+              class="text-gray-400 hover:text-white transition p-1 text-2xl leading-none"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <nav class="flex flex-col px-6 py-6 space-y-4">
+            <div>
+              <a
+                href="index.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Home</a
+              >
+            </div>
+            <div>
+              <a
+                href="about.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >About Us</a
+              >
+            </div>
+
+            <div class="flex flex-col group space-y-0">
+              <a
+                href="properties.html"
+                id="mobile-properties-btn"
+                class="text-white hover:text-[#facc15] text-lg font-semibold flex justify-between items-center w-full focus:outline-none transition"
+              >
+                <span class="nav-link">Properties</span>
+                <span
+                  id="mobile-properties-icon"
+                  class="inline-block transition-transform duration-300 text-sm"
+                  ><i class="fa-solid fa-angle-down"></i
+                ></span>
+              </a>
+              <div
+                id="mobile-properties-menu"
+                class="flex flex-col pl-4 mt-3 space-y-4"
+              >
+                <a
+                  href="properties.html"
+                  class="text-gray-300 hover:text-[#facc15] transition block pt-4"
+                  >All Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Buy Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Rent Properties</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#facc15] transition block"
+                  >Sell Properties</a
+                >
+              </div>
+            </div>
+
+            <div>
+              <a
+                href="services.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Services</a
+              >
+            </div>
+            <div>
+              <a
+                href="blogs.html"
+                class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors"
+                >Blogs</a
+              >
+            </div>
+
+            <hr class="border-white/40 my-4" />
+
+            <div class="flex flex-col gap-4 mt-4">
+              <div class="flex gap-4 justify-center">
+                <a
+                  href="#"
+                  aria-label="Favorite"
+                  class="group inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 ease-in-out hover:border-red-500 hover:bg-white"
+                >
+                  <i
+                    class="fa-regular fa-heart text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-red-500"
+                  ></i>
+                </a>
+                <a
+                  href="login.html"
+                  aria-label="Favorite"
+                  class="group inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 ease-in-out hover:border-[#0F172A] hover:bg-white"
+                >
+                  <i
+                    class="fa-regular fa-user text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-[#0F172A]"
+                  ></i>
+                </a>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="contacts.html"
+                  class="group flex items-center justify-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border-2 border-white hover:border-[#0F172A]"
+                >
+                  <span class="text-sm font-medium whitespace-nowrap"
+                    >Contact Us</span
+                  >
+
+                  <div
+                    class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]"
+                  >
+                    <i
+                      class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"
+                    ></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div
+        class="relative z-10 flex-grow flex flex-col items-center justify-center text-center px-4 pb-12"
+      >
+        <h1
+          class="text-white text-4xl sm:text-5xl md:text-7xl lg:text font-bold mb-4 leading-tight"
+        >
+          Blogs & Updates
+        </h1>
+        <div
+          class="flex items-center text-xs sm:text-sm md:text-base font-medium mt-2"
+        >
+          <p class="text-xl sm:text-3xl text-white drop-shadow-sm mb-4">
+            Turning Properties into Possibilities
+          </p>
+        </div>
+        <div
+          class="flex items-center gap-2 text-white/90 text-xs sm:text-sm md:text-base font-medium mt-2"
+        >
+          <a href="#" class="hover:text-yellow-400 transition cursor-pointer"
+            >Home</a
+          >
+          <span class="text-[10px] sm:text-xs"
+            ><i class="fa-solid fa-angle-right"></i
+          ></span>
+          <span class="text-white">First Time Buyers</span>
+        </div>
+      </div>
+    </div>
+    <!-- Header With Banner Ends -->
+
+    <!-- Main Starts -->
+    <main class="mx-auto font-['Inter'] text-[#1E1E1E]">
+      <!-- Section 1 -->
+      <section class="bg-[#E5E5E5] py-10 lg:py-16">
+        <div
+          class="max-w-[1320px] mx-auto px-5 md:px-8 lg:px-10 text-[#1E1E1E]"
+        >
+          <div class="mb-10 text-center max-w-6xl mx-auto">
+            <h1 class="text-3xl md:text-4xl font-bold mb-6 text-[#1a2b4c]">
+              Best Property in Kolkata Areas to Invest in 2026 Now
+            </h1>
+
+            <p class="text-base md:text-lg lg:text-xl font-medium">
+              Discover the best property in Kolkata areas to invest in 2026 with
+              insights on top locations, growth potential, rental demand and
+              future value.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-wrap items-center justify-start gap-6 md:gap-12 mb-10"
+          >
+            <div class="flex items-center gap-3">
+              <img
+                src="assests/images/blog/person-1.png"
+                alt="Sarah Mitchell"
+                class="w-12 h-12 rounded-full object-cover shadow-sm"
+              />
+              <div class="flex flex-col">
+                <span class="block text-base font-semibold text-[#1a2b4c]"
+                  >Sarah Mitchell</span
+                >
+                <span class="block text-sm text-gray-500"
+                  >Senior Real Estate Agent</span
+                >
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 text-gray-600">
+              <i class="fa-regular fa-calendar text-lg"></i>
+              <span class="text-sm md:text-base font-medium">May 25, 2026</span>
+            </div>
+
+            <div class="flex items-center gap-2 text-gray-600">
+              <i class="fa-regular fa-clock text-lg"></i>
+              <span class="text-sm md:text-base font-medium">8 min read</span>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <span
+              class="block text-xl md:text-2xl font-bold mb-4 text-[#1a2b4c]"
+            >
+              Best Property in Kolkata Areas to Invest in 2026 Now
+            </span>
+
+            <p class="text-base leading-relaxed mb-4">
+              The real estate market in Kolkata is evolving rapidly, making 2026
+              an exciting time for buyers and investors. Whether you are
+              planning to buy your dream apartment, invest for rental income, or
+              secure long-term appreciation, choosing the right property in
+              Kolkata can make all the difference.
+            </p>
+            <p class="text-base leading-relaxed mb-8">
+              From premium residential zones to fast-growing suburban hubs, the
+              city offers opportunities for every budget. In this FAQ-style
+              guide, we answer the most common questions buyers ask before
+              investing in property in Kolkata and explore the best areas to
+              consider in 2026.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="assests/images/blog/banner-bg.png"
+              alt="Kolkata Property View"
+              class="w-full h-auto rounded-2xl object-cover shadow-md"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="py-6 bg-white">
+        <div
+          class="max-w-[1320px] mx-auto px-5 md:px-8 lg:px-10 text-[#1E1E1E]"
+        >
+          <div class="mb-10">
+            <span
+              class="block text-xl md:text-2xl font-bold mb-4 text-[#1a2b4c]"
+            >
+              Why is Property in Kolkata Becoming Popular in 2026?
+            </span>
+
+            <p class="text-base leading-relaxed mb-4">
+              The demand for property in Kolkata is increasing because the city
+              offers a balance of affordability, infrastructure growth, and
+              quality living. Compared to other metro cities, Kolkata still
+              provides spacious homes at competitive prices.
+            </p>
+            <p class="text-base leading-relaxed mb-4">
+              Several factors are driving the growth of property in Kolkata in
+              2026:
+            </p>
+
+            <ul class="list-disc pl-5 text-base space-y-2 mb-4">
+              <li>Expansion of metro connectivity</li>
+              <li>Development of IT and business hubs</li>
+              <li>Rising demand for gated communities</li>
+              <li>Improved road infrastructure</li>
+              <li>Growth of commercial and retail spaces</li>
+            </ul>
+
+            <p class="text-base leading-relaxed mb-8">
+              Many investors believe that property in Kolkata still has strong
+              appreciation potential, especially in developing locations.
+            </p>
+
+            <hr class="h-[2px] bg-black border-0 my-6" />
+          </div>
+
+          <div class="mb-10">
+            <span
+              class="block text-xl md:text-2xl font-bold mb-8 text-[#1a2b4c]"
+            >
+              Which Are the Best Areas for Property in Kolkata in 2026?
+            </span>
+
+            <div class="mb-8">
+              <span
+                class="block text-lg md:text-xl font-bold mb-3 text-[#1a2b4c]"
+              >
+                New Town
+              </span>
+              <p class="text-base leading-relaxed mb-4">
+                New Town continues to dominate the market for property in
+                Kolkata. It has become a modern residential and commercial hub
+                with excellent roads, smart city planning, IT parks, shopping
+                malls, and educational institutions.
+              </p>
+              <p class="text-base leading-relaxed mb-4">Why invest here?</p>
+              <ul class="list-disc pl-5 text-base space-y-2 mb-4">
+                <li>Strong rental demand</li>
+                <li>Premium residential projects</li>
+                <li>Excellent metro connectivity</li>
+                <li>Presence of IT companies</li>
+              </ul>
+              <p class="text-base leading-relaxed">
+                New Town is ideal for both luxury buyers and long-term investors
+                searching for property in Kolkata.
+              </p>
+            </div>
+
+            <hr class="h-[2px] bg-black border-0 my-6" />
+
+            <div class="mb-8">
+              <span
+                class="block text-lg md:text-xl font-bold mb-3 text-[#1a2b4c]"
+              >
+                Rajarhat
+              </span>
+              <p class="text-base leading-relaxed mb-4">
+                Rajarhat remains one of the fastest-growing locations for
+                property in Kolkata. The area offers a mix of affordable and
+                premium apartments, making it suitable for first-time buyers and
+                families.
+              </p>
+              <p class="text-base leading-relaxed mb-4">
+                Benefits of investing in Rajarhat:
+              </p>
+              <ul class="list-disc pl-5 text-base space-y-2 mb-4">
+                <li>Rapid infrastructure development</li>
+                <li>Close to the airport</li>
+                <li>Good connectivity to New Town and Salt Lake</li>
+                <li>Growing social infrastructure</li>
+              </ul>
+              <p class="text-base leading-relaxed">
+                For buyers looking for future appreciation, Rajarhat is a smart
+                choice for property in Kolkata.
+              </p>
+            </div>
+
+            <hr class="h-[2px] bg-black border-0 my-6" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section - 3 -->
+      <section class="bg-[#E5E5E5] py-6">
+        <div
+          class="max-w-[1320px] mx-auto px-5 md:px-8 lg:px-10 text-[#1E1E1E]"
+        >
+          <span class="block text-lg md:text-xl font-bold mb-3 text-[#1a2b4c]">
+            EM Bypass
+          </span>
+          <p class="text-base leading-relaxed mb-4">
+            The Eastern Metropolitan Bypass has transformed into a premium
+            residential corridor. Luxury apartments, hospitals, malls, and
+            commercial developments make it a preferred location for high-end
+            property in Kolkata.
+          </p>
+          <p class="text-base leading-relaxed mb-4">Key advantages:</p>
+          <ul class="list-disc pl-5 text-base space-y-2 mb-4">
+            <li>Premium lifestyle projects</li>
+            <li>Excellent connectivity</li>
+            <li>Strong resale value</li>
+            <li>High rental potential</li>
+          </ul>
+          <p class="text-base leading-relaxed">
+            EM Bypass is perfect for buyers seeking upscale property in Kolkata.
+          </p>
+
+          <hr class="h-[2px] bg-black border-0 my-6" />
+
+          <div
+            class="border-2 border-[#1a2b4c] rounded-b-xl p-6 md:p-8 text-center my-10"
+          >
+            <p
+              class="text-lg md:text-xl font-semibold text-[#1a2b4c] leading-relaxed px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12"
+            >
+              “The best time to buy a home is when you're financially ready and
+              have found a property that meets your needs. Don't let market
+              speculation pressure you into decisions that don't align with your
+              personal timeline.”
+            </p>
+          </div>
+
+          <div class="mb-8">
+            <span
+              class="block text-lg md:text-xl font-bold mb-3 text-[#1a2b4c]"
+            >
+              Salt Lake
+            </span>
+            <p class="text-base leading-relaxed mb-4">
+              Salt Lake remains one of the most established destinations for
+              property in Kolkata. It is known for organized planning,
+              educational institutions, IT offices, and peaceful residential
+              neighborhoods.
+            </p>
+            <p class="text-base leading-relaxed mb-4">
+              Why buyers prefer Salt Lake:
+            </p>
+            <ul class="list-disc pl-5 text-base space-y-2 mb-4">
+              <li>Strong infrastructure</li>
+              <li>Reputed schools and hospitals</li>
+              <li>Stable property appreciation</li>
+              <li>High demand from professionals</li>
+            </ul>
+            <p class="text-base leading-relaxed">
+              Salt Lake continues to be a reliable option for property in
+              Kolkata investment.
+            </p>
+          </div>
+
+          <hr class="h-[2px] bg-black border-0 my-6" />
+        </div>
+      </section>
+
+      <!-- Section - 4 -->
+      <section class="py-6 bg-white">
+        <div
+          class="max-w-[1320px] mx-auto px-5 md:px-8 lg:px-10 text-[#1E1E1E]"
+        >
+          <div class="mb-8">
+            <span
+              class="block text-lg md:text-xl font-bold mb-3 text-[#1a2b4c]"
+            >
+              Joka
+            </span>
+            <p class="text-base leading-relaxed mb-4">
+              Joka is emerging as a promising investment hotspot because of
+              metro expansion and improving infrastructure. Buyers searching for
+              budget-friendly property in Kolkata are increasingly considering
+              this location.
+            </p>
+            <p class="text-base leading-relaxed mb-4">Reasons to invest:</p>
+            <ul class="list-disc pl-5 text-base space-y-2 mb-4">
+              <li>Affordable pricing</li>
+              <li>Upcoming metro benefits</li>
+              <li>Growing residential demand</li>
+              <li>Long-term appreciation potential</li>
+            </ul>
+            <p class="text-base leading-relaxed">
+              For investors with a future-focused mindset, Joka offers
+              affordable property in Kolkata opportunities.
+            </p>
+          </div>
+
+          <hr class="h-[2px] bg-black border-0 my-6" />
+
+          <div class="mb-10">
+            <span
+              class="block text-xl md:text-2xl font-bold mb-6 text-[#1a2b4c]"
+            >
+              Is Property in Kolkata Good for Long-Term Investment?
+            </span>
+
+            <div class="mb-6">
+              <img
+                src="assests/images/blog/invest-img.png"
+                alt="Long Term Investment Charts and Houses"
+                class="w-full h-auto rounded-2xl object-cover shadow-sm"
+              />
+            </div>
+
+            <p class="text-base leading-relaxed mb-4">
+              Yes, property in Kolkata can be a strong long-term investment. The
+              city is witnessing gradual but stable growth, which appeals to
+              investors who prefer lower risk compared to highly volatile
+              markets.
+            </p>
+            <p class="text-base leading-relaxed mb-4">
+              Long-term advantages include:
+            </p>
+            <ul class="list-disc pl-5 text-base space-y-2 mb-4">
+              <li>Affordable entry prices</li>
+              <li>Consistent rental demand</li>
+              <li>Infrastructure expansion</li>
+              <li>Growing employment hubs</li>
+            </ul>
+            <p class="text-base leading-relaxed">
+              Many experts believe that buying property in Kolkata in developing
+              areas today may generate significant returns over the next decade.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#1a2b4c] text-white rounded-xl p-8 md:p-12 text-center mt-12 mb-4"
+          >
+            <span class="block text-xl md:text-2xl font-bold mb-4">
+              Final Thoughts
+            </span>
+            <p class="text-base leading-relaxed">
+              Buying your first home is an exciting journey that combines
+              practical decision-making with deeply personal aspirations. By
+              following these guidelines and working with trusted professionals,
+              you can navigate the process with confidence. Remember, I'm here
+              to help every step of the way. If you have questions or are ready
+              to begin your home search, don't hesitate to reach out. Your dream
+              home is waiting!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Articles Section Starts -->
+      <section class="py-16">
+        <div class="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-10">
+          <div class="text-center">
+            <h2
+              class="font-display text-4xl font-extrabold text-ink md:text-[42px]"
+            >
+              Latest Articles
+            </h2>
+            <p class="mt-5 text-xl font-extrabold md:text-2xl">
+              Stay Informed with the latest real estate articles and news.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div
+              class="latest-article-card group overflow-hidden rounded-lg bg-white shadow-soft transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
+            >
+              <div class="latest-article-image relative overflow-hidden">
+                <img
+                  class="latest-article-img h-[260px] w-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+                  src="assests/images/blog/Image%20(22).png"
+                  alt="Luxury home with pool"
+                />
+                <img
+                  class="latest-article-img absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  src="assests/images/blog/side%20view%20villa.jpg"
+                  alt="Luxury home alternate view"
+                />
+                <div class="absolute left-4 top-4">
+                  <a
+                    href="#"
+                    class="rounded bg-[#14213D] px-4 py-2 text-xs text-white"
+                    >Buying Guide</a
+                  >
+                </div>
+              </div>
+              <div class="p-7">
+                <h3
+                  class="font-display text-[22px] font-bold leading-snug text-ink group-hover:text-[#FCA311] transition-colors"
+                >
+                  10 Questions to Ask Before Buying Your First Home
+                </h3>
+                <p class="mt-5 text-[17px] leading-tight">
+                  Essential questions that every first-time buyer should
+                  consider before making their biggest investment.
+                </p>
+                <div class="mt-7 text-sm text-neutral-500">
+                  <p>April 30, 2026</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="latest-article-card group overflow-hidden rounded-lg bg-white shadow-soft transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
+            >
+              <div class="latest-article-image relative overflow-hidden">
+                <img
+                  class="latest-article-img h-[260px] w-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+                  src="assests/images/blog/Image%20(23).png"
+                  alt="Home renovation team"
+                />
+                <img
+                  class="latest-article-img absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  src="assests/images/blog/villa-key.jpg"
+                  alt="Home improvement tools"
+                />
+                <div class="absolute left-4 top-4">
+                  <a
+                    href="#"
+                    class="rounded bg-[#14213D] px-4 py-2 text-xs text-white"
+                    >Home Improvement</a
+                  >
+                </div>
+              </div>
+              <div class="p-7">
+                <h3
+                  class="font-display text-[22px] font-bold leading-snug text-ink group-hover:text-[#FCA311] transition-colors"
+                >
+                  Renovations That Add the Most Value to Your Property
+                </h3>
+                <p class="mt-5 text-[17px] leading-tight">
+                  Discover which home improvements offer the best return on
+                  investment when selling your home.
+                </p>
+                <div class="mt-7 text-sm text-neutral-500">
+                  <p>April 30, 2026</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="latest-article-card group overflow-hidden rounded-lg bg-white shadow-soft transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
+            >
+              <div class="latest-article-image relative overflow-hidden">
+                <img
+                  class="latest-article-img h-[260px] w-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+                  src="assests/images/blog/Image%20(24).png"
+                  alt="House key with model home"
+                />
+                <img
+                  class="latest-article-img absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  src="assests/images/blog/agent.jpg"
+                  alt="Real estate agent"
+                />
+                <div class="absolute left-4 top-4">
+                  <a
+                    href="#"
+                    class="rounded bg-[#14213D] px-4 py-2 text-xs text-white"
+                    >Expert Tips</a
+                  >
+                </div>
+              </div>
+              <div class="p-7">
+                <h3
+                  class="font-display text-[22px] font-bold leading-snug text-ink group-hover:text-[#FCA311] transition-colors"
+                >
+                  How to Choose the Right Real Estate Agent
+                </h3>
+                <p class="mt-5 text-[17px] leading-tight">
+                  Key factors to consider when selecting an agent who will best
+                  represent your interests.
+                </p>
+                <div class="mt-7 text-sm text-neutral-500">
+                  <p>April 30, 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Latest Articles Section Ends -->
+    </main>
+    <!-- Main Section Ends -->
+
+    <!-- Footer Starts -->
+    <footer
+      class="bg-[#12192b] pt-8 pb-2 relative overflow-hidden group mt-auto border-t border-white/10"
+    >
+      <img
+        src="assests/images/services-images/ftr-1.png"
+        alt="Building Cityscape"
+        class="absolute bottom-0 left-0 w-full h-[250px] object-cover object-bottom opacity-90 transform translate-y-2/3 group-hover:translate-y-0 transition-transform duration-700 ease-out z-0 pointer-events-none"
+        loading="lazy"
+      />
+
+      <div class="max-w-[1320px] mx-auto px-4 md:px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-2">
+          <div class="lg:col-span-4 flex flex-col justify-between">
+            <div>
+              <div class="mb-1">
+                <a href="index.html" class="inline-block cursor-pointer">
+                  <img
+                    src="assests/images/ongoing-projects/logo.png"
+                    alt="Logo"
+                    class="w-[74px] h-[92px] object-contain"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <h2 class="text-3xl text-white mb-4">
+                <span class="italic font-medium">Smart Moves</span>
+                <span class="font-bold">Start With Us</span>
+              </h2>
+
+              <p class="text-gray-300 text-sm leading-relaxed mb-6 pr-4">
+                Redefining real estate through institutional-grade advisory and
+                world-class inventory.
+              </p>
+
+              <div class="flex gap-3 mb-6">
+                <a
+                  href="https://www.instagram.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-instagram" style="color: #fca311"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-facebook-f" style="color: #fca311"></i
+                ></a>
+                <a
+                  href="https://x.com/"
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"
+                  ><i class="fa-brands fa-twitter" style="color: #fca311"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="mt-auto">
+              <p class="text-white text-sm mb-3">
+                Receive monthly market reports and exclusive listing updates.
+              </p>
+              <form method="get">
+                <div
+                  class="flex bg-white rounded-lg overflow-hidden w-full max-w-[350px]"
+                >
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    class="w-full px-4 py-3 text-sm text-gray-800 outline-none bg-white"
+                    required
+                  />
+
+                  <input
+                    type="submit"
+                    class="bg-[#fca311] hover:bg-[#e5930f] text-black font-bold text-sm px-6 py-3 transition cursor-pointer"
+                    value="Join"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                NAVIGATION
+              </div>
+
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3 cursor-pointer"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-house" style="color: #fca311"></i>
+                    </span>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3 cursor-pointer"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-user-group"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="properties.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3 cursor-pointer"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-house-chimney-window"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    Property List
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3 cursor-pointer"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-gear" style="color: #fca311"></i>
+                    </span>
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="blogs.html"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3 cursor-pointer"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    >
+                      <i
+                        class="fa-solid fa-pen-to-square"
+                        style="color: #fca311"
+                      ></i>
+                    </span>
+                    Blogs
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                CONTACTS
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="mailto:infinityhorizon@gmail.com"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3 cursor-pointer"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white text-[#fca311] flex items-center justify-center text-[10px] shadow-sm"
+                    >
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    infinity@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="tel:+2835203202-940"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3 cursor-pointer"
+                  >
+                    <span
+                      class="w-6 h-6 rounded-full bg-white text-[#fca311] flex items-center justify-center text-[10px] shadow-sm"
+                      ><i class="fa-solid fa-phone"></i
+                    ></span>
+                    +2835203202-940
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                EXPERTISE
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block cursor-pointer"
+                    >Luxury Residential</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block cursor-pointer"
+                    >Commercial Assets</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block cursor-pointer"
+                    >Market Analysis</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="h3-heading text-white font-bold tracking-wide mb-6">
+                OFFICES
+              </div>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block cursor-pointer"
+                    >Kolkata</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block cursor-pointer"
+                    >Mumbai</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-[#fca311] text-sm transition block cursor-pointer"
+                    >Bangalore</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-white text-xs md:text-sm pt-5 pb-3 relative z-20"
+        >
+          <span class="mb-4 md:mb-0 text-white"
+            >&copy; 2026
+            <a
+              href="index.html"
+              class="hover:text-yellow-400 transition-colors cursor-pointer"
+            >
+              INFINITY HORIZON
+            </a>
+            ALL RIGHT RESERVED
+          </span>
+          <div
+            class="flex flex-wrap justify-center gap-6 md:gap-8 font-semibold tracking-wider uppercase text-[10px] sm:text-xs"
+          >
+            <a href="#" class="hover:text-[#fca311] transition cursor-pointer"
+              >OFFERS</a
+            >
+            <a href="#" class="hover:text-[#fca311] transition cursor-pointer"
+              >TERMS OF SERVICE</a
+            >
+            <a href="#" class="hover:text-[#fca311] transition cursor-pointer"
+              >PRIVACY POLICY</a
+            >
+            <a href="#" class="hover:text-[#fca311] transition cursor-pointer"
+              >COOKIE SETTINGS</a
+            >
+          </div>
+        </div>
+
+        <button
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          class="absolute right-4 md:right-6 bottom-11 w-12 h-12 rounded-full bg-white/95 text-[#fca311] flex items-center justify-center shadow-lg hover:bg-[#fca311] hover:text-white transition duration-300 text-xl z-30 leading-none cursor-pointer"
+        >
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <script src="assests/js/cmn-script.js"></script>
+  </body>
+</html>

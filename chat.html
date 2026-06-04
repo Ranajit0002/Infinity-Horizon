@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinity Horizon - Chats</title>
+  <link rel="shortcut icon" href="assests/images/about-images/logo.png" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style type="text/tailwindcss">
+    @theme {
+    --color-ink: #070b2d;
+    --color-sidebar: #171f5c;
+    --color-muted: #8d93a4;
+    --color-panel: #eef4fb;
+  }
+</style>
+</head>
+
+<body class="bg-panel min-h-screen text-ink lg:overflow-hidden">
+
+  <!-- Mobile Menu Backdrop -->
+  <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden transition-opacity duration-300">
+  </div>
+
+  <aside id="appSidebar"
+    class="fixed top-0 bottom-0 left-0 lg:top-6 lg:left-[34px] w-[240px] lg:w-[203px] h-screen lg:h-[calc(100vh-40px)] lg:rounded-xl bg-[#171f5c] flex flex-col py-8 px-4 lg:px-3 z-50 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+    <!-- Close Button for Mobile -->
+    <button id="closeSidebar" class="lg:hidden absolute top-4 right-4 text-white text-xl p-1">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Logo -->
+    <div class="flex flex-col items-center mb-8">
+      <img src="image/infinity horizon logo finale 1.png" alt="Infinity Horizon Logo"
+        class="w-[90px] h-[72px] object-contain" />
+    </div>
+
+    <!-- Nav -->
+    <nav class="flex flex-col gap-1 overflow-y-auto scrollbar-hide flex-1">
+      <a href="admin.html"
+        class="flex items-center gap-2.5 rounded-xl  px-3.5 py-2.5 text-[13px] font-bold text-white  transition">
+        <img src="image/icon/desktop-white.png" alt="Chat icon" class=" h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Dashboard</span>
+      </a>
+      <a href="chat.html"
+        class=" flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold  bg-white text-[#171f5c] transition hover:bg-white/10">
+        <img src="image/icon/chat-black.png" alt="Chat icon" class=" h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Chat</span>
+      </a>
+      <a href="calendar.html"
+        class=" flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white  transition">
+        <img src="image/icon/calender_icon.png" alt="Dashboard icon"
+          class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Calendar</span>
+      </a>
+      <a href="castomer.html"
+        class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold  transition text-white  hover:bg-white/10">
+        <img src="image/icon/castomer_icon.png" alt="Customer icon" class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Customer</span>
+      </a>
+      <a href="revenue.html"
+        class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white transition hover:bg-white/10">
+        <img src="image/icon/revenu_icon.png" alt="Revenue icon" class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Revenue</span>
+      </a>
+    </nav>
+
+    <!-- User Section -->
+    <div class="mt-auto pt-4 border-t border-white/10">
+      <div class="mb-4 flex items-center gap-3 rounded-xl bg-white px-3 py-3">
+        <img src="image/logo_us.png" alt="Sneha Paul" class="h-10 w-10 rounded-xl object-cover" />
+        <div class="min-w-0">
+          <p class="truncate text-xs font-bold text-[#26306a]">Sneha Paul</p>
+          <p class="truncate text-[11px] font-bold text-[#26306a]">dcdh@gmail.com</p>
+        </div>
+      </div>
+      <button
+        class="flex h-7 w-full items-center justify-center gap-2 rounded-full bg-white/30 text-xs font-bold text-white transition hover:bg-white/40">
+        <i class="fa-solid fa-right-from-bracket text-[13px]" aria-hidden="true"></i>
+        Logout
+      </button>
+    </div>
+  </aside>
+
+
+  <main class="app-main lg:ml-[237px] h-screen overflow-y-auto lg:overflow-hidden pb-6 pt-0 hide-scrollbar">
+    <section class="mx-auto flex h-full max-w-[1580px] flex-col">
+
+      <div class="sticky top-0 bg-[#eef4fb]/95 backdrop-blur-md z-40 px-4 md:px-[17px] pt-4 pb-2">
+        <div class="w-full flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <button id="toggleSidebar"
+              class="lg:hidden p-2 text-[#070b2d] bg-white rounded-full shadow-sm text-lg focus:outline-none cursor-pointer">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <h1 class="text-[24px] sm:text-[29px] font-bold leading-none tracking-normal text-ink">Chats</h1>
+          </div>
+          <div class="flex items-center gap-3 pr-1">
+            <button
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-[#8d92a5] text-white cursor-pointer">
+              <i class="fa-solid fa-magnifying-glass text-[17px]" aria-hidden="true"></i>
+            </button>
+            <button
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-[#8d92a5] text-white cursor-pointer">
+              <i class="fa-solid fa-comment-dots text-[17px]" aria-hidden="true"></i>
+            </button>
+            <button
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-[#8d92a5] text-white cursor-pointer">
+              <i class="fa-solid fa-bell text-[17px]" aria-hidden="true"></i>
+            </button>
+            <img src="image/Ellipse 3 (1).png" alt="Profile"
+              class="h-10 w-10 rounded-full object-cover cursor-pointer" />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-1 flex flex-col min-h-0 px-4 md:px-[17px] mt-4">
+        <h2 class="mb-4 text-xl font-bold text-ink">Default</h2>
+
+        <div class="grid min-h-0 flex-1 gap-[22px] pr-1 grid-cols-1 lg:grid-cols-[275px_minmax(0,1fr)] pb-6 lg:pb-0">
+
+          <aside class="flex flex-col rounded-2xl bg-white p-2.5 h-[350px] lg:h-full min-h-0 shadow-xs">
+            <label class="mb-4 flex h-[38px] items-center gap-2 rounded-md border border-[#5c5c5c] px-3 shrink-0">
+              <i class="fa-solid fa-magnifying-glass text-[15px]" aria-hidden="true"></i>
+              <input class="w-full border-0 bg-transparent text-xs outline-none placeholder:text-[#9aa0ad]"
+                placeholder="Search for" />
+            </label>
+
+            <div class="hide-scrollbar flex min-h-0 flex-col gap-[9px] overflow-y-auto pb-1">
+              <div
+                class="flex h-[56px] items-center gap-3 rounded-md border border-[#d1d1d1] px-2 shrink-0 bg-panel/30">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 82.png" alt="Sabuj Bera" class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Sabuj Bera</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">Hello, how are you ?</p>
+                </div>
+              </div>
+
+              <div
+                class="flex h-[41px] items-center gap-3 px-2 shrink-0 cursor-pointer hover:bg-panel/20 rounded-md transition">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 79 (1).png" alt="Snehas Roy"
+                    class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Snehas Roy</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">No further questions.</p>
+                </div>
+              </div>
+
+              <div
+                class="flex h-[41px] items-center gap-3 px-2 shrink-0 cursor-pointer hover:bg-panel/20 rounded-md transition">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 80 (1).png" alt="Snehas Roy"
+                    class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Anu Paul</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">Sure I can help with ...</p>
+                </div>
+              </div>
+
+              <div
+                class="flex h-[41px] items-center gap-3 px-2 shrink-0 cursor-pointer hover:bg-panel/20 rounded-md transition">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 82 (6).png" alt="Snehas Roy"
+                    class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Snehas Roy</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">No further questions.</p>
+                </div>
+              </div>
+
+              <div
+                class="flex h-[41px] items-center gap-3 px-2 shrink-0 cursor-pointer hover:bg-panel/20 rounded-md transition">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 82 (6).png" alt="Snehas Roy"
+                    class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Snehas Roy</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">No further questions.</p>
+                </div>
+              </div>
+
+              <div
+                class="flex h-[41px] items-center gap-3 px-2 shrink-0 cursor-pointer hover:bg-panel/20 rounded-md transition">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 82 (6).png" alt="Suraj Sing"
+                    class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Snehas Roy</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">I will share the meeting minutes...</p>
+                </div>
+              </div>
+
+              <div
+                class="flex h-[41px] items-center gap-3 px-2 shrink-0 cursor-pointer hover:bg-panel/20 rounded-md transition">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 79 (1).png" alt="Suraj Sing"
+                    class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Suraj Sing</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">I will share the meeting minutes...</p>
+                </div>
+              </div>
+
+              <div
+                class="flex h-[41px] items-center gap-3 px-2 shrink-0 cursor-pointer hover:bg-panel/20 rounded-md transition">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 80 (1).png" alt="Anu Paul" class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Anu Paul</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">Sure I can help with ...</p>
+                </div>
+              </div>
+
+              <div
+                class="flex h-[41px] items-center gap-3 px-2 shrink-0 cursor-pointer hover:bg-panel/20 rounded-md transition">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 79 (1).png" alt="Suraj Sing"
+                    class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Suraj Sing</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">I will share the meeting minutes...</p>
+                </div>
+              </div>
+
+              <div
+                class="flex h-[41px] items-center gap-3 px-2 shrink-0 cursor-pointer hover:bg-panel/20 rounded-md transition">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 79 (1).png" alt="Suraj Sing"
+                    class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Suraj Sing</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">I will share the meeting minutes...</p>
+                </div>
+              </div>
+
+              <div
+                class="flex h-[41px] items-center gap-3 px-2 shrink-0 cursor-pointer hover:bg-panel/20 rounded-md transition">
+                <div class="relative h-[32px] w-[32px] shrink-0">
+                  <img src="image/Rectangle 82 (1).png" alt="Anu Paul" class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-[12px] font-medium text-[#1a1a1a]">Anu Paul</p>
+                  <p class="truncate text-[12px] text-[#9da1ad]">Sure I can help with ...</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <section class="flex flex-col overflow-hidden rounded-2xl bg-white h-[450px] lg:h-full min-h-0 shadow-xs">
+            <div
+              class="flex h-[61px] shrink-0 items-center justify-between border-b border-[#d0d0d0] px-4 sm:px-6 shadow-[0_3px_4px_rgba(0,0,0,0.05)]">
+              <div class="flex items-center gap-3">
+                <div class="relative h-[34px] w-[34px]">
+                  <img src="image/Rectangle 82.png" alt="Sabuj Bera" class="h-full w-full rounded-md object-cover" />
+                  <span
+                    class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border border-white bg-[#82d020]"></span>
+                </div>
+                <div>
+                  <p class="text-[12px] font-medium text-[#1b1b1b]">Sabuj Bera</p>
+                  <p class="text-[12px] text-[#747474]">Last seen 2hr</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 sm:gap-6 text-black">
+                <button aria-label="Call" class="hover:text-sidebar transition cursor-pointer">
+                  <i class="fa-solid fa-phone text-[18px] sm:text-[20px]" aria-hidden="true"></i>
+                </button>
+                <button aria-label="Video" class="hover:text-sidebar transition cursor-pointer">
+                  <i class="fa-solid fa-video text-[19px] sm:text-[21px]" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="hide-scrollbar flex-1 overflow-y-auto px-4 sm:px-8 py-6 flex flex-col gap-4">
+              <div class="flex flex-col items-start max-w-[85%] sm:max-w-[70%]">
+                <div class="rounded-xl bg-[#d5d5d5] px-4 sm:px-6 py-3 text-[12px] leading-6 text-black">
+                  We need a new website that allows users to create accounts, browse products, and make purchases. Can
+                  you provide a rough timeline and cost estimate?
+                </div>
+                <div class="mt-2 flex items-center gap-2 pl-2">
+                  <img src="image/Rectangle 82.png" alt="Sabuj Bera" class="h-5 w-5 rounded-md object-cover" />
+                  <p class="text-[11px] text-[#666]">Today, 9:59 AM</p>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-end max-w-[85%] sm:max-w-[70%] self-end">
+                <div class="rounded-xl bg-sidebar px-4 sm:px-6 py-3 text-[12px] leading-6 text-white text-left">
+                  Sure, we can help with that. To provide an accurate estimate, we'll need more details on the features
+                  you want. Let's schedule a call this week to discuss the specifics, such as the types of products,
+                  payment methods, and any design preferences.
+                </div>
+                <div class="mt-2 flex items-center gap-2 pr-2 justify-end w-full">
+                  <p class="text-[11px] text-[#666]">Today, 10:02 AM</p>
+                  <img src="image/logo_us.png" alt="Sneha Paul" class="h-5 w-5 rounded-md object-cover" />
+                </div>
+              </div>
+            </div>
+
+            <div class="shrink-0 px-4 sm:px-[62px] pb-[22px]">
+              <div class="flex h-[50px] items-center gap-3 sm:gap-5 rounded-xl border border-[#404040] px-4 bg-white">
+                <button class="text-[#4d65c9] hover:opacity-80 transition shrink-0 cursor-pointer" aria-label="Voice">
+                  <i class="fa-solid fa-wave-square text-[18px] sm:text-[20px]" aria-hidden="true"></i>
+                </button>
+                <input
+                  class="min-w-0 flex-1 border-0 bg-transparent text-[12px] outline-none text-black placeholder:text-gray-500"
+                  placeholder="Type something" />
+                <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+                  <button class="text-[#91de18] hover:opacity-80 transition cursor-pointer" aria-label="Send">
+                    <i class="fa-solid fa-paper-plane text-[20px] sm:text-[22px]" aria-hidden="true"></i>
+                  </button>
+                  <button aria-label="Attach image" class="text-black hover:opacity-70 transition cursor-pointer">
+                    <i class="fa-solid fa-image text-[18px] sm:text-[20px]" aria-hidden="true"></i>
+                  </button>
+                  <button aria-label="Emoji" class="text-black hover:opacity-70 transition cursor-pointer">
+                    <i class="fa-solid fa-face-smile text-[18px] sm:text-[20px]" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

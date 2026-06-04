@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set New Password</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assests/images/login_Signup/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assests/css/cmn-style.css" />
+  </head>
+  <body class="bg-white">
+    <div class="flex w-full min-h-screen">
+      <div
+        class="hidden lg:flex lg:fixed lg:left-0 lg:top-0 lg:w-1/2 lg:h-screen relative bg-cover bg-center"
+        style="
+          background-image: url(assests/images/login_Signup//otp-newpass-bg.png);
+        "
+      >
+        <div
+          class="relative z-10 w-full flex flex-col justify-between p-12 lg:p-16 h-full"
+        >
+          <div class="flex justify-start mt-4">
+            <div class="text-center flex flex-col items-center gap-3">
+              <a href="index.html" class="w-[74px] h-[92px]">
+                <img
+                  src="assests/images/login_Signup//logo.png"
+                  alt="logo"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="text-white max-w-md mb-8">
+            <h2 class="text-4xl font-bold mb-4">Find your sweet home</h2>
+            <p class="text-gray-200 text-sm leading-relaxed font-medium">
+              Schedule visits in just a few clicks and discover a curated
+              collection of premium estates.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-1/2 lg:ml-[50%] flex flex-col min-h-screen">
+        <div
+          class="flex-1 flex flex-col justify-center py-12 px-6 sm:px-12 md:px-16 w-full max-w-xl mx-auto"
+        >
+          <div class="flex lg:hidden justify-center mb-10">
+            <div class="text-center flex flex-col items-center gap-2">
+              <a href="index.html" class="w-[74px] h-[92px]">
+                <img
+                  src="assests/images/login_Signup//logo.png"
+                  alt="logo"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+
+          <h1
+            class="text-3xl sm:text-[2.5rem] leading-tight font-bold text-gray-900 mb-4"
+          >
+            Set New Password
+          </h1>
+          <p class="text-gray-500 text-sm mb-10 leading-relaxed pr-4">
+            Please enter your new password to regain access to your account.
+          </p>
+
+          <form>
+            <div class="mb-3 relative">
+              <label
+                class="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2"
+                >New Password</label
+              >
+              <div class="relative">
+                <input
+                  type="password"
+                  placeholder="••••••••"
+                  class="w-full pl-4 pr-10 py-3.5 rounded-md border border-gray-100 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 transition-colors text-sm placeholder-gray-300 text-gray-800"
+                />
+                <i
+                  class="fa-regular fa-eye absolute right-4 top-1/2 -translate-y-1/2 text-gray-300 cursor-pointer hover:text-gray-500 transition-colors"
+                ></i>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2 mb-6">
+              <div class="flex items-center gap-2 text-xs text-gray-500">
+                <i
+                  class="fa-regular fa-circle-check text-gray-500 text-[10px]"
+                ></i>
+                <span>At least 8 characters long</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fa-regular fa-circle text-gray-300 text-[10px]"></i>
+                <span>Contains one uppercase letter</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fa-regular fa-circle text-gray-300 text-[10px]"></i>
+                <span>Contains at least one number</span>
+              </div>
+            </div>
+
+            <div class="mb-8 relative">
+              <label
+                class="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2"
+                >Confirm Password</label
+              >
+              <div class="relative">
+                <input
+                  type="password"
+                  placeholder="••••••••"
+                  class="w-full pl-4 pr-10 py-3.5 rounded-md border border-gray-100 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 transition-colors text-sm placeholder-gray-300 text-gray-800"
+                />
+                <i
+                  class="fa-regular fa-eye absolute right-4 top-1/2 -translate-y-1/2 text-gray-300 cursor-pointer hover:text-gray-500 transition-colors"
+                ></i>
+              </div>
+            </div>
+
+            <input
+              type="submit"
+              value="Update Password"
+              class="w-full bg-[#111827] text-white rounded-md py-3.5 text-base font-medium transition-all duration-300 hover:bg-[#FCA311] hover:shadow-md active:scale-[0.98] cursor-pointer outline-none mb-6"
+            />
+          </form>
+
+          <div>
+            <a
+              href="login.html"
+              class="inline-flex items-center gap-2 text-[13px] text-gray-500 hover:text-gray-900 font-medium transition-colors group"
+            >
+              <i
+                class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"
+              ></i>
+              Back to Login
+            </a>
+          </div>
+        </div>
+        <div
+          class="w-full mt-auto flex flex-col sm:flex-row justify-between items-center px-6 sm:px-12 md:px-16 py-8 bg-white text-[9px] sm:text-[10px] text-gray-400 font-bold uppercase tracking-widest gap-4 sm:gap-0"
+        >
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-gray-700 transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-gray-700 transition-colors">Terms</a>
+          </div>
+          <div>
+            © 2026
+            <a href="index.html" class="hover:text-gray-700 transition-colors"
+              >Infinity Horizon</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

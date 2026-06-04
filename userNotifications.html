@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USER - DASHBOARD</title>
+    <link rel="shortcut icon" href="./assets/userDashboardImages/logo.png" type="image/x-icon" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/userNotifications.css" />
+</head>
+
+<body>
+    <div class="font-sans text-gray-800 antialiased overflow-x-hidden">
+
+        <!-- sidebar start -->
+        <aside id="separator-sidebar"
+            class="bg-[#14213D] text-white fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
+            <div class="flex flex-col justify-between h-full px-5 py-4 overflow-y-auto">
+
+                <ul class="space-y-5 font-medium">
+                    <li>
+                        <a href="index.html"
+                            class="flex justify-center items-center px-2 py-1.5 text-white rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group">
+                            <img src="./assets/userDashboardImages/logo.png" alt="logo" class="w-24 h-26">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="userDashboard.html"
+                            class="flex items-center p-4 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userDashboard.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userDashboard.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="userSavedProperties.html"
+                            class="flex items-center p-4 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userSavedProperties.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userSavedProperties.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">Saved Properties</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="userMyInquiries.html"
+                            class="flex items-center p-4 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userMyInquiries.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userMyInquiries.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">My Inquiries</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="userMyBookings.html"
+                            class="flex items-center p-4 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userMyBookings.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userMyBookings.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">My Bookings</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="userNotifications.html"
+                            class="flex items-center p-4 bg-[#FCA311] text-[#F8FEFF] rounded-xl group active">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userNotifications.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userNotifications.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">Notifications</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="space-y-5 font-medium border-t border-default pt-4 mt-4">
+                    <li>
+                        <a href="#" id="dropdown-button" data-dropdown-toggle="dropdown"
+                            class="flex justify-evenly items-center p-2 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <img src="./assets/userDashboardImages/userImage.png" alt="userImage">
+                            <span>John Carter</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </li>
+
+                    <div id="dropdown" class="hidden w-[220px] bg-[#EEEEEE] text-[#1E1E1E] rounded-xl">
+                        <ul class="w-full text-sm font-medium" aria-labelledby="dropdown-button">
+                            <li><a href="#"
+                                    class="flex items-center w-full p-2 rounded-xl transition-colors duration-150 hover:bg-[#FCA311] hover:text-[#F8FEFF]">1</a>
+                            </li>
+                            <li><a href="#"
+                                    class="flex items-center w-full p-2 rounded-xl transition-colors duration-150 hover:bg-[#FCA311] hover:text-[#F8FEFF]">2</a>
+                            </li>
+                            <li><a href="#"
+                                    class="flex items-center w-full p-2 rounded-xl transition-colors duration-150 hover:bg-[#FCA311] hover:text-[#F8FEFF]">3</a>
+                            </li>
+                            <li><a href="#"
+                                    class="flex items-center w-full p-2 rounded-xl transition-colors duration-150 hover:bg-[#FCA311] hover:text-[#F8FEFF]">4</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <li>
+                        <a href="logout.html"
+                            class="flex items-center p-4 bg-[#EEEEEE] text-[#1E1E1E] rounded-xl hover:bg-[#FCA311] hover:text-[#F8FEFF] group">
+                            <div class="ms-3 w-6 h-6 bg-current"
+                                style="mask: url('./assets/userDashboardImages/userLogout.svg') no-repeat center; -webkit-mask: url('./assets/userDashboardImages/userLogout.svg') no-repeat center;">
+                            </div>
+                            <span class="ms-3">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- sidebar end -->
+
+        <div class="sm:ms-64 p-4">
+
+            <!-- section 1 start -->
+            <section>
+                <div class="w-full mx-auto font-sans select-none mb-6">
+
+                    <div class="flex items-center justify-between gap-4 mb-8">
+
+                        <div class="flex items-center gap-3 min-w-0">
+                            <button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar"
+                                aria-controls="separator-sidebar" type="button"
+                                class="inline-flex sm:hidden items-center justify-center p-2 text-neutral-700 bg-transparent hover:bg-neutral-100 focus:ring-2 focus:ring-neutral-300 rounded-md focus:outline-none shrink-0">
+                                <i class="fa-solid fa-bars text-xl"></i>
+                            </button>
+
+                            <h2
+                                class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-serif font-semibold text-[#14213D] truncate">
+                                Notifications
+                            </h2>
+                        </div>
+
+                        <div class="flex items-center gap-2 shrink-0">
+                            <div class="relative w-28 xs:w-36 sm:w-40 md:w-48">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <i class="fa-solid fa-magnifying-glass w-3 h-3 text-neutral-500"></i>
+                                </span>
+                                <input type="text" placeholder="Search"
+                                    class="w-full pl-8 pr-2 py-2 border border-[#14213D] rounded-lg placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-slate-400 transition-all text-xs" />
+                            </div>
+
+                            <!-- <button
+                                class="relative p-1.5 text-slate-700 hover:bg-slate-100 rounded-full transition-colors shrink-0"
+                                aria-label="Notifications">
+                                <img src="./assets/userDashboardImages/userBellDot.svg" alt="userBellDot"
+                                    class="w-5 h-5">
+                            </button> -->
+
+                            <button
+                                class="bg-[#14213D] text-white px-3 sm:px-5 py-2 rounded-lg font-medium text-xs sm:text-sm border border-[#14213D] hover:bg-white hover:text-[#14213D] transition-all whitespace-nowrap">
+                                <span class="hidden md:inline">Book Schedules</span>
+                                <span class="md:hidden">Book</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- section 1 end -->
+
+            <!-- section 2 start -->
+            <section>
+
+                <div class="w-full mx-auto antialiased">
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+                        <div
+                            class="lg:col-span-4 flex overflow-x-auto lg:overflow-x-visible lg:flex-col gap-4 pb-4 lg:pb-0 scrollbar-none lg:sticky lg:top-8">
+
+                            <button
+                                class="flex justify-center items-center gap-4 shrink-0 px-24 py-8 rounded-2xl text-base md:text-lg font-bold tracking-wide text-[#14213D] bg-white border border-[#fca311]/80 lg:w-full text-left transition-all duration-300 [background-image:none] hover:[background-image:linear-gradient(to_right,#F8FEFF,#FCA311)]">
+                                <i class="fa-regular fa-bell text-2xl"></i>
+                                All Notifications
+                            </button>
+
+                            <button
+                                class="flex justify-center items-center gap-4 shrink-0 px-24 py-8 rounded-2xl text-base md:text-lg font-bold tracking-wide text-[#14213D] bg-white border border-[#fca311]/80 lg:w-full text-left transition-all duration-300 [background-image:none] hover:[background-image:linear-gradient(to_right,#F8FEFF,#FCA311)]">
+                                <i class="fa-regular fa-comment text-2xl"></i>
+                                Unread
+                            </button>
+
+                            <button
+                                class="flex justify-center items-center gap-4 shrink-0 px-24 py-8 rounded-2xl text-base md:text-lg font-bold tracking-wide text-[#14213D] bg-white border border-[#fca311]/80 lg:w-full text-left transition-all duration-300 [background-image:none] hover:[background-image:linear-gradient(to_right,#F8FEFF,#FCA311)]">
+                                <i class="fa-solid fa-user-plus text-2xl"></i>
+                                New Leads
+                            </button>
+
+                            <button
+                                class="flex justify-center items-center gap-4 shrink-0 px-24 py-8 rounded-2xl text-base md:text-lg font-bold tracking-wide text-[#14213D] bg-white border border-[#fca311]/80 lg:w-full text-left transition-all duration-300 [background-image:none] hover:[background-image:linear-gradient(to_right,#F8FEFF,#FCA311)]">
+                                <i class="fa-regular fa-envelope text-2xl"></i>
+                                Messages
+                            </button>
+
+                            <button
+                                class="flex justify-center items-center gap-4 shrink-0 px-24 py-8 rounded-2xl text-base md:text-lg font-bold tracking-wide text-[#14213D] bg-white border border-[#fca311]/80 lg:w-full text-left transition-all duration-300 [background-image:none] hover:[background-image:linear-gradient(to_right,#F8FEFF,#FCA311)]">
+                                <i class="fa-regular fa-calendar text-2xl"></i>
+                                Appointments
+                            </button>
+
+                            <button
+                                class="flex justify-center items-center gap-4 shrink-0 px-24 py-8 rounded-2xl text-base md:text-lg font-bold tracking-wide text-[#14213D] bg-white border border-[#fca311]/80 lg:w-full text-left transition-all duration-300 [background-image:none] hover:[background-image:linear-gradient(to_right,#F8FEFF,#FCA311)]">
+                                <i class="fa-regular fa-house text-2xl"></i>
+                                Property Alerts
+                            </button>
+                        </div>
+
+                        <div class="lg:col-span-8 max-h-[780px] overflow-y-auto pr-3 space-y-6 overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+
+                            <div
+                                class="flex items-center justify-between gap-6 p-6 bg-white border-2 border-slate-500/80 rounded-2xl shadow-sm hover:border-slate-500 transition-colors">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="p-2 bg-purple-100 text-2xl text-purple-500 rounded-lg shrink-0 scale-110 shadow-sm">
+                                        <i class="fa-regular fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-[#14213D] text-slate-800 font-semibold md:text-xl capitalize">
+                                            New Lead Received
+                                        </p>
+                                        <p class="text-sm md:text-base text-slate-400 mt-1.5 capitalize font-medium">
+                                            Sarah Johnson Is Interested In “Modern Family Home In Downtown”
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <span class="text-xs md:text-sm font-bold text-slate-400 tabular-nums capitalize">
+                                        2 Min Ago
+                                    </span>
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-center justify-between gap-6 p-6 bg-white border-2 border-slate-500/80 rounded-2xl shadow-sm hover:border-slate-500 transition-colors">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="p-2 bg-purple-100 text-2xl text-purple-500 rounded-lg shrink-0 scale-110 shadow-sm">
+                                        <i class="fa-regular fa-comment"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-[#14213D] text-slate-800 font-semibold md:text-xl capitalize">
+                                            new message
+                                        </p>
+                                        <p class="text-sm md:text-base text-slate-400 mt-1.5 capitalize font-medium">
+                                            mike devis sent you a message about “luxury apartment in city"
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <span class="text-xs md:text-sm font-bold text-slate-400 tabular-nums capitalize">
+                                        10 Min Ago
+                                    </span>
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-center justify-between gap-6 p-6 bg-white border-2 border-slate-500/80 rounded-2xl shadow-sm hover:border-slate-500 transition-colors">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="p-2 bg-yellow-100 text-2xl text-yellow-500 rounded-lg shrink-0 scale-110 shadow-sm">
+                                        <i class="fa-regular fa-home"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-[#14213D] text-slate-800 font-semibold md:text-xl capitalize">
+                                            price update alert
+                                        </p>
+                                        <p class="text-sm md:text-base text-slate-400 mt-1.5 capitalize font-medium">
+                                            Sarah Johnson Is Interested In “Modern Family Home In Downtown”
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <span class="text-xs md:text-sm font-bold text-slate-400 tabular-nums capitalize">
+                                        15 Min Ago
+                                    </span>
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-center justify-between gap-6 p-6 bg-white border-2 border-slate-500/80 rounded-2xl shadow-sm hover:border-slate-500 transition-colors">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="p-2 bg-purple-100 text-2xl text-purple-500 rounded-lg shrink-0 scale-110 shadow-sm">
+                                        <i class="fa-regular fa-message"></i>
+
+                                    </div>
+                                    <div>
+                                        <p class="font-[#14213D] text-slate-800 font-semibold md:text-xl capitalize">
+                                            New inquiry
+                                        </p>
+                                        <p class="text-sm md:text-base text-slate-400 mt-1.5 capitalize font-medium">
+                                            Sarah Johnson Is Interested In “Modern Family Home In Downtown”
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <span class="text-xs md:text-sm font-bold text-slate-400 tabular-nums capitalize">
+                                        1 day Ago
+                                    </span>
+                                    <!-- <span class="w-2 h-2 bg-blue-500 rounded-full shadow-[0_0_8px_#3b82f6]"></span> -->
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-center justify-between gap-6 p-6 bg-white border-2 border-slate-500/80 rounded-2xl shadow-sm hover:border-slate-500 transition-colors">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="p-2 bg-yellow-100 text-2xl text-yellow-500 rounded-lg shrink-0 scale-110 shadow-sm">
+                                        <i class="fa-regular fa-calendar"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-[#14213D] text-slate-800 font-semibold md:text-xl capitalize">
+                                            appointment reminder
+                                        </p>
+                                        <p class="text-sm md:text-base text-slate-400 mt-1.5 capitalize font-medium">
+                                            Sarah Johnson Is Interested In “Modern Family Home In Downtown”
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <span class="text-xs md:text-sm font-bold text-slate-400 tabular-nums capitalize">
+                                        2 day Ago
+                                    </span>
+                                    <!-- <span class="w-2 h-2 bg-blue-500 rounded-full shadow-[0_0_8px_#3b82f6]"></span> -->
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-center justify-between gap-6 p-6 bg-white border-2 border-slate-500/80 rounded-2xl shadow-sm hover:border-slate-500 transition-colors">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="p-2 bg-purple-100 text-2xl text-purple-500 rounded-lg shrink-0 scale-110 shadow-sm">
+                                        <i class="fa-regular fa-user"></i>
+
+                                    </div>
+                                    <div>
+                                        <p class="font-[#14213D] text-slate-800 font-semibold md:text-xl capitalize">
+                                            New Lead Received
+                                        </p>
+                                        <p class="text-sm md:text-base text-slate-400 mt-1.5 capitalize font-medium">
+                                            Sarah Johnson Is Interested In “Modern Family Home In Downtown”
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <span class="text-xs md:text-sm font-bold text-slate-400 tabular-nums capitalize">
+                                        2 Day Ago
+                                    </span>
+                                    <!-- <span class="w-2 h-2 bg-blue-500 rounded-full shadow-[0_0_8px_#3b82f6]"></span> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- section 2 end -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="./js/userNotifications.js"></script>
+</body>
+
+</html>

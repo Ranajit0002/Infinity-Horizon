@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinity Horizon - Dashboard</title>
+  <link rel="shortcut icon" href="assests/images/about-images/logo.png" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <style type="text/tailwindcss">
+    @theme {
+    --color-navy: #0f1e38;
+    --color-navy-light: #1a2a4a;
+    --color-navy-muted: #223360;
+    --color-accent: #4f7cec;
+  }
+  /* Custom scrollbar hide utility */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+</head>
+
+<body class="bg-[#eef4fb] font-['DM_Sans'] text-[#070b2d] antialiased min-h-screen">
+
+  <!-- ───────────────── SIDEBAR ───────────────── -->
+  <!-- Mobile Overlay -->
+  <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden transition-opacity duration-300">
+  </div>
+
+  <aside id="appSidebar"
+    class="fixed top-0 bottom-0 left-0 lg:top-6 lg:left-[34px] w-[240px] lg:w-[203px] h-screen lg:h-[calc(100vh-40px)] lg:rounded-xl bg-[#171f5c] flex flex-col py-8 px-4 lg:px-3 z-50 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+    <!-- Close Button for Mobile -->
+    <button id="closeSidebar" class="lg:hidden absolute top-4 right-4 text-white text-xl p-1">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Logo -->
+    <div class="flex flex-col items-center mb-8">
+      <img src="image/infinity horizon logo finale 1.png" alt="Infinity Horizon Logo"
+        class="w-[90px] h-[72px] object-contain" />
+    </div>
+
+    <!-- Nav -->
+    <nav class="flex flex-col gap-1 overflow-y-auto scrollbar-hide flex-1">
+      <a href="admin.html"
+        class="flex items-center gap-2.5 rounded-xl bg-white px-3.5 py-2.5 text-[13px] font-bold text-[#171f5c] transition">
+        <img src="image/icon/dashbord_icon.png" alt="Dashboard icon"
+          class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Dashboard</span>
+      </a>
+      <a href="chat.html"
+        class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white transition hover:bg-white/10">
+        <img src="image/icon/chat_icon.png" alt="Chat icon" class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Chat</span>
+      </a>
+      <a href="calendar.html"
+        class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white transition hover:bg-white/10">
+        <img src="image/icon/calender_icon.png" alt="Calendar icon" class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Calendar</span>
+      </a>
+      <a href="castomer.html"
+        class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white transition hover:bg-white/10">
+        <img src="image/icon/castomer_icon.png" alt="Customer icon" class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Customer</span>
+      </a>
+      <a href="revenue.html"
+        class="flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-[13px] font-bold text-white transition hover:bg-white/10">
+        <img src="image/icon/revenu_icon.png" alt="Revenue icon" class="h-[18px] w-[18px] object-contain shrink-0" />
+        <span>Revenue</span>
+      </a>
+    </nav>
+
+    <!-- User Section -->
+    <div class="mt-auto pt-4 border-t border-white/10">
+      <div class="mb-4 flex items-center gap-3 rounded-xl bg-white px-3 py-3">
+        <img src="image/logo_us.png" alt="Sneha Paul" class="h-10 w-10 rounded-xl object-cover" />
+        <div class="min-w-0">
+          <p class="truncate text-xs font-bold text-[#26306a]">Sneha Paul</p>
+          <p class="truncate text-[11px] font-bold text-[#26306a]">dcdh@gmail.com</p>
+        </div>
+      </div>
+      <button
+        class="flex h-7 w-full items-center justify-center gap-2 rounded-full bg-white/30 text-xs font-bold text-white transition hover:bg-white/40">
+        <i class="fa-solid fa-right-from-bracket text-[13px]" aria-hidden="true"></i>
+        Logout
+      </button>
+    </div>
+  </aside>
+
+  <!-- ───────────────── MAIN CONTENT ───────────────── -->
+  <div class="lg:pl-[245px] transition-all duration-300">
+
+    <!-- Sticky Topbar Container -->
+    <div class="sticky top-0 bg-[#eef4fb]/95 backdrop-blur-md z-40 px-4 md:px-[17px] pt-4 pb-2">
+      <div class="w-full max-w-[1580px] mx-auto flex items-center justify-between">
+
+        <!-- Left side: Toggle button and Title -->
+        <div class="flex items-center gap-3">
+          <button id="toggleSidebar"
+            class="lg:hidden p-2 text-[#070b2d] bg-white rounded-full shadow-sm text-lg focus:outline-none">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h1 class="text-xl md:text-[29px] leading-none font-bold text-[#070b2d]">Dashboard</h1>
+        </div>
+
+        <!-- Right side: Actions -->
+        <div class="flex items-center gap-2 md:gap-3">
+          <button
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-slate-50 transition">
+            <i class="fa-solid fa-magnifying-glass text-sm md:text-[17px] text-[#64748b]" aria-hidden="true"></i>
+          </button>
+          <button
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-slate-50 transition">
+            <i class="fa-solid fa-comment-dots text-sm md:text-[17px] text-[#64748b]" aria-hidden="true"></i>
+          </button>
+          <button
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center shadow-sm relative hover:bg-slate-50 transition">
+            <i class="fa-solid fa-bell text-sm md:text-[17px] text-[#64748b]" aria-hidden="true"></i>
+            <span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-red-500"></span>
+          </button>
+          <img src="image/Ellipse 3 (1).png" alt="Profile"
+            class="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover cursor-pointer border border-white shadow-sm" />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Main Dashboard Elements Content -->
+    <main class="px-4 md:px-[17px] pt-2 pb-10">
+      <div class="w-full max-w-[1580px] mx-auto">
+
+        <p class="text-lg md:text-xl font-bold text-[#070b2d] mb-4">Customer</p>
+
+        <!-- Grid Wrapper for 2 Column Content Layout (Left Column and Active Customers Sidebar) -->
+        <div class="grid grid-cols-1 xl:grid-cols-[1fr_370px] gap-[17px] items-start mb-5">
+
+          <!-- Left Side Column Wrapper -->
+          <div class="space-y-[17px] w-full min-w-0">
+
+            <!-- First Row 3 Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[17px]">
+              <div class="bg-white rounded-2xl px-5 py-5 flex items-center justify-between shadow-sm">
+                <div class="min-w-0">
+                  <p class="text-xl md:text-[22px] font-semibold text-navy-light leading-tight truncate">12,4560</p>
+                  <p class="text-xs text-slate-400 mt-1 truncate">Total Customer</p>
+                </div>
+                <div class="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center flex-shrink-0 ml-2">
+                  <i class="fa-solid fa-users text-[20px] text-[#4f7cec]" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl px-5 py-5 flex items-center justify-between shadow-sm">
+                <div class="min-w-0">
+                  <p class="text-xl md:text-[22px] font-semibold text-navy-light leading-tight truncate">450</p>
+                  <p class="text-xs text-slate-400 mt-1 truncate">Listed Properties</p>
+                </div>
+                <div class="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center flex-shrink-0 ml-2">
+                  <i class="fa-solid fa-house text-[20px] text-[#4f7cec]" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl px-5 py-5 flex items-center justify-between shadow-sm sm:col-span-2 md:col-span-1">
+                <div class="min-w-0">
+                  <p class="text-xl md:text-[22px] font-semibold text-navy-light leading-tight truncate">320</p>
+                  <p class="text-xs text-slate-400 mt-1 truncate">Closed Deals</p>
+                </div>
+                <div class="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center flex-shrink-0 ml-2">
+                  <i class="fa-solid fa-circle-check text-[20px] text-[#4f7cec]" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row 3 Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[17px]">
+              <div class="bg-white rounded-2xl px-5 py-5 flex items-center justify-between shadow-sm">
+                <div class="min-w-0">
+                  <p class="text-xl md:text-[22px] font-semibold text-navy-light leading-tight truncate">320</p>
+                  <p class="text-xs text-slate-400 mt-1 truncate">Pending Deals</p>
+                </div>
+                <div class="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center flex-shrink-0 ml-2">
+                  <i class="fa-solid fa-clock text-[20px] text-[#4f7cec]" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl px-5 py-5 flex items-center justify-between shadow-sm">
+                <div class="min-w-0">
+                  <p class="text-xl md:text-[22px] font-semibold text-navy-light leading-tight truncate">320</p>
+                  <p class="text-xs text-slate-400 mt-1 truncate">Active Inqueries</p>
+                </div>
+                <div class="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center flex-shrink-0 ml-2">
+                  <i class="fa-solid fa-comment-dots text-[20px] text-[#4f7cec]" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl px-5 py-5 flex items-center justify-between shadow-sm sm:col-span-2 md:col-span-1">
+                <div class="min-w-0">
+                  <p class="text-xl md:text-[22px] font-semibold text-navy-light leading-tight truncate">320</p>
+                  <p class="text-xs text-slate-400 mt-1 truncate">Customer Visits</p>
+                </div>
+                <div class="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center flex-shrink-0 ml-2">
+                  <i class="fa-solid fa-circle-question text-[20px] text-[#4f7cec]" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chart Area -->
+            <div class="bg-white rounded-[10px] px-4 md:px-7 py-5 shadow-sm">
+              <div class="flex items-center justify-between mb-4">
+                <p class="text-sm font-bold text-[#070b2d]">Total Enquiries</p>
+                <select
+                  class="text-xs border border-[#070b2d] rounded-full px-4 py-1.5 outline-none text-[#070b2d] bg-white cursor-pointer">
+                  <option>Monthly</option>
+                  <option>Weekly</option>
+                  <option>Yearly</option>
+                </select>
+              </div>
+              <!-- Responsive SVG Wrapper -->
+              <div class="w-full overflow-x-auto scrollbar-hide">
+                <div class="min-w-[600px] w-full">
+                  <svg viewBox="0 0 640 204" width="100%" height="210" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#8c9bad" stop-opacity="0.95" />
+                        <stop offset="55%" stop-color="#cbd2d7" stop-opacity="0.7" />
+                        <stop offset="100%" stop-color="#ffffff" stop-opacity="0.15" />
+                      </linearGradient>
+                    </defs>
+                    <g stroke="#eacdf1" stroke-width="1.3">
+                      <path d="M42 25H640" />
+                      <path d="M42 68H640" />
+                      <path d="M42 111H640" />
+                      <path d="M42 154H640" />
+                      <path d="M42 197H640" />
+                    </g>
+                    <g font-size="14" fill="#070b2d">
+                      <text x="0" y="31">50</text><text x="0" y="74">40</text><text x="0" y="117">30</text><text x="0"
+                        y="160">20</text><text x="0" y="203">10</text>
+                    </g>
+                    <path
+                      d="M42,68 C63,58 83,72 105,86 C126,100 145,103 165,84 C186,65 205,65 224,78 C245,91 267,79 290,72 C312,65 328,60 350,75 C372,90 389,92 407,74 C429,52 436,22 455,25 C480,29 498,48 518,62 C537,76 555,83 578,70 C600,57 603,41 622,37 C633,35 633,27 640,25 L640,204 L42,204 Z"
+                      fill="url(#areaGrad)" />
+                    <path
+                      d="M42,68 C63,58 83,72 105,86 C126,100 145,103 165,84 C186,65 205,65 224,78 C245,91 267,79 290,72 C312,65 328,60 350,75 C372,90 389,92 407,74 C429,52 436,22 455,25 C480,29 498,48 518,62 C537,76 555,83 578,70 C600,57 603,41 622,37 C633,35 633,27 640,25"
+                      fill="none" stroke="#8998a9" stroke-width="2" />
+                    <rect x="422" y="1" width="88" height="27" rx="13.5" fill="#080a35" />
+                    <path d="M463 28l6 7 6-7z" fill="#080a35" />
+                    <text x="466" y="19" text-anchor="middle" font-size="12" fill="#fff">49 Enquiries</text>
+                    <circle cx="455" cy="25" r="5" fill="#080a35" stroke="#fff" stroke-width="2" />
+                    <g font-size="11" fill="#070b2d" text-anchor="middle">
+                      <text x="58" y="190">Jan</text><text x="113" y="190">Feb</text><text x="168"
+                        y="190">Mar</text><text x="223" y="190">Apr</text><text x="278" y="190">May</text><text x="333"
+                        y="190">Jun</text><text x="388" y="190">Jul</text><text x="443" y="190">Aug</text><text x="498"
+                        y="190">Sep</text><text x="553" y="190">Oct</text><text x="608" y="190">Nov</text><text x="638"
+                        y="190">Dec</text>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feedback Summary -->
+            <div class="rounded-2xl bg-white px-5 md:px-7 py-2 shadow-sm">
+              <p class="mb-3 text-[16px] font-medium text-[#111827]">Feedback Summary</p>
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="min-w-0 flex-1">
+                  <div class="mb-3 flex items-center gap-3">
+                    <img src="image/Rectangle 82 (2).png" alt="Rahul Verma"
+                      class="h-[46px] w-[46px] flex-shrink-0 rounded-md object-cover" />
+                    <div class="min-w-0">
+                      <p class="truncate text-[12px] font-medium text-[#111827]">Rahul Verma</p>
+                      <div class="mt-1 flex items-center gap-1 text-[12px] text-[#111827]">
+                        <i class="fa-solid fa-star text-[12px] text-[#f6a622]" aria-hidden="true"></i>
+                        <span>(4.6)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-[13px] font-medium leading-snug text-[#111827]">"I was very impressed with the
+                    professionalism."</p>
+                </div>
+                <img src="image/feedback 1.png" alt="Feedback Icon"
+                  class="h-12 w-12 sm:h-[84px] w-[74px] self-end sm:self-center flex-shrink-0 object-contain" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Sidebar Content (Active Customer sections) -->
+          <div class="space-y-[17px] w-full">
+            <!-- Active Customer List -->
+            <div class="bg-white rounded-[10px] p-5 md:p-6 shadow-sm">
+              <div class="flex items-center justify-between mb-4">
+                <p class="text-sm font-semibold text-navy-light">Active Customer</p>
+                <span class="text-xs text-slate-700 font-medium cursor-pointer hover:underline">View All</span>
+              </div>
+              <div class="flex flex-col gap-4">
+                <!-- Item 1 -->
+                <div class="flex items-center gap-3 bg-[#eef4fb] rounded-xl px-4 py-3.5">
+                  <img src="image/Rectangle 82.png" alt="Asit Sengupta"
+                    class="w-9 h-9 rounded-xl object-cover flex-shrink-0" />
+                  <div class="min-w-0">
+                    <p class="text-xs font-semibold text-navy-light truncate">Asit Sengupta</p>
+                    <p class="text-[10px] text-slate-600 flex items-center gap-1 mt-0.5 truncate">
+                      <i class="fa-solid fa-location-dot text-[9px] text-[#94a3b8]" aria-hidden="true"></i>
+                      Santragachhi, Howrah
+                    </p>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex items-center gap-3 bg-[#eef4fb] rounded-xl px-4 py-3.5">
+                  <img src="image/Rectangle 82 (1).png" alt="Asit Sengupta"
+                    class="w-9 h-9 rounded-xl object-cover flex-shrink-0" />
+                  <div class="min-w-0">
+                    <p class="text-xs font-semibold text-navy-light truncate">Asit Sengupta</p>
+                    <p class="text-[10px] text-slate-600 flex items-center gap-1 mt-0.5 truncate">
+                      <i class="fa-solid fa-location-dot text-[9px] text-[#94a3b8]" aria-hidden="true"></i>
+                      Santragachhi, Howrah
+                    </p>
+                  </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex items-center gap-3 bg-[#eef4fb] rounded-xl px-4 py-3.5">
+                  <img src="image/Rectangle 82.png" alt="Asit Sengupta"
+                    class="w-9 h-9 rounded-xl object-cover flex-shrink-0" />
+                  <div class="min-w-0">
+                    <p class="text-xs font-semibold text-navy-light truncate">Asit Sengupta</p>
+                    <p class="text-[10px] text-slate-600 flex items-center gap-1 mt-0.5 truncate">
+                      <i class="fa-solid fa-location-dot text-[9px] text-[#94a3b8]" aria-hidden="true"></i>
+                      Santragachhi, Howrah
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Total Active Customer Chart -->
+            <div class="bg-white rounded-[10px] p-5 md:p-7 min-h-[300px] shadow-sm flex flex-col justify-between">
+              <p class="text-sm font-semibold text-navy-light mb-4">Total Active Customer</p>
+              <div class="flex justify-center my-2">
+                <svg viewBox="0 0 140 140" width="140" height="140">
+                  <circle cx="70" cy="70" r="54" fill="none" stroke="#f1f5f9" stroke-width="16" />
+                  <circle cx="70" cy="70" r="54" fill="none" stroke="#4f7cec" stroke-width="16"
+                    stroke-dasharray="101.8 237.9" stroke-dashoffset="0" stroke-linecap="round" />
+                  <circle cx="70" cy="70" r="54" fill="none" stroke="#ef4444" stroke-width="16"
+                    stroke-dasharray="152.7 186.9" stroke-dashoffset="-101.8" stroke-linecap="round" />
+                  <circle cx="70" cy="70" r="54" fill="none" stroke="#f59e0b" stroke-width="16"
+                    stroke-dasharray="84.8 254.8" stroke-dashoffset="-254.5" stroke-linecap="round" />
+                  <text x="70" y="66" text-anchor="middle" font-size="13" font-weight="600" fill="#4f7cec">2.87%</text>
+                  <text x="70" y="80" text-anchor="middle" font-size="8.5" fill="#94a3b8">this month</text>
+                </svg>
+              </div>
+              <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-4">
+                <div class="flex items-center gap-1.5 text-[11px] text-slate-500">
+                  <span class="w-2.5 h-2.5 rounded-sm bg-accent inline-block"></span>New
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px] text-slate-500">
+                  <span class="w-2.5 h-2.5 rounded-sm bg-red-500 inline-block"></span>Verified
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px] text-slate-500">
+                  <span class="w-2.5 h-2.5 rounded-sm bg-amber-400 inline-block"></span>Returning
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── Customer BY Region + Map ── -->
+        <div class="bg-white rounded-2xl p-4 md:p-5 shadow-sm mb-5">
+          <div class="flex items-center justify-between mb-5">
+            <p class="text-sm font-semibold text-navy-light">Customer BY Region</p>
+            <select
+              class="text-xs border border-slate-200 rounded-lg px-3 py-1.5 outline-none text-slate-600 bg-white cursor-pointer">
+              <option>Weekly</option>
+              <option>Monthly</option>
+            </select>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Region bars -->
+            <div class="flex flex-col gap-4">
+              <!-- Howrah -->
+              <div>
+                <div class="flex justify-between mb-1.5">
+                  <span class="text-xs font-medium text-navy-light">Howrah</span>
+                  <span class="text-xs text-slate-400">(312)</span>
+                </div>
+                <div class="w-full h-2 bg-green-100 rounded-full">
+                  <div class="h-[7px] rounded-full bg-green-500" style="width:69%"></div>
+                </div>
+              </div>
+              <!-- Tamluk -->
+              <div>
+                <div class="flex justify-between mb-1.5">
+                  <span class="text-xs font-medium text-navy-light">Tamluk</span>
+                  <span class="text-xs text-slate-400">(189)</span>
+                </div>
+                <div class="w-full h-2 bg-green-100 rounded-full">
+                  <div class="h-[7px] rounded-full bg-green-500" style="width:42%"></div>
+                </div>
+              </div>
+              <!-- Barasat -->
+              <div>
+                <div class="flex justify-between mb-1.5">
+                  <span class="text-xs font-medium text-navy-light">Barasat</span>
+                  <span class="text-xs text-slate-400">(212)</span>
+                </div>
+                <div class="w-full h-2 bg-green-100 rounded-full">
+                  <div class="h-[7px] rounded-full bg-green-500" style="width:47%"></div>
+                </div>
+              </div>
+              <!-- Madhyamgram -->
+              <div>
+                <div class="flex justify-between mb-1.5">
+                  <span class="text-xs font-medium text-navy-light">Madhyamgram</span>
+                  <span class="text-xs text-slate-400">(423)</span>
+                </div>
+                <div class="w-full h-2 bg-green-100 rounded-full">
+                  <div class="h-[7px] rounded-full bg-green-500" style="width:94%"></div>
+                </div>
+              </div>
+              <!-- Sodepur -->
+              <div>
+                <div class="flex justify-between mb-1.5">
+                  <span class="text-xs font-medium text-navy-light">Sodepur</span>
+                  <span class="text-xs text-slate-400">(200)</span>
+                </div>
+                <div class="w-full h-2 bg-green-100 rounded-full">
+                  <div class="h-[7px] rounded-full bg-green-500" style="width:44%"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Map Grid -->
+            <div class="rounded-xl overflow-hidden h-[200px] border border-slate-100 shadow-inner">
+              <iframe width="100%" height="200" frameborder="0" style="border:0;"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d921768!2d88.3!3d22.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1"
+                allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Customer List Table ── -->
+        <div class="bg-white rounded-2xl p-4 md:p-5 shadow-sm mb-8">
+          <div class="flex items-center justify-between mb-4">
+            <p class="text-sm font-semibold text-navy-light">Customer List</p>
+            <button
+              class="text-xs font-medium px-4 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition">View
+              all</button>
+          </div>
+
+          <!-- Table Responsive Scrollable Wrapper -->
+          <div class="rounded-xl overflow-hidden overflow-x-auto border border-slate-100">
+            <table class="w-full text-xs min-w-[900px]" style="border-collapse:collapse;">
+              <thead>
+                <tr class="bg-navy text-white">
+                  <th class="text-left px-4 py-3 font-medium text-[11px]">ID</th>
+                  <th class="text-left px-4 py-3 font-medium text-[11px]">Customer Name</th>
+                  <th class="text-left px-4 py-3 font-medium text-[11px]">Property Type</th>
+                  <th class="text-left px-4 py-3 font-medium text-[11px]">Email</th>
+                  <th class="text-left px-4 py-3 font-medium text-[11px]">Phone</th>
+                  <th class="text-left px-4 py-3 font-medium text-[11px]">Status</th>
+                  <th class="text-left px-4 py-3 font-medium text-[11px]">Budget</th>
+                  <th class="text-left px-4 py-3 font-medium text-[11px]">Registration date</th>
+                  <th class="text-left px-4 py-3 font-medium text-[11px]">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Row 1 -->
+                <tr class="border-t border-slate-100 hover:bg-slate-50/80 transition">
+                  <td class="px-4 py-3 font-medium text-navy-light">CUS 2009</td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-2">
+                      <img src="image/Rectangle 82.png" alt="Customer"
+                        class="w-7 h-7 rounded-full object-cover flex-shrink-0" />
+                      <span class="text-navy-light font-medium">Sabuj Bera</span>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-slate-500">House</td>
+                  <td class="px-4 py-3 text-slate-500">sabuj00@gmail.com</td>
+                  <td class="px-4 py-3 text-slate-500">5645345670</td>
+                  <td class="px-4 py-3"><span
+                      class="bg-red-100 text-red-700 text-[10px] font-semibold px-3 py-1 rounded-full">Lost</span></td>
+                  <td class="px-4 py-3 text-navy-light font-medium">Rs. 39,7860</td>
+                  <td class="px-4 py-3 text-slate-500">Aug 8, 2024</td>
+                  <td class="px-4 py-3">
+                    <div class="flex gap-2.5">
+                      <button class="text-green-500 hover:text-green-600 transition"><i
+                          class="fa-solid fa-pen-to-square text-[15px]"></i></button>
+                      <button class="text-red-400 hover:text-red-500 transition"><i
+                          class="fa-solid fa-trash text-[15px]"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- Row 2 -->
+                <tr class="border-t border-slate-100 hover:bg-slate-50/80 transition">
+                  <td class="px-4 py-3 font-medium text-navy-light">CUS 2016</td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-2">
+                      <img src="image/Rectangle 82.png" alt="Customer"
+                        class="w-7 h-7 rounded-full object-cover flex-shrink-0" />
+                      <span class="text-navy-light font-medium">Snehas Roy</span>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-slate-500">Office Space</td>
+                  <td class="px-4 py-3 text-slate-500">abs123@gmail.com</td>
+                  <td class="px-4 py-3 text-slate-500">9745345670</td>
+                  <td class="px-4 py-3"><span
+                      class="bg-purple-100 text-purple-700 text-[10px] font-semibold px-3 py-1 rounded-full">Negotiation</span>
+                  </td>
+                  <td class="px-4 py-3 text-navy-light font-medium">Rs. 78,7668</td>
+                  <td class="px-4 py-3 text-slate-500">Aug 9, 2026</td>
+                  <td class="px-4 py-3">
+                    <div class="flex gap-2.5">
+                      <button class="text-green-500 hover:text-green-600 transition"><i
+                          class="fa-solid fa-pen-to-square text-[15px]"></i></button>
+                      <button class="text-red-400 hover:text-red-500 transition"><i
+                          class="fa-solid fa-trash text-[15px]"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- Row 3 -->
+                <tr class="border-t border-slate-100 hover:bg-slate-50/80 transition">
+                  <td class="px-4 py-3 font-medium text-navy-light">CUS 2018</td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-2">
+                      <img src="image/Rectangle 82.png" alt="Customer"
+                        class="w-7 h-7 rounded-full object-cover flex-shrink-0" />
+                      <span class="text-navy-light font-medium">Suraj Sing</span>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-slate-500">Villa</td>
+                  <td class="px-4 py-3 text-slate-500">suraj34@gmail.com</td>
+                  <td class="px-4 py-3 text-slate-500">9445345670</td>
+                  <td class="px-4 py-3"><span
+                      class="bg-yellow-100 text-yellow-700 text-[10px] font-semibold px-3 py-1 rounded-full">Site
+                      visit</span></td>
+                  <td class="px-4 py-3 text-navy-light font-medium">Rs. 54,7860</td>
+                  <td class="px-4 py-3 text-slate-500">Sep 7, 2020</td>
+                  <td class="px-4 py-3">
+                    <div class="flex gap-2.5">
+                      <button class="text-green-500 hover:text-green-600 transition"><i
+                          class="fa-solid fa-pen-to-square text-[15px]"></i></button>
+                      <button class="text-red-400 hover:text-red-500 transition"><i
+                          class="fa-solid fa-trash text-[15px]"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- Row 4 -->
+                <tr class="border-t border-slate-100 hover:bg-slate-50/80 transition">
+                  <td class="px-4 py-3 font-medium text-navy-light">CUS 2020</td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-2">
+                      <img src="image/Rectangle 82 (1).png" alt="Customer"
+                        class="w-7 h-7 rounded-full object-cover flex-shrink-0" />
+                      <span class="text-navy-light font-medium">Anu Paul</span>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-slate-500">Commercial</td>
+                  <td class="px-4 py-3 text-slate-500">anupaul56@gmail.com</td>
+                  <td class="px-4 py-3 text-slate-500">9745775670</td>
+                  <td class="px-4 py-3"><span
+                      class="bg-blue-100 text-blue-700 text-[10px] font-semibold px-3 py-1 rounded-full">Inquiry</span>
+                  </td>
+                  <td class="px-4 py-3 text-navy-light font-medium">Rs. 44,7860</td>
+                  <td class="px-4 py-3 text-slate-500">Jan 9, 2018</td>
+                  <td class="px-4 py-3">
+                    <div class="flex gap-2.5">
+                      <button class="text-green-500 hover:text-green-600 transition"><i
+                          class="fa-solid fa-pen-to-square text-[15px]"></i></button>
+                      <button class="text-red-400 hover:text-red-500 transition"><i
+                          class="fa-solid fa-trash text-[15px]"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-4">
+            <p class="text-xs text-slate-400 text-center sm:text-left">Showing 1-4 out of 16 result</p>
+            <div class="flex items-center gap-1 flex-wrap justify-center">
+              <button
+                class="text-xs px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition">Prev.</button>
+              <button class="text-xs w-7 h-7 rounded-lg bg-navy text-white font-medium">1</button>
+              <button
+                class="text-xs w-7 h-7 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition">2</button>
+              <button
+                class="text-xs w-7 h-7 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition">3</button>
+              <button
+                class="text-xs w-7 h-7 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition">4</button>
+              <button
+                class="text-xs px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition">Next</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

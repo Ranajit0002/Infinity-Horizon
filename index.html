@@ -1,0 +1,2386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="assests/images/index/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assests/css/cmn-style.css" />
+  <link rel="stylesheet" href="assests/css/index/style.css" />
+</head>
+
+<body class="text-white w-full">
+  <!-- Hero with nav Starts -->
+  <div class="relative w-full flex flex-col">
+    <div class="absolute inset-0 z-0 w-full h-full overflow-hidden">
+      <video autoplay loop muted playsinline class="object-cover w-full h-full">
+        <source src="assests/videos/video-test-1.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-[#111827]/40"></div>
+    </div>
+
+    <header class="relative z-40 w-full pt-4 md:pt-6 pb-2">
+      <div class="max-w-[1320px] mx-auto px-4 md:px-6">
+        <nav class="flex items-center justify-between w-full h-16">
+          <div class="flex-1 flex justify-start">
+            <a href="index.html" class="inline-block">
+              <img src="assests/images/index/logo.png" alt="Logo" class="w-[74px] h-[92px] object-contain"
+                loading="lazy" />
+            </a>
+          </div>
+
+          <div
+            class="hidden lg:flex flex-none items-center gap-6 backdrop-blur-xl border-2 border-white/50 rounded-full px-6 py-1">
+            <a href="index.html"
+              class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors">Home</a>
+            <a href="about.html"
+              class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors">About US</a>
+
+            <div class="relative group cursor-pointer">
+              <a href="properties.html" id="desktop-properties-btn"
+                class="flex items-center py-2.5 text-sm text-white transition">
+                <span
+                  class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors">Properties</span>
+                <span
+                  class="ml-1.5 text-[10px] text-white group-hover:text-[#facc15] inline-block transition-transform duration-300 group-hover:-rotate-180"><i
+                    class="fa-solid fa-angle-down"></i></span>
+              </a>
+
+              <div id="desktop-properties-dropdown"
+                class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-50 backdrop-blur-md rounded-t-sm rounded-b-2xl border border-[#facc15] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                <ul class="py-2">
+                  <li>
+                    <a href="properties.html"
+                      class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition">All
+                      Properties</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition">Buy
+                      Properties</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition">Rent
+                      Properties</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-5 py-2.5 text-sm text-black hover:bg-[#facc15] hover:text-[#0F172a] transition">Sell
+                      Properties</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <a href="services.html"
+              class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors">Services</a>
+            <a href="blogs.html"
+              class="nav-link text-white text-sm font-semibold hover:text-[#facc15] transition-colors">Blogs</a>
+          </div>
+
+          <div class="hidden lg:flex flex-1 items-center justify-end gap-3">
+            <a href="#" aria-label="Favorite"
+              class="group inline-flex items-center justify-center w-11 h-11 rounded-full bg-slate-900 border-2 border-transparent transition-all duration-300 ease-in-out hover:border-red-500 hover:bg-white">
+              <i
+                class="fa-regular fa-heart text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-red-500"></i>
+            </a>
+            <a href="login.html" aria-label="Favorite"
+              class="group inline-flex items-center justify-center w-11 h-11 rounded-full bg-slate-900 border-2 border-transparent transition-all duration-300 ease-in-out hover:border-[#0F172A] hover:bg-white">
+              <i
+                class="fa-regular fa-user text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-[#0F172A]"></i>
+            </a>
+
+            <a href="contacts.html"
+              class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]">
+              <span class="text-sm font-medium whitespace-nowrap">Contact Us</span>
+
+              <div
+                class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]">
+                <i
+                  class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"></i>
+              </div>
+            </a>
+          </div>
+
+          <button id="menu-btn"
+            class="lg:hidden text-white p-2 focus:outline-none z-50 relative ml-auto flex items-center justify-center">
+            <span id="icon-menu" class="text-3xl leading-none drop-shadow-md">&#9776;</span>
+            <span id="icon-close" class="hidden text-3xl leading-none drop-shadow-md">&#10005;</span>
+          </button>
+        </nav>
+      </div>
+      <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 invisible"></div>
+
+      <div id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-[85%] max-w-[320px] backdrop-blur-md border-l border-white/40 z-50 translate-x-full overflow-y-auto">
+        <div class="flex items-center justify-between p-6 border-b border-white/40">
+          <span class="text-white font-bold tracking-wider">
+            <a href="index.html" class="inline-block">
+              <img src="assests/images/index/logo.png" alt="Logo" class="w-[74px] h-[92px] object-contain"
+                loading="lazy" />
+            </a>
+          </span>
+          <button id="close-menu-btn" class="text-gray-400 hover:text-white transition p-1 text-2xl leading-none">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col px-6 py-6 space-y-4">
+          <div>
+            <a href="index.html"
+              class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors">Home</a>
+          </div>
+          <div>
+            <a href="about.html"
+              class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors">About Us</a>
+          </div>
+
+          <div class="flex flex-col group space-y-0">
+            <a href="properties.html" id="mobile-properties-btn"
+              class="text-white hover:text-[#facc15] text-lg font-semibold flex justify-between items-center w-full focus:outline-none transition">
+              <span class="nav-link">Properties</span>
+              <span id="mobile-properties-icon" class="inline-block transition-transform duration-300 text-sm"><i
+                  class="fa-solid fa-angle-down"></i></span>
+            </a>
+            <div id="mobile-properties-menu" class="flex flex-col pl-4 mt-3 space-y-4">
+              <a href="properties.html" class="text-gray-300 hover:text-[#facc15] transition block pt-4">All
+                Properties</a>
+              <a href="#" class="text-gray-300 hover:text-[#facc15] transition block">Buy Properties</a>
+              <a href="#" class="text-gray-300 hover:text-[#facc15] transition block">Rent Properties</a>
+              <a href="#" class="text-gray-300 hover:text-[#facc15] transition block">Sell Properties</a>
+            </div>
+          </div>
+
+          <div>
+            <a href="services.html"
+              class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors">Services</a>
+          </div>
+          <div>
+            <a href="blogs.html"
+              class="nav-link text-white text-lg font-medium hover:text-[#facc15] transition-colors">Blogs</a>
+          </div>
+
+          <hr class="border-white/40 my-4" />
+
+          <div class="flex flex-col gap-4 mt-4">
+            <div class="flex gap-4 justify-center">
+              <a href="#" aria-label="Favorite"
+                class="group inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 ease-in-out hover:border-red-500 hover:bg-white">
+                <i
+                  class="fa-regular fa-heart text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-red-500"></i>
+              </a>
+              <a href="login.html" aria-label="Favorite"
+                class="group inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-white transition-all duration-300 ease-in-out hover:border-[#0F172A] hover:bg-white">
+                <i
+                  class="fa-regular fa-user text-sm transition-colors duration-300 ease-in-out text-amber-500 group-hover:text-[#0F172A]"></i>
+              </a>
+            </div>
+            <div class="flex justify-center">
+              <a href="contacts.html"
+                class="group flex items-center justify-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border-2 border-white hover:border-[#0F172A]">
+                <span class="text-sm font-medium whitespace-nowrap">Contact Us</span>
+
+                <div
+                  class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]">
+                  <i
+                    class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="relative z-10 w-full h-[85vh] flex flex-col">
+      <main class="flex-1 flex flex-col items-center justify-center text-center px-4 w-full">
+        <h1 class="text-4xl md:text-5xl xl:text-7xl font-bold mb-6">
+          Find Your Dream Home
+        </h1>
+        <p class="text-lg md:text-2xl font-medium mb-12 drop-shadow-lg text-gray-200">
+          Turning Properties into Possibilities
+        </p>
+        <a href="#"
+          class="group flex items-center gap-4 px-4 py-2 sm:pr-4 pr-4 sm:gap-3 sm:px-6 sm:py-3 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A]">
+          <span class="text-sm font-medium whitespace-nowrap">View Properties</span>
+
+          <div
+            class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]">
+            <i
+              class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"></i>
+          </div>
+        </a>
+      </main>
+
+      <div class="flex justify-center pb-24 md:pb-32 w-full">
+        <div class="w-[20px] h-[34px] border-2 border-white rounded-full flex justify-center pt-1.5 shadow-lg">
+          <div class="w-0.5 h-2 bg-white rounded-full animate-scroll-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative z-20 w-full -mt-16">
+      <div class="w-full relative rounded-t-[3rem] md:rounded-t-[5rem] p-6 md:p-8 lg:p-16">
+        <div
+          class="absolute inset-0 backdrop-blur-md rounded-t-[3rem] md:rounded-t-[5rem] border-t border-white/30 -z-10">
+        </div>
+
+        <div class="w-full max-w-5xl mx-auto p-6 md:p-8 rounded-2xl border border-white/50 relative z-10">
+          <div class="flex flex-col md:flex-row flex-wrap lg:flex-nowrap items-end justify-between gap-4 lg:gap-6">
+            <div class="flex flex-col gap-1.5 w-full md:w-[calc(50%-0.5rem)] lg:flex-1 relative group">
+              <label
+                class="text-[10px] md:text-[11px] font-medium text-white/70 uppercase tracking-widest pl-1 whitespace-nowrap">Looking
+                For</label>
+              <div class="relative cursor-pointer">
+                <div
+                  class="w-full bg-white/5 border border-white/20 hover:bg-white/10 rounded-xl px-4 py-3.5 flex items-center justify-between transition-all">
+                  <span class="text-sm font-medium text-white whitespace-nowrap">Property Types</span>
+                  <i class="fa-solid fa-sort text-[#d4af37] text-xs"></i>
+                </div>
+                <div
+                  class="absolute top-full mt-2 left-0 w-full bg-[#111827]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 overflow-hidden">
+                  <ul class="flex flex-col py-1">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">Apartment</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">Office</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">Retail
+                        Shop</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1.5 w-full md:w-[calc(50%-0.5rem)] lg:flex-1 relative group">
+              <label
+                class="text-[10px] md:text-[11px] font-medium text-white/70 uppercase tracking-widest pl-1 whitespace-nowrap">Location</label>
+              <div class="relative cursor-pointer">
+                <div
+                  class="w-full bg-white/5 border border-white/20 hover:bg-white/10 rounded-xl px-4 py-3.5 flex items-center justify-between transition-all">
+                  <span class="text-sm font-medium text-white whitespace-nowrap">All locations</span>
+                  <i class="fa-solid fa-sort text-[#d4af37] text-xs opacity-70 group-hover:opacity-100"></i>
+                </div>
+                <div
+                  class="absolute top-full mt-2 left-0 w-full bg-[#111827]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 overflow-hidden">
+                  <ul class="flex flex-col py-1">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">Kolkata</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">Mumbai</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">Delhi</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1.5 w-full md:w-[calc(50%-0.5rem)] lg:flex-1 relative group">
+              <label
+                class="text-[10px] md:text-[11px] font-medium text-white/70 uppercase tracking-widest pl-1 whitespace-nowrap">BHK</label>
+              <div class="relative cursor-pointer">
+                <div
+                  class="w-full bg-white/5 border border-white/20 hover:bg-white/10 rounded-xl px-4 py-3.5 flex items-center justify-between transition-all">
+                  <span class="text-sm font-medium text-white whitespace-nowrap">Select BHK</span>
+                  <i class="fa-solid fa-sort text-[#d4af37] text-xs opacity-70 group-hover:opacity-100"></i>
+                </div>
+                <div
+                  class="absolute top-full mt-2 left-0 w-full bg-[#111827]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 overflow-hidden">
+                  <ul class="flex flex-col py-1">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">1
+                        BHK</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">2
+                        BHK</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">3
+                        BHK +</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1.5 w-full md:w-[calc(50%-0.5rem)] lg:flex-1 relative group">
+              <label
+                class="text-[10px] md:text-[11px] font-medium text-white/70 uppercase tracking-widest pl-1 whitespace-nowrap">Your
+                Budget</label>
+              <div class="relative cursor-pointer">
+                <div
+                  class="w-full bg-white/5 border border-white/20 hover:bg-white/10 rounded-xl px-4 py-3.5 flex items-center justify-between transition-all">
+                  <span class="text-sm font-medium text-white whitespace-nowrap">Max Price</span>
+                  <i class="fa-solid fa-sort text-[#d4af37] text-xs opacity-70 group-hover:opacity-100"></i>
+                </div>
+                <div
+                  class="absolute top-full mt-2 left-0 w-full bg-[#111827]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 overflow-hidden">
+                  <ul class="flex flex-col py-1">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">Under
+                        50L</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">50L
+                        - 1Cr</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-3 text-sm text-gray-200 hover:bg-[#d4af37] hover:text-[#111827] transition-colors">Over
+                        1Cr</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="w-full lg:w-auto flex-shrink-0 bg-[#111827] hover:bg-[#d4af37] text-white hover:text-[#111827] px-10 py-3.5 rounded-xl text-sm font-bold tracking-widest transition-all flex items-center justify-center gap-2 lg:gap-3 border border-white/20 shadow-xl mt-2 lg:mt-0">
+              <i class="fa-solid fa-magnifying-glass"></i> <span>SEARCH</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="mobile-backdrop"
+    class="fixed inset-0 bg-black/60 z-[40] opacity-0 pointer-events-none transition-opacity duration-500 md:hidden backdrop-blur-sm">
+  </div>
+
+  <div id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-[75%] max-w-[350px] bg-[#111827]/95 backdrop-blur-2xl z-[50] transform translate-x-full transition-transform duration-700 cubic-bezier(0.77, 0, 0.175, 1) flex flex-col pt-32 px-10 md:hidden border-l border-white/10 overflow-y-auto">
+    <nav class="flex flex-col gap-8 w-full pb-10">
+      <a href="#" class="text-2xl text-white hover:text-[#d4af37] transition-all duration-300">Home</a>
+      <a href="#" class="text-2xl text-white hover:text-[#d4af37] transition-all duration-300">About US</a>
+
+      <div class="group flex flex-col w-full cursor-pointer">
+        <div
+          class="text-2xl text-white group-hover:text-[#d4af37] flex items-center gap-4 w-max transition-all duration-300">
+          Properties
+          <i class="fa-solid fa-chevron-down text-sm transition-transform duration-500 group-hover:rotate-180"></i>
+        </div>
+        <div
+          class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
+          <div class="overflow-hidden">
+            <div
+              class="flex flex-col gap-4 pl-4 border-l-2 border-white/20 pt-4 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              <a href="#" class="text-lg text-gray-300 hover:text-[#d4af37] transition-colors block">Residential</a>
+              <a href="#" class="text-lg text-gray-300 hover:text-[#d4af37] transition-colors block">Commercial</a>
+              <a href="#" class="text-lg text-gray-300 hover:text-[#d4af37] transition-colors block">Rentals</a>
+              <a href="#" class="text-lg text-gray-300 hover:text-[#d4af37] transition-colors block">New Projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="text-2xl text-white hover:text-[#d4af37] transition-all duration-300">Services</a>
+      <a href="#" class="text-2xl text-white hover:text-[#d4af37] transition-all duration-300">Blogs</a>
+    </nav>
+
+    <div class="flex gap-5 mt-auto">
+      <button
+        class="w-12 h-12 rounded-full bg-white/5 border border-white/20 flex items-center justify-center text-white hover:bg-[#d4af37] hover:text-[#111827] transition-all duration-300">
+        <i class="fa-regular fa-heart text-xl"></i>
+      </button>
+      <button
+        class="w-12 h-12 rounded-full bg-white/5 border border-white/20 flex items-center justify-center text-white hover:bg-[#d4af37] hover:text-[#111827] transition-all duration-300">
+        <i class="fa-regular fa-user text-xl"></i>
+      </button>
+    </div>
+
+    <a href="#"
+      class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]">
+      <span class="text-sm font-medium whitespace-nowrap">Contact Us</span>
+
+      <div
+        class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]">
+        <i
+          class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"></i>
+      </div>
+    </a>
+  </div>
+  <!-- Hero with nav Ends -->
+
+  <!-- Scroll Section Starts -->
+  <section class="bg-[#f3f6f9] py-16 lg:py-24">
+    <div class="mx-auto w-full max-w-[1320px] px-6">
+      <div class="flex flex-col lg:flex-row items-center w-full relative">
+        <div class="w-full lg:w-1/2 pr-0 lg:pr-12 space-y-10">
+          <div>
+            <h2 class="text-4xl md:text-6xl font-bold text-[#161d2d] mb-6">
+              <span class="text-gray-400 font-light">#</span>Trusted By 1
+              Million Clients
+            </h2>
+            <p class="text-lg text-[#475569] max-w-lg leading-relaxed">
+              Helping people fine the perfect home with trusted guidance,
+              market expertise and seamless property solutions.
+            </p>
+          </div>
+
+          <div class="space-y-8">
+            <div class="flex -space-x-4">
+              <img class="w-16 h-16 rounded-full object-cover" src="assests/images/index/client-img-1.png"
+                alt="Buyer 1" />
+              <img class="w-16 h-16 rounded-full object-cover" src="assests/images/index/client-img-2.png"
+                alt="Buyer 2" />
+              <img class="w-16 h-16 rounded-full object-cover" src="assests/images/index/client-img-3.png"
+                alt="Buyer 3" />
+              <img class="w-16 h-16 rounded-full object-cover" src="assests/images/index/client-img-4.png"
+                alt="Buyer 4" />
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div>
+                <div class="text-3xl font-bold text-[#161d2d] mb-1">1M</div>
+                <div class="text-[13px] text-[#475569] font-medium">
+                  Happy buyers
+                </div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-[#161d2d] mb-1">100K</div>
+                <div class="text-[13px] text-[#475569] font-medium">
+                  Clients reviews
+                </div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-[#161d2d] mb-1">4.8</div>
+                <div class="text-[13px] text-[#475569] font-medium">
+                  Positive rating
+                </div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-[#161d2d] mb-1">
+                  8 Lakh
+                </div>
+                <div class="text-[13px] text-[#475569] font-medium">
+                  Project Covered
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="px-8 py-2.5 border border-gray-300 rounded-lg text-sm text-[#161d2d] font-medium hover:bg-[#161d2d] hover:text-white transition-all duration-300">
+            Learn More
+          </button>
+        </div>
+
+        <div class="w-full lg:w-1/2 h-[580px] custom-scrollbar overflow-y-auto [direction:rtl] mt-16 lg:mt-0">
+          <div class="[direction:ltr] ml-8 lg:ml-16 space-y-6 pb-4">
+            <div
+              class="relative bg-white p-5 md:p-6 lg:p-8 rounded-2xl md:rounded-[2rem] group hover:bg-[#161d2d] hover:-translate-x-1 transition-all duration-300 cursor-pointer border border-transparent">
+              <div class="flex gap-4 md:gap-5">
+                <div class="shrink-0">
+                  <div
+                    class="w-10 h-10 md:w-12 md:h-12 bg-[#161d2d] group-hover:bg-white group-hover:text-[#161d2d] rounded-full flex items-center justify-center text-white shadow-md transition-colors duration-300">
+                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
+                      </path>
+                    </svg>
+                    <!-- <img src="assests/images/index/compass.png" alt="" /> -->
+                  </div>
+                </div>
+
+                <div class="pb-10 md:pb-12">
+                  <h3
+                    class="text-lg md:text-xl lg:text-[22px] font-semibold text-[#161d2d] group-hover:text-white leading-snug transition-colors duration-300">
+                    Two Decades Of Building Excellence and Trust
+                  </h3>
+                  <p
+                    class="mt-2 md:mt-3 text-xs md:text-sm text-[#475569] group-hover:text-gray-200 leading-relaxed transition-colors duration-300">
+                    Infinity Horizon has evolved to become one of the leading
+                    Real Estate developers in Eastern India and parts of
+                    Southern India.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-4 right-4 md:bottom-6 md:right-6 w-9 h-9 md:w-11 md:h-11 bg-[#161d2d] group-hover:bg-white group-hover:text-[#161d2d] rounded-lg md:rounded-xl flex items-center justify-center text-white group-hover:scale-105 transition-all duration-300 shadow-md">
+                <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="relative bg-white p-5 md:p-6 lg:p-8 rounded-2xl md:rounded-[2rem] group hover:bg-[#161d2d] hover:-translate-x-1 transition-all duration-300 cursor-pointer border border-transparent">
+              <div class="flex gap-4 md:gap-5">
+                <div class="shrink-0">
+                  <div
+                    class="w-10 h-10 md:w-12 md:h-12 bg-[#161d2d] group-hover:bg-white group-hover:text-[#161d2d] rounded-full flex items-center justify-center text-white shadow-md transition-colors duration-300">
+                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
+                      </path>
+                    </svg>
+                    <!-- <img src="assests/images/index/compass.png" alt="" /> -->
+                  </div>
+                </div>
+
+                <div class="pb-10 md:pb-12">
+                  <h3
+                    class="text-lg md:text-xl lg:text-[22px] font-semibold text-[#161d2d] group-hover:text-white leading-snug transition-colors duration-300">
+                    Two Decades Of Building Excellence and Trust
+                  </h3>
+                  <p
+                    class="mt-2 md:mt-3 text-xs md:text-sm text-[#475569] group-hover:text-gray-200 leading-relaxed transition-colors duration-300">
+                    Infinity Horizon has evolved to become one of the leading
+                    Real Estate developers in Eastern India and parts of
+                    Southern India.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-4 right-4 md:bottom-6 md:right-6 w-9 h-9 md:w-11 md:h-11 bg-[#161d2d] group-hover:bg-white group-hover:text-[#161d2d] rounded-lg md:rounded-xl flex items-center justify-center text-white group-hover:scale-105 transition-all duration-300 shadow-md">
+                <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="relative bg-white p-5 md:p-6 lg:p-8 rounded-2xl md:rounded-[2rem] group hover:bg-[#161d2d] hover:-translate-x-1 transition-all duration-300 cursor-pointer border border-transparent">
+              <div class="flex gap-4 md:gap-5">
+                <div class="shrink-0">
+                  <div
+                    class="w-10 h-10 md:w-12 md:h-12 bg-[#161d2d] group-hover:bg-white group-hover:text-[#161d2d] rounded-full flex items-center justify-center text-white shadow-md transition-colors duration-300">
+                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
+                      </path>
+                    </svg>
+                    <!-- <img src="assests/images/index/compass.png" alt="" /> -->
+                  </div>
+                </div>
+
+                <div class="pb-10 md:pb-12">
+                  <h3
+                    class="text-lg md:text-xl lg:text-[22px] font-semibold text-[#161d2d] group-hover:text-white leading-snug transition-colors duration-300">
+                    Two Decades Of Building Excellence and Trust
+                  </h3>
+                  <p
+                    class="mt-2 md:mt-3 text-xs md:text-sm text-[#475569] group-hover:text-gray-200 leading-relaxed transition-colors duration-300">
+                    Infinity Horizon has evolved to become one of the leading
+                    Real Estate developers in Eastern India and parts of
+                    Southern India.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-4 right-4 md:bottom-6 md:right-6 w-9 h-9 md:w-11 md:h-11 bg-[#161d2d] group-hover:bg-white group-hover:text-[#161d2d] rounded-lg md:rounded-xl flex items-center justify-center text-white group-hover:scale-105 transition-all duration-300 shadow-md">
+                <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="relative bg-white p-5 md:p-6 lg:p-8 rounded-2xl md:rounded-[2rem] group hover:bg-[#161d2d] hover:-translate-x-1 transition-all duration-300 cursor-pointer border border-transparent">
+              <div class="flex gap-4 md:gap-5">
+                <div class="shrink-0">
+                  <div
+                    class="w-10 h-10 md:w-12 md:h-12 bg-[#161d2d] group-hover:bg-white group-hover:text-[#161d2d] rounded-full flex items-center justify-center text-white shadow-md transition-colors duration-300">
+                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
+                      </path>
+                    </svg>
+                    <!-- <img src="assests/images/index/compass.png" alt="" /> -->
+                  </div>
+                </div>
+
+                <div class="pb-10 md:pb-12">
+                  <h3
+                    class="text-lg md:text-xl lg:text-[22px] font-semibold text-[#161d2d] group-hover:text-white leading-snug transition-colors duration-300">
+                    Two Decades Of Building Excellence and Trust
+                  </h3>
+                  <p
+                    class="mt-2 md:mt-3 text-xs md:text-sm text-[#475569] group-hover:text-gray-200 leading-relaxed transition-colors duration-300">
+                    Infinity Horizon has evolved to become one of the leading
+                    Real Estate developers in Eastern India and parts of
+                    Southern India.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-4 right-4 md:bottom-6 md:right-6 w-9 h-9 md:w-11 md:h-11 bg-[#161d2d] group-hover:bg-white group-hover:text-[#161d2d] rounded-lg md:rounded-xl flex items-center justify-center text-white group-hover:scale-105 transition-all duration-300 shadow-md">
+                <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Scroll Section Starts -->
+
+  <!-- Popular Listings Starts -->
+  <section class="pt-16 pb-8">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6">
+      <div class="mb-10">
+        <h2 class="text-4xl md:text-5xl text-slate-900 mb-4 tracking-tight">
+          Popular Listings
+        </h2>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+          <p class="text-slate-800 text-lg">
+            Infinity Horizon's most popular watchlists. View all 2412 listings
+          </p>
+          <a href="#"
+            class="flex items-center justify-center w-6 sm:w-8 md:w-10 h-6 sm:h-8 md:h-10 rounded-full bg-[#111827] text-amber-500 border-2 hover:bg-white hover:text-black hover:border-black transition-colors">
+            <i class="fa-solid fa-arrow-right text-xs sm:text-sm md:text-base"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mb-8">
+        <a href="#"
+          class="px-6 py-2.5 rounded-full border border-slate-400 text-slate-700 bg-transparent hover:border-slate-800 hover:text-slate-900 font-medium text-sm transition">
+          House
+        </a>
+        <a href="#"
+          class="px-6 py-2.5 rounded-full border border-slate-400 text-slate-700 bg-transparent hover:border-slate-800 hover:text-slate-900 font-medium text-sm transition">
+          Apartment
+        </a>
+        <a href="#"
+          class="px-6 py-2.5 rounded-full border border-slate-400 text-slate-700 bg-transparent hover:border-slate-800 hover:text-slate-900 font-medium text-sm transition">
+          Villa
+        </a>
+        <a href="#"
+          class="px-6 py-2.5 rounded-full border border-slate-400 text-slate-700 bg-transparent hover:border-slate-800 hover:text-slate-900 font-medium text-sm transition">
+          Office
+        </a>
+      </div>
+
+      <div
+        class="drag-slider flex gap-6 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing pb-8 select-none">
+        <div
+          class="w-[85vw] sm:w-[380px] md:w-[410px] flex-shrink-0 bg-[#f8fafc] rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="relative h-[220px] bg-gray-200">
+            <img src="assests/images/index/popular-listing-1.png" alt="Duplex House"
+              class="w-full h-full object-cover pointer-events-none" draggable="false" />
+            <div class="absolute top-4 left-0 bg-[#f59e0b] text-white text-xs font-bold px-4 py-1.5 ribbon pr-6">
+              Special Offers
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-slate-900">Duplex House</h3>
+              <div class="flex items-center gap-3">
+                <div class="flex items-center gap-1 text-slate-800 font-medium text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  BT Road
+                </div>
+                <button class="text-slate-900 hover:text-red-500 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <p class="text-slate-600 text-sm mb-6">
+              Size:
+              <span class="font-semibold text-slate-800">9580 sq. ft.</span>
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <p class="text-slate-600 text-sm">
+                Start From:
+                <span class="font-bold text-slate-900">₹ 48 Lacs</span>
+              </p>
+
+              <a href="#"
+                class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-[#facc15] hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200">
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-[85vw] sm:w-[380px] md:w-[410px] flex-shrink-0 bg-[#f8fafc] rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="relative h-[220px] bg-gray-200">
+            <img src="assests/images/index/popular-listing-2.png" alt="Single Family House"
+              class="w-full h-full object-cover pointer-events-none" draggable="false" />
+            <div class="absolute top-4 left-0 bg-[#1e293b] text-white text-xs font-bold px-4 py-1.5 ribbon pr-6">
+              Featured
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-slate-900">
+                Single Family House
+              </h3>
+              <div class="flex items-center gap-3">
+                <div class="flex items-center gap-1 text-slate-800 font-medium text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  Sonarpur
+                </div>
+                <button class="text-slate-900 hover:text-red-500 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <p class="text-slate-600 text-sm mb-6">
+              Size:
+              <span class="font-semibold text-slate-800">4580 sq. ft.</span>
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <p class="text-slate-600 text-sm">
+                Start From:
+                <span class="font-bold text-slate-900">₹ 38 Lacs</span>
+              </p>
+              <a href="#"
+                class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-[#facc15] hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200">
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-[85vw] sm:w-[380px] md:w-[410px] flex-shrink-0 bg-[#f8fafc] rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="relative h-[220px] bg-gray-200">
+            <img src="assests/images/index/popular-listing-3.png" alt="Single Family House"
+              class="w-full h-full object-cover pointer-events-none" draggable="false" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-slate-900">
+                Single Family House
+              </h3>
+              <div class="flex items-center gap-3">
+                <div class="flex items-center gap-1 text-slate-800 font-medium text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  Baruipur
+                </div>
+                <button class="text-slate-900 hover:text-red-500 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <p class="text-slate-600 text-sm mb-6">
+              Size:
+              <span class="font-semibold text-slate-800">4580 sq. ft.</span>
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <p class="text-slate-600 text-sm">
+                Start From:
+                <span class="font-bold text-slate-900">₹ 38 Lacs</span>
+              </p>
+              <a href="#"
+                class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-[#facc15] hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200">
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-[85vw] sm:w-[380px] md:w-[410px] flex-shrink-0 bg-[#f8fafc] rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="relative h-[220px] bg-gray-200">
+            <img src="assests/images/index/popular-listing-3.png" alt="Single Family House"
+              class="w-full h-full object-cover pointer-events-none" draggable="false" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-slate-900">
+                Single Family House
+              </h3>
+              <div class="flex items-center gap-3">
+                <div class="flex items-center gap-1 text-slate-800 font-medium text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  Baruipur
+                </div>
+                <button class="text-slate-900 hover:text-red-500 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <p class="text-slate-600 text-sm mb-6">
+              Size:
+              <span class="font-semibold text-slate-800">4580 sq. ft.</span>
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <p class="text-slate-600 text-sm">
+                Start From:
+                <span class="font-bold text-slate-900">₹ 38 Lacs</span>
+              </p>
+              <a href="#"
+                class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-[#facc15] hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200">
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-[85vw] sm:w-[380px] md:w-[410px] flex-shrink-0 bg-[#f8fafc] rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="relative h-[220px] bg-gray-200">
+            <img src="assests/images/index/popular-listing-3.png" alt="Single Family House"
+              class="w-full h-full object-cover pointer-events-none" draggable="false" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-slate-900">
+                Single Family House
+              </h3>
+              <div class="flex items-center gap-3">
+                <div class="flex items-center gap-1 text-slate-800 font-medium text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  Baruipur
+                </div>
+                <button class="text-slate-900 hover:text-red-500 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <p class="text-slate-600 text-sm mb-6">
+              Size:
+              <span class="font-semibold text-slate-800">4580 sq. ft.</span>
+            </p>
+            <div class="flex justify-between items-center mt-auto">
+              <p class="text-slate-600 text-sm">
+                Start From:
+                <span class="font-bold text-slate-900">₹ 38 Lacs</span>
+              </p>
+              <a href="#"
+                class="bg-[#171e2e] text-white px-5 py-2.5 rounded-lg text-xs font-bold hover:bg-[#facc15] hover:text-[#171E2E] transform hover:-translate-x-2 shadow hover:shadow-md transition-all duration-200">
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Popular Listings Ends -->
+
+  <!-- Listing Categories Starts -->
+  <section class="py-8 bg-[#f3f6f9]">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6">
+      <div class="mb-10">
+        <h2 class="text-4xl md:text-5xl text-slate-900 mb-4 tracking-tight">
+          Listing Categories
+        </h2>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+          <p class="text-slate-800 text-lg">
+            Type of our property View All 4142 listings
+          </p>
+          <a href="#"
+            class="flex items-center justify-center w-6 sm:w-8 md:w-10 h-6 sm:h-8 md:h-10 rounded-full bg-[#111827] text-amber-500 border-2 hover:bg-white hover:text-black hover:border-black transition-colors">
+            <i class="fa-solid fa-arrow-right text-xs sm:text-sm md:text-base"></i>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="drag-slider flex gap-6 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing pb-8 select-none">
+        <div
+          class="flex w-[85vw] sm:w-[320px] md:w-[380px] lg:w-[410px] flex-shrink-0 bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+          <div class="w-[130px] sm:w-[150px] h-[130px] sm:h-[150px] flex-shrink-0">
+            <img src="assests/images/index/house-img.png" alt="House"
+              class="w-full h-full object-cover pointer-events-none rounded-2xl" draggable="false" />
+          </div>
+          <div class="flex-1 p-5 flex flex-col justify-center">
+            <h3 class="text-xl sm:text-2xl font-bold text-[#1e293b] mb-1.5">
+              House
+            </h3>
+            <p class="text-slate-600 font-medium text-sm">1,049 listings</p>
+          </div>
+        </div>
+
+        <div
+          class="flex w-[85vw] sm:w-[320px] md:w-[380px] lg:w-[410px] flex-shrink-0 bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+          <div class="w-[130px] sm:w-[150px] h-[130px] sm:h-[150px] flex-shrink-0">
+            <img src="assests/images/index/apartment-img.png" alt="Apartment"
+              class="w-full h-full object-cover pointer-events-none rounded-2xl" draggable="false" />
+          </div>
+          <div class="flex-1 p-5 flex flex-col justify-center">
+            <h3 class="text-xl sm:text-2xl font-bold text-[#1e293b] mb-1.5">
+              Apartment
+            </h3>
+            <p class="text-slate-600 font-medium text-sm">1,400 listings</p>
+          </div>
+        </div>
+
+        <div
+          class="flex w-[85vw] sm:w-[320px] md:w-[380px] lg:w-[410px] flex-shrink-0 bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+          <div class="w-[130px] sm:w-[150px] h-[130px] sm:h-[150px] flex-shrink-0">
+            <img src="assests/images/index/villa-img.png" alt="Villa"
+              class="w-full h-full object-cover pointer-events-none rounded-2xl" draggable="false" />
+          </div>
+          <div class="flex-1 p-5 flex flex-col justify-center">
+            <h3 class="text-xl sm:text-2xl font-bold text-[#1e293b] mb-1.5">
+              Villa
+            </h3>
+            <p class="text-slate-600 font-medium text-sm">400 listings</p>
+          </div>
+        </div>
+
+        <div
+          class="flex w-[85vw] sm:w-[320px] md:w-[380px] lg:w-[410px] flex-shrink-0 bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+          <div class="w-[130px] sm:w-[150px] h-[130px] sm:h-[150px] flex-shrink-0">
+            <img src="assests/images/index/villa-img.png" alt="Villa"
+              class="w-full h-full object-cover pointer-events-none rounded-2xl" draggable="false" />
+          </div>
+          <div class="flex-1 p-5 flex flex-col justify-center">
+            <h3 class="text-xl sm:text-2xl font-bold text-[#1e293b] mb-1.5">
+              Villa
+            </h3>
+            <p class="text-slate-600 font-medium text-sm">400 listings</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Listing Categories Starts -->
+
+  <!-- Ongoing Prjects Starts -->
+  <section class="py-16">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div class="w-full lg:w-1/3 flex flex-col justify-center">
+        <h2 class="text-4xl md:text-5xl text-slate-900 mb-5 tracking-tight">
+          Our Ongoing Projects
+        </h2>
+        <p class="text-slate-800 text-lg mb-10 leading-relaxed max-w-sm">
+          Building tomorrow's is our motto & we have been doing exactly that.
+        </p>
+
+        <div class="flex gap-4">
+          <button id="prev-btn"
+            class="flex items-center justify-center w-12 h-12 bg-[#111827] rounded-full hover:bg-slate-800 transform hover:-translate-x-1 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none shadow-md hover:shadow-lg">
+            <i class="fa-solid fa-arrow-left text-[#eab308] text-sm md:text-base"></i>
+          </button>
+          <button id="next-btn"
+            class="flex items-center justify-center w-12 h-12 bg-[#e2e8f0] border border-slate-300 rounded-full hover:bg-slate-200 transform hover:translate-x-1 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none shadow-sm hover:shadow-md">
+            <i class="fa-solid fa-arrow-right text-[#eab308] text-sm md:text-base"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-2/3 relative overflow-hidden rounded-2xl">
+        <div id="projects-slider"
+          class="drag-slider flex gap-6 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing select-none pb-4">
+          <div
+            class="relative w-[85vw] sm:w-[350px] md:w-[400px] h-[450px] sm:h-[550px] flex-shrink-0 rounded-2xl overflow-hidden group">
+            <img src="assests/images/index/ongoing-img-1.jpg" alt="Residential"
+              class="absolute inset-0 w-full h-full object-cover pointer-events-none transition-transform duration-700 group-hover:scale-105"
+              draggable="false" />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-[#0f172a]/70 via-transparent to-[#0f172a]/90 pointer-events-none">
+            </div>
+
+            <div class="relative h-full p-8 flex flex-col justify-between pointer-events-none">
+              <div>
+                <h3 class="text-3xl font-bold text-white mb-2">
+                  Residential
+                </h3>
+                <p class="text-slate-200 text-sm font-medium tracking-wide">
+                  20 Properties
+                </p>
+              </div>
+
+              <a href="ongoing-projects.html"
+                class="group/btn flex items-center gap-2 text-lg text-white font-medium hover:text-[#f59e0b] transition-colors duration-300 pointer-events-auto cursor-pointer self-start focus:outline-none">
+                More Details
+                <span
+                  class="flex justify-center w-5 h-5 transition-transform duration-300 transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1">
+                  <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: -45deg"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="relative w-[85vw] sm:w-[350px] md:w-[400px] h-[450px] sm:h-[550px] flex-shrink-0 rounded-2xl overflow-hidden group">
+            <img src="assests/images/index/ongoing-img-2.jpg" alt="Commercial"
+              class="absolute inset-0 w-full h-full object-cover pointer-events-none transition-transform duration-700 group-hover:scale-105"
+              draggable="false" />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-[#0f172a]/70 via-transparent to-[#0f172a]/90 pointer-events-none">
+            </div>
+
+            <div class="relative h-full p-8 flex flex-col justify-between pointer-events-none">
+              <div>
+                <h3 class="text-3xl font-bold text-white mb-2">Commercial</h3>
+                <p class="text-slate-200 text-sm font-medium tracking-wide">
+                  10 Properties
+                </p>
+              </div>
+
+              <a href="ongoing-projects.html"
+                class="group/btn flex items-center gap-2 text-lg text-white font-medium hover:text-[#f59e0b] transition-colors duration-300 pointer-events-auto cursor-pointer self-start focus:outline-none">
+                More Details
+                <span
+                  class="flex justify-center w-5 h-5 transition-transform duration-300 transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1">
+                  <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: -45deg"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="relative w-[85vw] sm:w-[350px] md:w-[400px] h-[450px] sm:h-[550px] flex-shrink-0 rounded-2xl overflow-hidden group">
+            <img src="assests/images/index/ongoing-img-2.jpg" alt="Retail"
+              class="absolute inset-0 w-full h-full object-cover pointer-events-none transition-transform duration-700 group-hover:scale-105"
+              draggable="false" />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-[#0f172a]/70 via-transparent to-[#0f172a]/90 pointer-events-none">
+            </div>
+
+            <div class="relative h-full p-8 flex flex-col justify-between pointer-events-none">
+              <div>
+                <h3 class="text-3xl font-bold text-white mb-2">Retail</h3>
+                <p class="text-slate-200 text-sm font-medium tracking-wide">
+                  15 Properties
+                </p>
+              </div>
+
+              <a href="ongoing-projects.html"
+                class="group/btn flex items-center gap-2 text-lg text-white font-medium hover:text-[#f59e0b] transition-colors duration-300 pointer-events-auto cursor-pointer self-start focus:outline-none">
+                More Details
+                <span
+                  class="flex justify-center w-5 h-5 transition-transform duration-300 transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1">
+                  <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: -45deg"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Ongoing Prjects Ends -->
+
+  <!-- Logo Slider Section Starts -->
+  <section class="overflow-hidden relative py-4 border-y border-gray-300 shadow-inner bg-cover bg-center"
+    style="background-image: url(assests/images/index/scroll.png)">
+    <!-- <div class="absolute inset-0 bg-white/70 backdrop-blur-sm"></div> -->
+
+    <div class="relative animate-scroll flex items-center gap-3 px-10">
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <img src="assests/images/index/eternia.png" alt="Eternia"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/spacia.png" alt="Spacia"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/primus.png" alt="Primus Ganges"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/laguna.png" alt="Laguna Bay"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/solus.png" alt="Solus"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/o3one.png" alt="O3one"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/intellia.png" alt="Intellia"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/town-square.png" alt="Town Square"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/theroyal.png" alt="The Royal Ganges"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/optima.png" alt="Optima"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+      </div>
+
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <img src="assests/images/index/eternia.png" alt="Eternia"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/spacia.png" alt="Spacia"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/primus.png" alt="Primus Ganges"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/laguna.png" alt="Laguna Bay"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/solus.png" alt="Solus"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/o3one.png" alt="O3one"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/intellia.png" alt="Intellia"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/town-square.png" alt="Town Square"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/theroyal.png" alt="The Royal Ganges"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+        <img src="assests/images/index/optima.png" alt="Optima"
+          class="h-12 md:h-16 w-auto object-contain mix-blend-multiply opacity-80" />
+      </div>
+    </div>
+  </section>
+  <!-- Logo Slider Section Ends -->
+
+  <!-- Galary Section Starts -->
+  <section class="py-10 bg-[#f3f6f9]">
+    <div class="container mx-auto w-full max-w-[1320px] px-4 sm:px-8 lg:px-12">
+      <h1
+        class="mb-8 text-4xl leading-tight tracking-tight text-[#2a2f35] sm:text-[44px] sm:leading-none md:text-[52px]">
+        Projects Gallery
+      </h1>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:hidden">
+        <figure class="overflow-hidden rounded-2xl sm:col-span-2">
+          <img src="assests/images/index/Rectangle 48.png" alt="Modern home exterior"
+            class="aspect-[16/9] w-full object-cover transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <figure class="overflow-hidden rounded-2xl">
+          <img src="assests/images/index/Rectangle 52.png" alt="Residential villa"
+            class="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <figure class="overflow-hidden rounded-2xl">
+          <img src="assests/images/index/Rectangle 51.png" alt="Luxury property deck area"
+            class="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <figure class="overflow-hidden rounded-2xl sm:col-span-2">
+          <img src="assests/images/index/Rectangle 53.png" alt="Family house with lawn"
+            class="aspect-[16/9] w-full object-cover transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <figure class="overflow-hidden rounded-2xl">
+          <img src="assests/images/index/Rectangle 57.png" alt="Minimal white architecture"
+            class="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <figure class="overflow-hidden rounded-2xl">
+          <img src="assests/images/index/Rectangle 50.png" alt="Poolside modern house"
+            class="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <figure class="overflow-hidden rounded-2xl sm:col-span-2">
+          <img src="assests/images/index/Rectangle 49.png" alt="Suburban red house"
+            class="aspect-[16/9] w-full object-cover transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <figure class="overflow-hidden rounded-2xl">
+          <img src="assests/images/index/Rectangle 55.png" alt="Home with reflective pool"
+            class="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <figure class="overflow-hidden rounded-2xl sm:col-span-2">
+          <img src="assests/images/index/Rectangle 56.png" alt="Contemporary home at dusk"
+            class="aspect-[16/9] w-full object-cover transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <figure class="overflow-hidden rounded-2xl">
+          <img src="assests/images/index/Rectangle 54.png" alt="Classic residential lane"
+            class="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105" />
+        </figure>
+      </div>
+      <div class="relative hidden w-full lg:block" style="aspect-ratio: 1316 / 724">
+        <figure class="group absolute overflow-hidden rounded-[18px]"
+          style="left: 0%; top: 10.77%; width: 31.38%; height: 34.8%">
+          <img src="assests/images/index/Rectangle 48.png" alt="Modern home exterior"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </figure>
+
+        <figure class="group absolute overflow-hidden rounded-[18px]"
+          style="left: 32.97%; top: -3.45%; width: 13.67%; height: 19.06%">
+          <img src="assests/images/index/Rectangle 52.png" alt="Residential villa"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </figure>
+
+        <figure class="group absolute overflow-hidden rounded-[18px]"
+          style="left: 32.97%; top: 18.5%; width: 13.67%; height: 27.07%">
+          <img src="assests/images/index/Rectangle 51.png" alt="Minimal white architecture"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </figure>
+
+        <figure class="group absolute overflow-hidden rounded-[18px]"
+          style="left: 48.1%; top: 10.77%; width: 25%; height: 34.8%">
+          <img src="assests/images/index/Rectangle 53.png" alt="Family house with lawn"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </figure>
+
+        <figure class="group absolute overflow-hidden rounded-[18px]"
+          style="left: 74.54%; top: 18.5%; width: 16.26%; height: 27.07%">
+          <img src="assests/images/index/Rectangle 57.png" alt="Home with reflective pool"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </figure>
+
+        <figure class="group absolute overflow-hidden rounded-[18px]"
+          style="left: 6.68%; top: 51.38%; width: 16.26%; height: 27.07%">
+          <img src="assests/images/index/Rectangle 50.png" alt="Poolside modern house"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </figure>
+
+        <figure class="group absolute overflow-hidden rounded-[18px]"
+          style="left: 24.46%; top: 51.38%; width: 25%; height: 34.8%">
+          <img src="assests/images/index/Rectangle 49.png" alt="Suburban red house"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </figure>
+
+        <figure class="group absolute overflow-hidden rounded-[18px]"
+          style="left: 50.91%; top: 51.38%; width: 16.26%; height: 27.07%">
+          <img src="assests/images/index/Rectangle 54.png" alt="Luxury property deck area"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </figure>
+
+        <figure class="group absolute overflow-hidden rounded-[18px]"
+          style="left: 68.61%; top: 51.38%; width: 31.38%; height: 34.8%">
+          <img src="assests/images/index/Rectangle 56.png" alt="Contemporary home at dusk"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </figure>
+
+        <figure class="group absolute overflow-hidden rounded-[18px]"
+          style="left: 50.91%; top: 80.93%; width: 13.67%; height: 19.06%">
+          <img src="assests/images/index/Rectangle 55.png" alt="Classic residential lane"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </figure>
+      </div>
+    </div>
+  </section>
+  <!-- Galary Section Ends -->
+
+  <!-- Meet Agent Section Starts -->
+  <section class="py-[50px] lg:py-20 px-4 sm:px-6 lg:px-12">
+    <div class="max-w-[1320px] mx-auto">
+      <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-10 lg:mb-16 gap-6">
+        <div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1E1E1E] mb-2 sm:mb-4">
+            Meet Our Agents
+          </h2>
+          <p class="text-[#1E1E1E] text-2xl sm:text-xl">
+            Always give you best suggestion
+          </p>
+        </div>
+        <div onclick="scrollRight()"
+          class="flex items-center justify-center w-6 sm:w-8 md:w-10 h-6 sm:h-8 md:h-10 rounded-full bg-[#111827] text-amber-500 border-2 hover:bg-white hover:text-black hover:border-black transition-colors">
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
+      </div>
+
+      <div id="slider-container"
+        class="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar scroll-smooth cursor-pointer select-none pb-8 px-1">
+        <div
+          class="group relative flex-shrink-0 w-[200px] sm:w-[270px] lg:w-[320px] h-[300px] sm:h-[400px] lg:h-[450px]">
+          <div
+            class="absolute inset-0 overflow-hidden bg-white border border-gray-100 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-[120px] group-hover:rounded-[24px] lg:rounded-[160px] lg:group-hover:rounded-[24px]">
+            <img src="assests/images/index/agent-1.png" alt="moa1.png"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none" />
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-end pb-8 lg:pb-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+              <div class="flex items-center gap-1 mb-1">
+                <span class="text-white text-base font-bold pt-1">4.9</span>
+                <span class="text-orange-400 text-xl">★</span>
+              </div>
+              <h3 class="text-xl lg:text-2xl font-bold text-white mb-1">
+                Danial Carter
+              </h3>
+              <p class="text-gray-300 text-xs lg:text-sm mb-2">
+                Field Executive
+              </p>
+              <div
+                class="flex gap-6 items-center justify-center text-[#FCA311] transition-all duration-300 px-5 py-2 border border-white backdrop-blur rounded-2xl">
+                <a href="#" class="hover:scale-110 transition-transform">
+                  <img src="assests/images/index/fb-logo.png" alt="fb.png"
+                    class="w-5 h-5 lg:w-6 lg:h-6 object-contain" />
+                </a>
+                <a href="#" class="hover:scale-110 transition-transform">
+                  <img src="assests/images/index/insta-logo.png" alt="ig.png"
+                    class="w-5 h-5 lg:w-6 lg:h-6 object-contain" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative flex-shrink-0 w-[200px] sm:w-[270px] lg:w-[320px] h-[300px] sm:h-[400px] lg:h-[450px]">
+          <div
+            class="absolute inset-0 overflow-hidden bg-white border border-gray-100 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-[120px] group-hover:rounded-[24px] lg:rounded-[160px] lg:group-hover:rounded-[24px]">
+            <img src="assests/images/index/agent-2.png" alt="moa2.png"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none" />
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-end pb-8 lg:pb-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+              <div class="flex items-center gap-1 mb-1">
+                <span class="text-white text-base font-bold pt-1">4.9</span>
+                <span class="text-orange-400 text-xl">★</span>
+              </div>
+              <h3 class="text-xl lg:text-2xl font-bold text-white mb-1">
+                Danial Carter
+              </h3>
+              <p class="text-gray-300 text-xs lg:text-sm mb-2">
+                Field Executive
+              </p>
+              <div
+                class="flex gap-6 items-center justify-center text-[#FCA311] transition-all duration-300 px-5 py-2 border border-white backdrop-blur rounded-2xl">
+                <a href="#" class="hover:scale-110 transition-transform">
+                  <img src="assests/images/index/fb-logo.png" alt="fb.png"
+                    class="w-5 h-5 lg:w-6 lg:h-6 object-contain" />
+                </a>
+                <a href="#" class="hover:scale-110 transition-transform">
+                  <img src="assests/images/index/insta-logo.png" alt="ig.png"
+                    class="w-5 h-5 lg:w-6 lg:h-6 object-contain" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative flex-shrink-0 w-[200px] sm:w-[270px] lg:w-[320px] h-[300px] sm:h-[400px] lg:h-[450px]">
+          <div
+            class="absolute inset-0 overflow-hidden bg-white border border-gray-100 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-[120px] group-hover:rounded-[24px] lg:rounded-[160px] lg:group-hover:rounded-[24px]">
+            <img src="assests/images/index/agent-3.png" alt="moa3.png"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none" />
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-end pb-8 lg:pb-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+              <div class="flex items-center gap-1 mb-1">
+                <span class="text-white text-base font-bold pt-1">4.9</span>
+                <span class="text-orange-400 text-xl">★</span>
+              </div>
+              <h3 class="text-xl lg:text-2xl font-bold text-white mb-1">
+                Danial Carter
+              </h3>
+              <p class="text-gray-300 text-xs lg:text-sm mb-2">
+                Field Executive
+              </p>
+              <div
+                class="flex gap-6 items-center justify-center text-[#FCA311] transition-all duration-300 px-5 py-2 border border-white backdrop-blur rounded-2xl">
+                <a href="#" class="hover:scale-110 transition-transform">
+                  <img src="assests/images/index/fb-logo.png" alt="fb.png"
+                    class="w-5 h-5 lg:w-6 lg:h-6 object-contain" />
+                </a>
+                <a href="#" class="hover:scale-110 transition-transform">
+                  <img src="assests/images/index/insta-logo.png" alt="ig.png"
+                    class="w-5 h-5 lg:w-6 lg:h-6 object-contain" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative flex-shrink-0 w-[200px] sm:w-[270px] lg:w-[320px] h-[300px] sm:h-[400px] lg:h-[450px]">
+          <div
+            class="absolute inset-0 overflow-hidden bg-white border border-gray-100 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-[120px] group-hover:rounded-[24px] lg:rounded-[160px] lg:group-hover:rounded-[24px]">
+            <img src="assests/images/index/agent-4.png" alt="moa4.png"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none" />
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-end pb-8 lg:pb-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+              <div class="flex items-center gap-1 mb-1">
+                <span class="text-white text-base font-bold pt-1">4.9</span>
+                <span class="text-orange-400 text-xl">★</span>
+              </div>
+              <h3 class="text-xl lg:text-2xl font-bold text-white mb-1">
+                Danial Carter
+              </h3>
+              <p class="text-gray-300 text-xs lg:text-sm mb-2">
+                Field Executive
+              </p>
+              <div
+                class="flex gap-6 items-center justify-center text-[#FCA311] transition-all duration-300 px-5 py-2 border border-white backdrop-blur rounded-2xl">
+                <a href="#" class="hover:scale-110 transition-transform">
+                  <img src="assests/images/index/fb-logo.png" alt="fb.png"
+                    class="w-5 h-5 lg:w-6 lg:h-6 object-contain" />
+                </a>
+                <a href="#" class="hover:scale-110 transition-transform">
+                  <img src="assests/images/index/insta-logo.png" alt="ig.png"
+                    class="w-5 h-5 lg:w-6 lg:h-6 object-contain" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const slider = document.getElementById("slider-container");
+
+      function scrollRight() {
+        // Calculates the width of the first card visible to ensure accurate scrolling
+        const cardWidth = slider.querySelector(".group").offsetWidth;
+        const gap = parseInt(window.getComputedStyle(slider).gap);
+        slider.scrollLeft += cardWidth + gap;
+      }
+
+      let isDown = false,
+        startX,
+        scrollLeft;
+
+      slider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+        slider.classList.remove("scroll-smooth");
+      });
+      slider.addEventListener("mouseleave", () => (isDown = false));
+      slider.addEventListener("mouseup", () => {
+        isDown = false;
+        slider.classList.add("scroll-smooth");
+      });
+      slider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    </script>
+  </section>
+  <!-- Meet Agent Section Ends -->
+
+  <!-- Video Section Starts -->
+  <section>
+    <div
+      class="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] flex items-center justify-center overflow-hidden bg-gray-900">
+      <video id="bgVideo" class="absolute top-0 left-0 w-full h-full object-cover z-0" loop muted playsinline>
+        <source src="assests/videos/video-test-2.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black/30 z-10 pointer-events-none"></div>
+      <div
+        class="relative z-20 flex flex-col items-center justify-center px-4 sm:px-6 w-full max-w-[1320px] mx-auto text-center">
+        <button id="videoControlBtn"
+          class="group bg-white rounded-full w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center shadow-lg transition-all duration-300 ease-out hover:scale-110 hover:bg-gray-100 border-2 hover:border-amber-500 focus:outline-none">
+          <i id="controlIcon"
+            class="fa-solid fa-play text-[#111827] group-hover:text-amber-500 text-xl sm:text-2xl md:text-3xl ml-1 transition-all duration-300"></i>
+        </button>
+
+        <h1
+          class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-snug md:leading-tight mt-6 md:mt-8 max-w-3xl">
+          Experience Our Professional <br class="hidden sm:block" />
+          Real Estate Approach
+        </h1>
+      </div>
+    </div>
+  </section>
+  <!-- Video Section Ends -->
+
+  <!-- Testimonials Starts -->
+  <section class="bg-[#f3f6f9] px-6 py-12">
+    <div class="max-w-[1320px] flex flex-col items-center justify-center mx-auto">
+      <h2 class="text-3xl md:text-4xl lg:text-[40px] font-semibold text-center text-[#1a1f2c] mb-8 lg:mb-16">
+        What People Say
+      </h2>
+
+      <div class="relative w-full max-w-[1320px]">
+        <div id="testimonial-track"
+          class="flex gap-4 lg:gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar items-center py-12 w-full px-4 sm:px-0">
+          <div class="shrink-0 w-[5vw] md:w-[calc(50%-175px)] lg:w-[calc(50%-200px)]"></div>
+
+          <div
+            class="testi-card inactive shrink-0 snap-center w-[85vw] sm:w-[350px] lg:w-[400px] p-6 lg:p-8 flex flex-col justify-between h-full rounded-md relative cursor-pointer">
+            <div class="testi-bubble p-6 sm:p-8 relative mb-10 rounded-md">
+              <p class="testi-text text-base sm:text-lg font-medium leading-relaxed">
+                “Infinity Horizon Properties are designed to offer all
+                amenities within the project. They understand the importance
+                of a comfortable living space”
+              </p>
+              <div class="testi-tail absolute -bottom-8 right-10 w-16 h-16 rotate-45 rounded-sm z-[-1]"></div>
+            </div>
+            <div class="px-2 mt-auto">
+              <h4 class="testi-author font-semibold text-lg lg:text-xl">
+                Robert Downey 1
+              </h4>
+              <p class="testi-role text-sm mt-1">Resident</p>
+            </div>
+          </div>
+
+          <div
+            class="testi-card inactive shrink-0 snap-center w-[85vw] sm:w-[350px] lg:w-[400px] p-6 lg:p-8 flex flex-col justify-between h-full rounded-md relative cursor-pointer">
+            <div class="testi-bubble p-6 sm:p-8 relative mb-10 rounded-md">
+              <p class="testi-text text-base sm:text-lg font-medium leading-relaxed">
+                “Infinity Horizon Properties are designed to offer all
+                amenities within the project. They understand the importance
+                of a comfortable living space”
+              </p>
+              <div class="testi-tail absolute -bottom-8 right-10 w-16 h-16 rotate-45 rounded-sm z-[-1]"></div>
+            </div>
+            <div class="px-2 mt-auto">
+              <h4 class="testi-author font-semibold text-lg lg:text-xl">
+                Robert Downey 2
+              </h4>
+              <p class="testi-role text-sm mt-1">Resident</p>
+            </div>
+          </div>
+
+          <div
+            class="testi-card inactive shrink-0 snap-center w-[85vw] sm:w-[350px] lg:w-[400px] p-6 lg:p-8 flex flex-col justify-between h-full rounded-md relative cursor-pointer">
+            <div class="testi-bubble p-6 sm:p-8 relative mb-10 rounded-md">
+              <p class="testi-text text-base sm:text-lg font-medium leading-relaxed">
+                “Infinity Horizon Properties are designed to offer all
+                amenities within the project. They understand the importance
+                of a comfortable living space”
+              </p>
+              <div class="testi-tail absolute -bottom-8 right-10 w-16 h-16 rotate-45 rounded-sm z-[-1]"></div>
+            </div>
+            <div class="px-2 mt-auto">
+              <h4 class="testi-author font-semibold text-lg lg:text-xl">
+                Robert Downey 3
+              </h4>
+              <p class="testi-role text-sm mt-1">Resident</p>
+            </div>
+          </div>
+
+          <div
+            class="testi-card inactive shrink-0 snap-center w-[85vw] sm:w-[350px] lg:w-[400px] p-6 lg:p-8 flex flex-col justify-between h-full rounded-md relative cursor-pointer">
+            <div class="testi-bubble p-6 sm:p-8 relative mb-10 rounded-md">
+              <p class="testi-text text-base sm:text-lg font-medium leading-relaxed">
+                “Infinity Horizon Properties are designed to offer all
+                amenities within the project. They understand the importance
+                of a comfortable living space”
+              </p>
+              <div class="testi-tail absolute -bottom-8 right-10 w-16 h-16 rotate-45 rounded-sm z-[-1]"></div>
+            </div>
+            <div class="px-2 mt-auto">
+              <h4 class="testi-author font-semibold text-lg lg:text-xl">
+                Robert Downey 4
+              </h4>
+              <p class="testi-role text-sm mt-1">Resident</p>
+            </div>
+          </div>
+
+          <div
+            class="testi-card inactive shrink-0 snap-center w-[85vw] sm:w-[350px] lg:w-[400px] p-6 lg:p-8 flex flex-col justify-between h-full rounded-md relative cursor-pointer">
+            <div class="testi-bubble p-6 sm:p-8 relative mb-10 rounded-md">
+              <p class="testi-text text-base sm:text-lg font-medium leading-relaxed">
+                “Infinity Horizon Properties are designed to offer all
+                amenities within the project. They understand the importance
+                of a comfortable living space”
+              </p>
+              <div class="testi-tail absolute -bottom-8 right-10 w-16 h-16 rotate-45 rounded-sm z-[-1]"></div>
+            </div>
+            <div class="px-2 mt-auto">
+              <h4 class="testi-author font-semibold text-lg lg:text-xl">
+                Robert Downey 5
+              </h4>
+              <p class="testi-role text-sm mt-1">Resident</p>
+            </div>
+          </div>
+
+          <div class="shrink-0 w-[5vw] md:w-[calc(50%-175px)] lg:w-[calc(50%-200px)]"></div>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center gap-4 mt-4">
+        <button id="btn-testi-left"
+          class="flex items-center justify-center w-12 h-12 bg-[#111827] rounded-full hover:bg-slate-800 transform hover:-translate-x-1 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none shadow-md hover:shadow-lg">
+          <i class="fa-solid fa-arrow-left text-[#eab308] text-sm md:text-base"></i>
+        </button>
+        <button id="btn-testi-right"
+          class="flex items-center justify-center w-12 h-12 bg-[#e2e8f0] border border-slate-300 rounded-full hover:bg-slate-200 transform hover:translate-x-1 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none shadow-sm hover:shadow-md">
+          <i class="fa-solid fa-arrow-right text-[#eab308] text-sm md:text-base"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials Ends -->
+
+  <!-- QR COde Section Starts -->
+  <section class="bg-white flex items-center justify-center min-h-[372px] p-0">
+    <div
+      class="w-full max-w-7xl bg-white overflow-hidden flex flex-col md:flex-row items-center justify-between px-3 md:px-20 py-10 md:py-0 md:h-[372px]">
+      <div class="flex flex-col items-center md:items-center gap-6 order-2 md:order-1 mt-10 md:mt-0">
+        <div class="flex gap-4">
+          <a href="#"
+            class="w-12 h-12 rounded-full bg-[#1a2b3c] flex items-center justify-center text-orange-400 cursor-pointer hover:bg-transparent border-2 hover:border-amber-500 transition-colors">
+            <i class="fa-brands fa-android"></i>
+          </a>
+          <a href="#"
+            class="w-12 h-12 rounded-full bg-[#1a2b3c] flex items-center justify-center text-orange-400 cursor-pointer hover:bg-transparent border-2 hover:border-amber-500 transition-colors">
+            <i class="fa-brands fa-apple"></i>
+          </a>
+        </div>
+        <a href="#"
+          class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]">
+          <span class="text-sm font-medium whitespace-nowrap">Download App</span>
+
+          <div
+            class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]">
+            <i
+              class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"></i>
+          </div>
+        </a>
+      </div>
+
+      <div class="flex-1 text-center px-4 md:px-12 order-1 md:order-2">
+        <h2 class="text-4xl md:text-5xl text-[#1a2b3c] mb-6 leading-tight">
+          Stay ahead of the ordinary!
+        </h2>
+        <p class="text-gray-600 text-lg md:text-xl max-w-md mx-auto leading-relaxed">
+          “Explore properties made easy - grab our app for deals, speed and
+          convenience.”
+        </p>
+      </div>
+
+      <div class="order-3 mt-10 md:mt-0">
+        <div class="w-[220px] bg-[#1a2b3c] p-3 rounded-[40px] shadow-l">
+          <div class="bg-white rounded-[32px] py-10 px-2 flex flex-col items-center">
+            <div class="w-full aspect-square bg-gray-50 flex items-center justify-center p-2 mb-6">
+              <img src="assests/images/index/qr-code.png" alt="QR Code" class="w-full h-full grayscale opacity-80" />
+            </div>
+            <span class="text-2xl font-bold text-[#1a2b3c]">Scan Me</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- QR COde Section Ends -->
+
+  <!-- Article Section Starts -->
+  <section class="py-16 px-6 bg-[#f3f6f9]">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="text-left">
+          <h2 class="text-4xl md:text-5xl text-[#1a2b3c] mb-4">
+            News & Articles
+          </h2>
+          <p class="text-gray-600 text-lg">
+            See our latest real estate related news.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <a href="#"
+            class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]">
+            <span class="text-sm font-medium whitespace-nowrap">Brows All Blog</span>
+
+            <div
+              class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]">
+              <i
+                class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group">
+          <div class="overflow-hidden rounded-3xl mb-6">
+            <img src="assests/images/index/news-article-img-1.png" alt="Modern House"
+              class="w-full h-[280px] object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+            <span>Apr 18, 2026</span>
+            <span class="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
+            <span>4min read</span>
+          </div>
+          <p class="text-[#1a2b3c] font-medium leading-relaxed mb-6">
+            There are many variations of passages of Lorem Ipsum available
+          </p>
+          <button
+            class="border border-gray-300 px-8 py-2.5 rounded-lg text-[#1a2b3c] font-medium hover:bg-[#1a2b3c] hover:text-white transition-colors">
+            Read More
+          </button>
+        </div>
+
+        <div class="group">
+          <div class="overflow-hidden rounded-3xl mb-6">
+            <img src="assests/images/index/news-article-img-2.png" alt="Luxury Estate"
+              class="w-full h-[280px] object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+            <span>Apr 18, 2026</span>
+            <span class="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
+            <span>4min read</span>
+          </div>
+          <p class="text-[#1a2b3c] font-medium leading-relaxed mb-6">
+            There are many variations of passages of Lorem Ipsum available
+          </p>
+          <button
+            class="border border-gray-300 px-8 py-2.5 rounded-lg text-[#1a2b3c] font-medium hover:bg-[#1a2b3c] hover:text-white transition-colors">
+            Read More
+          </button>
+        </div>
+
+        <div class="group">
+          <div class="overflow-hidden rounded-3xl mb-6">
+            <img src="assests/images/index/news-article-img-3.jpg" alt="Luxury Estate"
+              class="w-full h-[280px] object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+            <span>Apr 18, 2026</span>
+            <span class="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
+            <span>4min read</span>
+          </div>
+          <p class="text-[#1a2b3c] font-medium leading-relaxed mb-6">
+            There are many variations of passages of Lorem Ipsum available
+          </p>
+          <button
+            class="border border-gray-300 px-8 py-2.5 rounded-lg text-[#1a2b3c] font-medium hover:bg-[#1a2b3c] hover:text-white transition-colors">
+            Read More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Article Section Starts -->
+
+  <!-- Calculator Section -->
+  <section class="py-6 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 lg:px-16">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-2xl sm:text-4xl md:text-5xl text-[#1a2b3c] mb-8 md:mb-16 text-center md:text-left">
+        Find The Best home With Us
+      </h2>
+
+      <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
+        <div
+          class="bg-[#f3f6f9] rounded-[1.5rem] sm:rounded-[40px] p-5 sm:p-8 md:p-12 shadow-sm flex items-center justify-between relative overflow-hidden group min-h-[200px] sm:min-h-[260px]">
+          <div class="flex-1 text-left z-20 max-w-[60%] sm:max-w-[55%]">
+            <h3 class="text-lg sm:text-2xl font-semibold text-[#1a2b3c] mb-2 sm:mb-4">
+              Consultation
+            </h3>
+            <p class="text-gray-600 leading-snug sm:leading-relaxed mb-5 sm:mb-10 text-xs sm:text-lg">
+              We are ready to help, Consult your property options with us.
+            </p>
+            <a href="#"
+              class="bg-transparent border border-[#1a2b3c] text-[#1a2b3c] px-3 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl flex items-center gap-2 sm:gap-3 hover:bg-[#1a2b3c] hover:text-white transition-all group/btn w-max">
+              <span class="text-[11px] sm:text-sm font-medium whitespace-nowrap">Start Chat</span>
+
+              <span class="flex justify-center text-[#fca311] group-hover/btn:text-white">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+          <img src="assests/images/index/consult-women.png" alt="Consultant"
+            class="absolute -right-4 sm:right-0 bottom-0 h-[65%] sm:h-[90%] object-contain pointer-events-none group-hover:scale-105 transition-transform duration-500 z-10" />
+        </div>
+
+        <div
+          class="bg-[#f3f6f9] rounded-[1.5rem] sm:rounded-[40px] p-5 sm:p-8 md:p-12 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between relative overflow-hidden group gap-6 sm:gap-0">
+          <div class="flex-1 text-left z-20 w-full sm:max-w-[50%]">
+            <h3 class="text-lg sm:text-2xl font-semibold text-[#1a2b3c] mb-2 sm:mb-4">
+              Calculator
+            </h3>
+            <p class="text-gray-600 leading-snug sm:leading-relaxed mb-5 sm:mb-10 text-xs sm:text-lg">
+              We are ready to help, Consult your property options with us.
+            </p>
+            <a href="#"
+              class="bg-transparent border border-[#1a2b3c] text-[#1a2b3c] px-3 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl flex items-center gap-2 sm:gap-3 hover:bg-[#1a2b3c] hover:text-white transition-all group/btn w-max">
+              <span class="text-[11px] sm:text-sm font-medium whitespace-nowrap">Calculate</span>
+
+              <span class="flex justify-center text-[#fca311] group-hover/btn:text-white">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+
+          <div
+            class="w-full max-w-[200px] bg-[#4b5563] rounded-[1.25rem] sm:rounded-3xl p-3 sm:p-4 shadow-xl z-10 self-center sm:self-auto">
+            <div id="screen"
+              class="w-full h-10 sm:h-12 bg-[#d1d8a7] rounded-lg mb-3 sm:mb-4 flex items-center justify-end px-3 text-lg sm:text-xl font-mono text-slate-800 overflow-hidden shadow-inner border border-black/10">
+              0
+            </div>
+            <div class="grid grid-cols-4 gap-1.5 text-white text-center text-xs">
+              <div onclick="clearScreen()"
+                class="calc-btn bg-[#6b7280] col-span-1 py-2 rounded-md cursor-pointer select-none active:scale-95 transition-all">
+                C
+              </div>
+              <div onclick="appendOp('/')"
+                class="calc-btn bg-[#9ca3af]/30 py-2 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                ÷
+              </div>
+              <div onclick="appendOp('*')"
+                class="calc-btn bg-[#9ca3af]/30 py-2 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                ×
+              </div>
+              <div onclick="appendOp('-')"
+                class="calc-btn bg-[#9ca3af]/30 py-2 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                -
+              </div>
+
+              <div onclick="appendNum('7')"
+                class="calc-btn bg-[#6b7280]/20 py-2.5 sm:py-3 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                7
+              </div>
+              <div onclick="appendNum('8')"
+                class="calc-btn bg-[#6b7280]/20 py-2.5 sm:py-3 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                8
+              </div>
+              <div onclick="appendNum('9')"
+                class="calc-btn bg-[#6b7280]/20 py-2.5 sm:py-3 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                9
+              </div>
+              <div onclick="appendOp('+')"
+                class="calc-btn bg-[#9ca3af]/30 py-2 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                +
+              </div>
+
+              <div onclick="appendNum('4')"
+                class="calc-btn bg-[#6b7280]/20 py-2.5 sm:py-3 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                4
+              </div>
+              <div onclick="appendNum('5')"
+                class="calc-btn bg-[#6b7280]/20 py-2.5 sm:py-3 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                5
+              </div>
+              <div onclick="appendNum('6')"
+                class="calc-btn bg-[#6b7280]/20 py-2.5 sm:py-3 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                6
+              </div>
+              <div onclick="calculate()"
+                class="calc-btn bg-white/20 py-2 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/30 transition-all font-bold">
+                =
+              </div>
+
+              <div onclick="appendNum('1')"
+                class="calc-btn bg-[#6b7280]/20 py-2.5 sm:py-3 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                1
+              </div>
+              <div onclick="appendNum('2')"
+                class="calc-btn bg-[#6b7280]/20 py-2.5 sm:py-3 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                2
+              </div>
+              <div onclick="appendNum('3')"
+                class="calc-btn bg-[#6b7280]/20 py-2.5 sm:py-3 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                3
+              </div>
+              <div onclick="appendNum('0')"
+                class="calc-btn bg-[#6b7280]/20 py-2.5 sm:py-3 rounded-md cursor-pointer select-none active:scale-95 hover:bg-white/20 transition-all">
+                0
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Calculator Section Ends -->
+
+  <!-- Form Section Starts -->
+  <section class="py-12 md:py-20 px-4 sm:px-6 md:px-12 lg:px-16 bg-[#f3f6f9] overflow-hidden">
+    <div class="max-w-[1320px] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-12 sm:gap-16 md:gap-24 items-center">
+      <div class="relative w-full h-[320px] sm:h-[450px] md:h-[550px] flex items-center justify-center">
+        <div
+          class="absolute w-[140px] sm:w-[200px] md:w-[260px] h-[200px] sm:h-[280px] md:h-[360px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg z-10 transform -rotate-[15deg] -translate-x-12 sm:-translate-x-20 md:-translate-x-32 translate-y-4 sm:translate-y-8 md:translate-y-12">
+          <img src="assests/images/index/form-img-2.png" alt="Building Background Left"
+            class="w-full h-full object-cover" />
+        </div>
+
+        <div
+          class="absolute w-[140px] sm:w-[200px] md:w-[260px] h-[200px] sm:h-[280px] md:h-[360px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg z-10 transform rotate-[20deg] translate-x-16 sm:translate-x-24 md:translate-x-36 translate-y-10 sm:translate-y-16 md:translate-y-24">
+          <img src="assests/images/index/form-img-3.png" alt="Building Background Right"
+            class="w-full h-full object-cover" />
+        </div>
+
+        <div
+          class="absolute w-[140px] sm:w-[200px] md:w-[260px] h-[200px] sm:h-[280px] md:h-[360px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl z-30 transform -translate-y-2 sm:-translate-y-4 md:-translate-y-8">
+          <img src="assests/images/index/form-img-1.png" alt="Building Main" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <div class="text-left mt-8 md:mt-0">
+        <h2 class="text-4xl sm:text-5xl text-[#1a2b3c] mb-4 leading-tight">
+          Get In Touch <br />
+          With Our Experts
+        </h2>
+        <p class="text-gray-600 text-base sm:text-lg mb-10 sm:mb-12">
+          A 30-min discovery call to see how we can help.
+        </p>
+
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10 sm:gap-y-12">
+          <div class="relative border-b border-gray-400 pb-2 transition-all">
+            <input type="text"
+              class="w-full text-sm bg-transparent text-[#1a2b3c] focus:outline-none placeholder-gray-500"
+              placeholder="Name" />
+          </div>
+
+          <div class="relative border-b border-gray-400 pb-2 transition-all">
+            <input type="email"
+              class="w-full text-sm bg-transparent text-[#1a2b3c] focus:outline-none placeholder-gray-500"
+              placeholder="Email (required)" />
+          </div>
+
+          <div class="relative border-b border-gray-400 pb-2 transition-all">
+            <input type="tel"
+              class="w-full text-sm bg-transparent text-[#1a2b3c] focus:outline-none placeholder-gray-500"
+              placeholder="Phone Number" />
+          </div>
+
+          <div class="relative border-b border-gray-400 pb-2" id="contact-dropdown-container">
+            <div class="flex justify-between items-center cursor-pointer py-0.5" id="contact-dropdown-trigger">
+              <span class="text-sm text-gray-500" id="contact-dropdown-label">Select Service</span>
+              <i class="fa-solid fa-chevron-down text-[14px] text-gray-400 transition-transform duration-300"
+                id="contact-dropdown-icon"></i>
+            </div>
+
+            <div id="contact-dropdown-options"
+              class="hidden absolute left-0 right-0 top-full mt-1 bg-white/95 backdrop-blur-md shadow-lg rounded-xl overflow-hidden z-50 border border-gray-200">
+              <div
+                class="contact-option-item px-4 py-3 text-sm text-[#1a2b3c] hover:bg-[#1a2b3c] hover:text-white cursor-pointer transition-colors"
+                data-value="Buying Property">
+                Buying Property
+              </div>
+              <div
+                class="contact-option-item px-4 py-3 text-sm text-[#1a2b3c] hover:bg-[#1a2b3c] hover:text-white cursor-pointer transition-colors"
+                data-value="Renting Property">
+                Renting Property
+              </div>
+              <div
+                class="contact-option-item px-4 py-3 text-sm text-[#1a2b3c] hover:bg-[#1a2b3c] hover:text-white cursor-pointer transition-colors"
+                data-value="Selling Property">
+                Selling Property
+              </div>
+            </div>
+          </div>
+
+          <div class="sm:col-span-2 relative border-b border-gray-400 pb-2 transition-all">
+            <textarea
+              class="w-full text-sm bg-transparent text-[#1a2b3c] resize-none h-6 pt-1 focus:outline-none placeholder-gray-500"
+              placeholder="Message"></textarea>
+          </div>
+
+          <div class="sm:col-span-2 mt-2 sm:mt-4">
+            <button type="submit"
+              class="group flex items-center gap-4 px-4 py-2 sm:pr-2 pr-2 sm:gap-3 sm:px-4 sm:py-2 rounded-2xl transition-all duration-500 ease-in-out bg-[#0F172A] text-white hover:bg-white hover:text-[#0F172A] border border-transparent hover:border-[#0F172A]">
+              <span class="text-sm font-medium whitespace-nowrap">Send</span>
+
+              <div
+                class="flex items-center justify-center w-7 h-7 rounded-xl transition-colors duration-300 ease-in-out bg-white group-hover:bg-[#0F172A]">
+                <i
+                  class="fa-solid fa-arrow-right text-sm transition-transform duration-300 ease-in-out text-slate-900 -rotate-45 group-hover:text-amber-400 group-hover:rotate-0"></i>
+              </div>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Form Section Ends -->
+
+  <!-- Accordian Section Starts -->
+  <section class="py-16 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20 overflow-hidden">
+    <div class="max-w-[1320px] mx-auto">
+      <span class="mb-10 text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl text-[#1a2b3c] leading-tight">
+          Have Question In Your Mind?
+        </h2>
+      </span>
+
+      <div class="grid md:grid-cols-1 xl:grid-cols-2 gap-12 md:gap-24 items-center">
+        <div class="space-y-4">
+          <!-- Item 1 -->
+          <div
+            class="accordion-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition-colors duration-300"
+            id="item-1">
+            <button onclick="
+                  toggleAccordion(1);
+                  this.parentElement.classList.toggle('bg-white');
+                  this.parentElement.classList.toggle('bg-[#0F172A]');
+                  this.classList.toggle('text-[#1a2b3c]');
+                  this.classList.toggle('text-white');
+                  this.querySelector('.icon-container').classList.toggle(
+                    'text-[#1a2b3c]',
+                  );
+                  this.querySelector('.icon-container').classList.toggle(
+                    'text-white',
+                  );
+                  this.parentElement
+                    .querySelector('p')
+                    .classList.toggle('text-gray-600');
+                  this.parentElement
+                    .querySelector('p')
+                    .classList.toggle('text-gray-300');
+                "
+              class="accordion-trigger group w-full flex justify-between items-center px-6 py-5 text-left text-[#1a2b3c] text-lg font-medium outline-none hover:bg-[#0F172A] hover:text-white transition-colors">
+              <span>1. Business Strategy</span>
+              <div class="icon-container text-[#1a2b3c] group-hover:text-white transition-colors">
+                <span class="plus-icon w-5 h-5 transition-transform duration-300">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon w-5 h-5 hidden transition-transform duration-300">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </div>
+            </button>
+            <div
+              class="accordion-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out">
+              <div class="accordion-inner overflow-hidden">
+                <div class="px-6 pb-6">
+                  <p class="text-sm leading-relaxed text-gray-600 transition-colors duration-300">
+                    A long established fact that a reader will be distracted
+                    by the readable content of a page when looking at its
+                    layout.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div
+            class="accordion-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition-colors duration-300"
+            id="item-2">
+            <button onclick="
+                  toggleAccordion(2);
+                  this.parentElement.classList.toggle('bg-white');
+                  this.parentElement.classList.toggle('bg-[#0F172A]');
+                  this.classList.toggle('text-[#1a2b3c]');
+                  this.classList.toggle('text-white');
+                  this.querySelector('.icon-container').classList.toggle(
+                    'text-[#1a2b3c]',
+                  );
+                  this.querySelector('.icon-container').classList.toggle(
+                    'text-white',
+                  );
+                  this.parentElement
+                    .querySelector('p')
+                    .classList.toggle('text-gray-600');
+                  this.parentElement
+                    .querySelector('p')
+                    .classList.toggle('text-gray-300');
+                "
+              class="accordion-trigger group w-full flex justify-between items-center px-6 py-5 text-left text-[#1a2b3c] text-lg font-medium outline-none hover:bg-[#0F172A] hover:text-white transition-colors">
+              <span>2. Growth Marketing</span>
+              <div class="icon-container text-[#1a2b3c] group-hover:text-white transition-colors">
+                <span class="plus-icon w-5 h-5 transition-transform duration-300">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon w-5 h-5 hidden transition-transform duration-300">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </div>
+            </button>
+            <div
+              class="accordion-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out">
+              <div class="accordion-inner overflow-hidden">
+                <div class="px-6 pb-6">
+                  <p class="text-sm leading-relaxed text-gray-600 transition-colors duration-300">
+                    This is an example of the explanation showing when you
+                    click on the accordion. It now expands and collapses with
+                    a smooth transition.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div
+            class="accordion-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition-colors duration-300"
+            id="item-3">
+            <button onclick="
+                  toggleAccordion(3);
+                  this.parentElement.classList.toggle('bg-white');
+                  this.parentElement.classList.toggle('bg-[#0F172A]');
+                  this.classList.toggle('text-[#1a2b3c]');
+                  this.classList.toggle('text-white');
+                  this.querySelector('.icon-container').classList.toggle(
+                    'text-[#1a2b3c]',
+                  );
+                  this.querySelector('.icon-container').classList.toggle(
+                    'text-white',
+                  );
+                  this.parentElement
+                    .querySelector('p')
+                    .classList.toggle('text-gray-600');
+                  this.parentElement
+                    .querySelector('p')
+                    .classList.toggle('text-gray-300');
+                "
+              class="accordion-trigger group w-full flex justify-between items-center px-6 py-5 text-left text-[#1a2b3c] text-lg font-medium outline-none hover:bg-[#0F172A] hover:text-white transition-colors">
+              <span>3. Market Analysis</span>
+              <div class="icon-container text-[#1a2b3c] group-hover:text-white transition-colors">
+                <span class="plus-icon w-5 h-5 transition-transform duration-300">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon w-5 h-5 hidden transition-transform duration-300">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </div>
+            </button>
+            <div
+              class="accordion-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out">
+              <div class="accordion-inner overflow-hidden">
+                <div class="px-6 pb-6">
+                  <p class="text-sm leading-relaxed text-gray-600 transition-colors duration-300">
+                    Using CSS Grid for animation allows the browser to
+                    calculate the exact height of the text dynamically,
+                    ensuring zero lag.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Section (Unchanged) -->
+        <div class="relative w-full h-[320px] sm:h-[400px] md:h-[500px] flex items-center justify-center mt-8 md:mt-0">
+          <div
+            class="absolute w-[180px] sm:w-[240px] md:w-[320px] h-[220px] sm:h-[300px] md:h-[420px] rounded-[1.5rem] md:rounded-[24px] overflow-hidden z-10 transform -translate-x-8 sm:-translate-x-12 md:-translate-x-16 -translate-y-6 sm:-translate-y-8 md:-translate-y-10">
+            <img src="assests/images/index/acordian-img-1.png" alt="Building exterior"
+              class="w-full h-full object-cover" />
+          </div>
+          <div
+            class="absolute w-[180px] sm:w-[240px] md:w-[320px] h-[220px] sm:h-[300px] md:h-[420px] rounded-[1.5rem] md:rounded-[24px] overflow-hidden z-20 transform translate-x-8 sm:translate-x-12 md:translate-x-16 translate-y-6 sm:translate-y-8 md:translate-y-10">
+            <img src="assests/images/index/acordian-img-2.png" alt="Modern Office" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Accordian Section Ends -->
+
+  <!-- Footer Starts -->
+  <footer class="bg-[#12192b] pt-8 pb-2 relative overflow-hidden group mt-auto border-t border-white/10">
+    <img src="assests/images/services-images/ftr-1.png" alt="Building Cityscape"
+      class="absolute bottom-0 left-0 w-full h-[250px] object-cover object-bottom opacity-90 transform translate-y-2/3 group-hover:translate-y-0 transition-transform duration-700 ease-out z-0 pointer-events-none"
+      loading="lazy" />
+
+    <div class="max-w-[1320px] mx-auto px-4 md:px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-2">
+        <div class="lg:col-span-4 flex flex-col justify-between">
+          <div>
+            <div class="mb-1">
+              <a href="index.html" class="inline-block">
+                <img src="assests/images/ongoing-projects/logo.png" alt="Logo" class="w-[74px] h-[92px] object-contain"
+                  loading="lazy" />
+              </a>
+            </div>
+
+            <h2 class="text-3xl text-white mb-4">
+              <span class="italic font-medium">Smart Moves</span>
+              <span class="font-bold">Start With Us</span>
+            </h2>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-6 pr-4">
+              Redefining real estate through institutional-grade advisory and
+              world-class inventory.
+            </p>
+
+            <div class="flex gap-3 mb-6">
+              <a href="https://www.instagram.com/"
+                class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"><i
+                  class="fa-brands fa-instagram" style="color: #fca311"></i></a>
+              <a href="https://www.facebook.com/"
+                class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"><i
+                  class="fa-brands fa-facebook-f" style="color: #fca311"></i></a>
+              <a href="https://x.com/"
+                class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition border border-white transition-colors duration-300 hover:border-[#fca311] hover:bg-[#12192b]"><i
+                  class="fa-brands fa-twitter" style="color: #fca311"></i></a>
+            </div>
+          </div>
+
+          <div class="mt-auto">
+            <p class="text-white text-sm mb-3">
+              Receive monthly market reports and exclusive listing updates.
+            </p>
+            <form method="get">
+              <div class="flex bg-white rounded-lg overflow-hidden w-full max-w-[350px]">
+                <input type="email" placeholder="Email Address"
+                  class="w-full px-4 py-3 text-sm text-gray-800 outline-none bg-white" required />
+
+                <input type="submit"
+                  class="bg-[#fca311] hover:bg-[#e5930f] text-black font-bold text-sm px-6 py-3 transition"
+                  value="Join" />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <div class="h3-heading text-white font-bold tracking-wide mb-6">
+              NAVIGATION
+            </div>
+
+            <ul class="space-y-4">
+              <li>
+                <a href="index.html"
+                  class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-house" style="color: #fca311"></i>
+                  </span>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="about.html"
+                  class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-user-group" style="color: #fca311"></i>
+                  </span>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="properties.html"
+                  class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-house-chimney-window" style="color: #fca311"></i>
+                  </span>
+                  Property List
+                </a>
+              </li>
+              <li>
+                <a href="services.html"
+                  class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-gear" style="color: #fca311"></i>
+                  </span>
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="blogs.html"
+                  class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center">
+                    <i class="fa-solid fa-pen-to-square" style="color: #fca311"></i>
+                  </span>
+                  Blogs
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="h3-heading text-white font-bold tracking-wide mb-6">
+              CONTACTS
+            </div>
+            <ul class="space-y-4">
+              <li>
+                <a href="mailto:infinityhorizon@gmail.com"
+                  class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3">
+                  <span
+                    class="w-6 h-6 rounded-full bg-white text-[#fca311] flex items-center justify-center text-[10px] shadow-sm">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  infinity@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+2835203202-940"
+                  class="text-gray-300 hover:text-[#fca311] text-sm transition flex items-center gap-3">
+                  <span
+                    class="w-6 h-6 rounded-full bg-white text-[#fca311] flex items-center justify-center text-[10px] shadow-sm"><i
+                      class="fa-solid fa-phone"></i></span>
+                  +2835203202-940
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="h3-heading text-white font-bold tracking-wide mb-6">
+              EXPERTISE
+            </div>
+            <ul class="space-y-4">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-[#fca311] text-sm transition block">Luxury Residential</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-[#fca311] text-sm transition block">Commercial Assets</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-[#fca311] text-sm transition block">Market Analysis</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="h3-heading text-white font-bold tracking-wide mb-6">
+              OFFICES
+            </div>
+            <ul class="space-y-4">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-[#fca311] text-sm transition block">Kolkata</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-[#fca311] text-sm transition block">Mumbai</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-[#fca311] text-sm transition block">Bangalore</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row justify-between items-center text-white text-xs md:text-sm pt-5 pb-3 relative z-20">
+        <span class="mb-4 md:mb-0 text-white">&copy; 2026
+          <a href="index.html" class="hover:text-[#facc15] transition-colors">
+            INFINITY HORIZON
+          </a>
+          ALL RIGHT RESERVED
+        </span>
+        <div
+          class="flex flex-wrap justify-center gap-6 md:gap-8 font-semibold tracking-wider uppercase text-[10px] sm:text-xs">
+          <a href="#" class="hover:text-[#fca311] transition">OFFERS</a>
+          <a href="#" class="hover:text-[#fca311] transition">TERMS OF SERVICE</a>
+          <a href="#" class="hover:text-[#fca311] transition">PRIVACY POLICY</a>
+          <a href="#" class="hover:text-[#fca311] transition">COOKIE SETTINGS</a>
+        </div>
+      </div>
+
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="absolute right-4 md:right-6 bottom-11 w-12 h-12 rounded-full bg-white/95 text-[#fca311] flex items-center justify-center shadow-lg hover:bg-[#fca311] hover:text-white transition duration-300 text-xl z-30 leading-none">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+  </footer>
+  <!-- Footer Ends -->
+
+  <script src="assests/js/cmn-script.js"></script>
+  <script src="assests/js/index/script.js"></script>
+</body>
+
+</html>
