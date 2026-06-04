@@ -1,0 +1,64 @@
+@keyframes textFade {
+
+    0%,
+    25% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    30%,
+    95% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.activity-line-1 {
+    animation: textFade 9s infinite ease-in-out;
+}
+
+.activity-line-2 {
+    animation: textFade 9s infinite ease-in-out -3s;
+}
+
+.activity-line-3 {
+    animation: textFade 9s infinite ease-in-out -6s;
+}
+
+@keyframes crossFade {
+
+    0%,
+    30% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    33%,
+    97% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.slide-1 {
+    animation: crossFade 12s infinite ease-in-out;
+}
+
+.slide-2 {
+    animation: crossFade 12s infinite ease-in-out -4s;
+}
+
+.slide-3 {
+    animation: crossFade 12s infinite ease-in-out -8s;
+}
+

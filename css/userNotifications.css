@@ -1,0 +1,26 @@
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.custom-feed-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-feed-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-feed-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.4);
+    border-radius: 9999px;
+}
+
+.custom-feed-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.6);
+}
+
